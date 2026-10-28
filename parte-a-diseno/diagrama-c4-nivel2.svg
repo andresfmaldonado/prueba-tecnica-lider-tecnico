@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="892" viewBox="0 0 1540 892" font-family="Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<defs>
+  <filter id="sombra" x="-10%" y="-10%" width="125%" height="135%"><feDropShadow dx="0" dy="1.6" stdDeviation="2.2" flood-color="#000" flood-opacity="0.25"/></filter>
+  <marker id="pta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#4C9BF5"/></marker>
+  <marker id="ptg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#80868B"/></marker>
+  <marker id="ptgi" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0 L0 5 L10 10z" fill="#80868B"/></marker>
+</defs>
+<rect width="1540" height="892" fill="#fff"/>
+<rect x="0" y="0" width="1540" height="56" fill="#4C9BF5" filter="url(#sombra)"/>
+<text x="40" y="37" font-size="25" font-weight="500" fill="#fff" text-anchor="start">Arquitectura objetivo: servicio de Agendamiento (C4 nivel 2, contenedores)</text>
+<rect x="600" y="150" width="905" height="682" rx="4" fill="#F1F3F4"/>
+<text x="622" y="180" font-size="19" font-weight="500" fill="#202124" text-anchor="start">Google Cloud Platform — Agendamiento</text>
+<rect x="225" y="165" width="255" height="632" rx="4" fill="#fff" stroke="#BDC1C6" stroke-width="1.2"/>
+<text x="242" y="192" font-size="19" font-weight="500" fill="#202124" text-anchor="start">Monolito PHP (legado)</text>
+<rect x="20" y="165" width="180" height="310" rx="4" fill="#fff" stroke="#BDC1C6" stroke-width="1.2" stroke-dasharray="3 5"/>
+<text x="110" y="190" font-size="16" font-weight="500" fill="#202124" text-anchor="middle">Sistemas consumidores</text>
+<rect x="830" y="195" width="640" height="485" rx="4" fill="#fff" stroke="#188038" stroke-width="2.2" stroke-dasharray="1 5.5" stroke-linecap="round"/>
+<text x="852" y="222" font-size="19" font-weight="500" fill="#202124" text-anchor="start">Servicio Agendamiento (Cloud Run)</text>
+<path d="M110 165 V108 H715 V150" fill="none" stroke="#80868B" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round" marker-end="url(#ptg)"/>
+<text x="124" y="98" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Fase 4: API o eventos</text>
+<path d="M110 475 V573 H240" fill="none" stroke="#80868B" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round" marker-end="url(#ptg)"/>
+<text x="28" y="600" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Fase 1: leen y</text>
+<text x="28" y="618" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">escriben las tablas</text>
+<path d="M465 285 H625" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="548" y="255" font-size="15" font-weight="400" fill="#3C4043" text-anchor="middle" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">migrado: HTTP</text>
+<text x="548" y="272" font-size="15" font-weight="400" fill="#3C4043" text-anchor="middle" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">sombra: async</text>
+<path d="M815 285 H850" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<path d="M352 345 V525" fill="none" stroke="#80868B" stroke-width="2" marker-start="url(#ptgi)" marker-end="url(#ptg)"/>
+<text x="362" y="440" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">lee / escribe</text>
+<path d="M955 330 V385" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<path d="M1235 425 H1060" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="1148" y="414" font-size="15" font-weight="400" fill="#3C4043" text-anchor="middle" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">lee / escribe</text>
+<path d="M1060 265 H1430 V136" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="1245" y="254" font-size="15" font-weight="400" fill="#3C4043" text-anchor="middle" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">terceros (S8)</text>
+<path d="M850 573 H465" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="660" y="561" font-size="15" font-weight="400" fill="#3C4043" text-anchor="middle" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">upsert idempotente</text>
+<path d="M352 621 V745 H625" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="470" y="735" font-size="15" font-weight="400" fill="#3C4043" text-anchor="middle" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">WAL</text>
+<path d="M795 745 H830" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<path d="M990 745 H1030" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<path d="M1050 705 V621" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="1058" y="668" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">eventos</text>
+<path d="M1260 705 V525" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="1252" y="610" font-size="15" font-weight="400" fill="#3C4043" text-anchor="end" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">eventos CDC</text>
+<path d="M1300 525 V705" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="1308" y="610" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">outbox</text>
+<path d="M1410 705 V525" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="1418" y="610" font-size="15" font-weight="400" fill="#3C4043" text-anchor="start" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">lote</text>
+<path d="M834 443 H810" fill="none" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<rect x="30" y="200" width="160" height="76" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<rect x="42" y="214" width="34" height="22" rx="3" fill="#5F6368"/>
+<rect x="45" y="217" width="28" height="16" fill="#fff"/>
+<rect x="54" y="236" width="10" height="4" fill="#5F6368"/><rect x="50" y="240" width="18" height="3" rx="1.5" fill="#5F6368"/>
+<text x="86" y="230" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Call center</text>
+<text x="44" y="266" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">(sistema)</text>
+<rect x="30" y="290" width="160" height="76" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<rect x="42" y="304" width="34" height="22" rx="3" fill="#5F6368"/>
+<rect x="45" y="307" width="28" height="16" fill="#fff"/>
+<rect x="54" y="326" width="10" height="4" fill="#5F6368"/><rect x="50" y="330" width="18" height="3" rx="1.5" fill="#5F6368"/>
+<text x="86" y="320" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Ruteo</text>
+<text x="44" y="356" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">(sistema)</text>
+<rect x="30" y="380" width="160" height="76" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<rect x="42" y="394" width="34" height="22" rx="3" fill="#5F6368"/>
+<rect x="45" y="397" width="28" height="16" fill="#fff"/>
+<rect x="54" y="416" width="10" height="4" fill="#5F6368"/><rect x="50" y="420" width="18" height="3" rx="1.5" fill="#5F6368"/>
+<text x="86" y="410" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Reportes</text>
+<text x="44" y="446" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">(sistema)</text>
+<rect x="240" y="225" width="225" height="120" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<rect x="252" y="238" width="34" height="9" rx="2.5" fill="#E8710A"/>
+<circle cx="258" cy="242.5" r="1.7" fill="#fff"/><circle cx="264" cy="242.5" r="1.7" fill="#fff"/>
+<rect x="252" y="249" width="34" height="9" rx="2.5" fill="#E8710A"/>
+<circle cx="258" cy="253.5" r="1.7" fill="#fff"/><circle cx="264" cy="253.5" r="1.7" fill="#fff"/>
+<rect x="252" y="260" width="34" height="9" rx="2.5" fill="#E8710A"/>
+<circle cx="258" cy="264.5" r="1.7" fill="#fff"/><circle cx="264" cy="264.5" r="1.7" fill="#fff"/>
+<text x="296" y="255" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Monolito PHP</text>
+<text x="254" y="291" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">pantalla del call center</text>
+<text x="254" y="311" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">flag por tenant</text>
+<text x="254" y="331" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">hook de sombra</text>
+<rect x="240" y="525" width="225" height="96" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<ellipse cx="269" cy="544" rx="15" ry="6" fill="#E8710A"/>
+<path d="M254 544 v20 a15 6 0 0 0 30 0 v-20 a15 6 0 0 1 -30 0z" fill="#E8710A"/>
+<path d="M254 552 a15 6 0 0 0 30 0 M254 559 a15 6 0 0 0 30 0" fill="none" stroke="#fff" stroke-width="1.6"/>
+<text x="296" y="555" font-size="19" font-weight="700" fill="#202124" text-anchor="start">PostgreSQL</text>
+<text x="254" y="591" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">compartida</text>
+<text x="254" y="611" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">tablas + triggers</text>
+<rect x="625" y="245" width="190" height="80" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<polygon points="654.0,257.0 669.0,265.5 669.0,282.5 654.0,291.0 639.0,282.5 639.0,265.5" fill="#4285F4"/>
+<g transform="translate(637,257)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><text x="17" y="21" font-size="11" font-weight="700" fill="#fff" stroke="none" text-anchor="middle">api</text></g>
+<text x="681" y="275" font-size="19" font-weight="700" fill="#202124" text-anchor="start">API Gateway</text>
+<text x="639" y="311" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">JWT + tenant</text>
+<rect x="620" y="385" width="190" height="116" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<rect x="635" y="416" width="7" height="14" rx="1.5" fill="#4285F4"/>
+<rect x="646" y="408" width="7" height="22" rx="1.5" fill="#4285F4"/>
+<rect x="657" y="400" width="7" height="30" rx="1.5" fill="#4285F4"/>
+<text x="634" y="449" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Observabilidad</text>
+<text x="634" y="471" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">logs, métricas,</text>
+<text x="634" y="491" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">trazas</text>
+<rect x="850" y="240" width="210" height="90" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<polygon points="879.0,252.0 894.0,260.5 894.0,277.5 879.0,286.0 864.0,277.5 864.0,260.5" fill="#4285F4"/>
+<g transform="translate(862,252)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 12 L5 17 L11 22 M23 12 L29 17 L23 22"/></g>
+<text x="906" y="270" font-size="19" font-weight="700" fill="#202124" text-anchor="start">API</text>
+<text x="864" y="306" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">Cloud Run</text>
+<text x="864" y="326" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">hexagonal + DDD</text>
+<rect x="850" y="385" width="210" height="100" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<ellipse cx="879" cy="404" rx="15" ry="6" fill="#4285F4"/>
+<path d="M864 404 v20 a15 6 0 0 0 30 0 v-20 a15 6 0 0 1 -30 0z" fill="#4285F4"/>
+<path d="M864 412 a15 6 0 0 0 30 0 M864 419 a15 6 0 0 0 30 0" fill="none" stroke="#fff" stroke-width="1.6"/>
+<text x="906" y="415" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Base de datos</text>
+<text x="864" y="451" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">Cloud SQL</text>
+<text x="864" y="471" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">tenant_id + RLS</text>
+<rect x="850" y="525" width="210" height="96" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<polygon points="879.0,537.0 894.0,545.5 894.0,562.5 879.0,571.0 864.0,562.5 864.0,545.5" fill="#4285F4"/>
+<g transform="translate(862,537)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13 H26 M22 9 L26 13 L22 17 M27 22 H8 M12 18 L8 22 L12 26"/></g>
+<text x="906" y="555" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Adaptador</text>
+<text x="864" y="591" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">de sincronización</text>
+<text x="864" y="611" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">(anticorrupción)</text>
+<rect x="1235" y="385" width="210" height="140" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<polygon points="1264.0,397.0 1279.0,405.5 1279.0,422.5 1264.0,431.0 1249.0,422.5 1249.0,405.5" fill="#4285F4"/>
+<g transform="translate(1247,397)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="7"/><circle cx="17" cy="17" r="1.5" fill="#fff"/></g>
+<text x="1291" y="415" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Worker</text>
+<text x="1249" y="451" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">Cloud Run Service:</text>
+<text x="1249" y="471" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">eventos y outbox</text>
+<text x="1249" y="491" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">Cloud Run Jobs:</text>
+<text x="1249" y="511" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">lote nocturno</text>
+<rect x="625" y="705" width="170" height="100" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<path d="M639 723 H667 M661 718 L667 723 L661 728" fill="none" stroke="#4285F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M639 734 H667 M661 729 L667 734 L661 739" fill="none" stroke="#4285F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M639 745 H667 M661 740 L667 745 L661 750" fill="none" stroke="#4285F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="681" y="735" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Datastream</text>
+<text x="639" y="771" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">CDC del legado</text>
+<rect x="830" y="705" width="160" height="100" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<rect x="844" y="720" width="30" height="8" rx="2" fill="#4285F4"/>
+<circle cx="850" cy="724" r="1.6" fill="#fff"/>
+<rect x="844" y="731" width="30" height="8" rx="2" fill="#4285F4"/>
+<circle cx="850" cy="735" r="1.6" fill="#fff"/>
+<rect x="844" y="742" width="30" height="8" rx="2" fill="#4285F4"/>
+<circle cx="850" cy="746" r="1.6" fill="#fff"/>
+<text x="844" y="769" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Cloud Storage</text>
+<text x="844" y="791" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">archivos CDC</text>
+<rect x="1030" y="705" width="300" height="100" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<line x1="1059" y1="734" x2="1048" y2="734" stroke="#4285F4" stroke-width="3"/>
+<circle cx="1048" cy="734" r="5" fill="#4285F4"/>
+<line x1="1059" y1="734" x2="1070" y2="723" stroke="#4285F4" stroke-width="3"/>
+<circle cx="1070" cy="723" r="5" fill="#4285F4"/>
+<line x1="1059" y1="734" x2="1070" y2="745" stroke="#4285F4" stroke-width="3"/>
+<circle cx="1070" cy="745" r="5" fill="#4285F4"/>
+<circle cx="1059" cy="734" r="6" fill="#4285F4"/>
+<text x="1086" y="735" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Pub/Sub</text>
+<text x="1044" y="771" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">eventos y notificaciones</text>
+<rect x="1345" y="705" width="150" height="100" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<circle cx="1374" cy="734" r="14" fill="#fff" stroke="#4285F4" stroke-width="3.4"/>
+<path d="M1374 725 V734 L1381 738" fill="none" stroke="#4285F4" stroke-width="3" stroke-linecap="round"/>
+<text x="1359" y="769" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Scheduler</text>
+<text x="1359" y="791" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">cron del lote</text>
+<rect x="1215" y="62" width="250" height="74" rx="6" fill="#fff" stroke="#DADCE0" stroke-width="0.8" filter="url(#sombra)"/>
+<path d="M1236 102 a8 8 0 0 1 0 -16 a10 10 0 0 1 19 -2 a8 8 0 0 1 2 18z" fill="#9AA0A6"/>
+<text x="1271" y="92" font-size="19" font-weight="700" fill="#202124" text-anchor="start">Proveedor de rutas</text>
+<text x="1229" y="128" font-size="16" font-weight="400" fill="#5F6368" text-anchor="start">(externo, por confirmar)</text>
+<path d="M20 863 H70" stroke="#4C9BF5" stroke-width="2.4" stroke-dasharray="9 6" marker-end="url(#pta)"/>
+<text x="80" y="868" font-size="15" font-weight="400" fill="#5F6368" text-anchor="start">flujo del servicio</text>
+<path d="M240 863 H290" stroke="#80868B" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round" marker-end="url(#ptg)"/>
+<text x="300" y="868" font-size="15" font-weight="400" fill="#5F6368" text-anchor="start">acceso de los sistemas del legado (fases 1 y 4)</text>
+</svg>

@@ -20,53 +20,7 @@
 
 ## 1. Arquitectura objetivo (C4 nivel 2)
 
-```mermaid
-flowchart LR
-  CC["Call center<br/>(sistema + pantalla en el monolito)"]
-  RU["Ruteo<br/>(sistema)"]
-  RE["Reportes<br/>(sistema)"]
-  PRV["Proveedor de rutas<br/>(externo, por confirmar)"]
-
-  subgraph GCP["GCP"]
-    GW["API Gateway<br/>JWT + tenant"]
-    subgraph SVC["Servicio Agendamiento"]
-      API["Agendamiento API<br/>Cloud Run, hexagonal/DDD"]
-      WK["Agendamiento Worker<br/>Cloud Run Service: eventos y relay del outbox<br/>Cloud Run Jobs: lote nocturno"]
-      DB[("BD Agendamiento<br/>Cloud SQL, tenant_id + RLS")]
-      SYNC["Adaptador de sincronización<br/>(capa anticorrupción)"]
-    end
-    BUS{{"Pub/Sub"}}
-    CDC["Datastream<br/>CDC del legado"]
-    GCSB["Cloud Storage<br/>archivos CDC + notificaciones"]
-    SCH["Cloud Scheduler"]
-    OBS["Observabilidad<br/>logs, métricas, trazas"]
-  end
-
-  subgraph LEG["Monolito PHP (legado)"]
-    MON["Monolito PHP<br/>flag por tenant + hook sombra"]
-    LDB[("PostgreSQL compartida<br/>tablas + triggers")]
-  end
-
-  CC --> MON
-  MON -- "tenant migrado: HTTP" --> GW --> API
-  MON -- "sombra: copia async" --> GW
-  MON --- LDB
-  LDB -- "WAL" --> CDC --> GCSB -- "notificación" --> BUS --> WK
-  SCH --> WK
-  API --> DB
-  WK --> DB
-  WK -- "outbox: eventos" --> BUS
-  BUS --> SYNC -- "upsert idempotente" --> LDB
-  CC -. "fase 1: lee/escribe tablas" .-> LDB
-  RU -. "fase 1: lee tablas" .-> LDB
-  RE -. "fase 1: lee tablas" .-> LDB
-  CC -. "fase 4: API" .-> GW
-  RU -. "fase 4: eventos/API" .-> BUS
-  RE -. "fase 4: eventos/API" .-> BUS
-  API -. "terceros (S8)" .-> PRV
-  API -.-> OBS
-  WK -.-> OBS
-```
+![Arquitectura objetivo del servicio de Agendamiento (C4 nivel 2): sistemas consumidores, monolito legado y servicios en GCP](diagrama-c4-nivel2.png)
 
 - **Agendamiento API** (Cloud Run, TypeScript/NestJS, hexagonal + DDD): `AgendarGuia` y consulta de citas. El monolito llama con una cuenta de servicio y el tenant va en un claim firmado que valida el Gateway. Workers y adaptador, sin JWT, reciben el tenant en el mensaje o en la cola del lote y lo fijan con `SET LOCAL` por transacción (pooler en modo transacción).
 - **Worker:** un Cloud Run Service siempre activo para los consumidores CDC y el relay del *outbox* (el lag < 5 s lo exige), y Cloud Run Jobs solo para el lote nocturno por tenant.
@@ -87,11 +41,11 @@ flowchart LR
 | **F3 Lote nocturno** | Primero sombra de la corrida completa; luego corte por olas de tenants. Ruteo adopta la señal de lote finalizado. El lote legado queda de respaldo ≥ 4 semanas | Lote termina antes de las 05:00 en todas las olas | Sem. 11–14 |
 | **F4 Lectores y retiro** | Ruteo, reportes y call center pasan a eventos/API; se retiran sincronización, triggers y tablas (*expand/contract*) | Cero lecturas directas a las tablas | Sem. 15+ |
 
-**Por qué este orden:** lo *por demanda* tiene poco volumen y radio de impacto pequeño, y da retroalimentación rápida. El lote (40.000 guías, sin segunda oportunidad en la ventana) va al final: ejecuta el mismo caso de uso, así que su corrección se valida antes con lo por demanda, y volumen y ventana se prueban antes del corte con la prueba de capacidad (H2.4). Los lectores son el acoplamiento menos conocido; la sincronización los mantiene vivos, así que pueden esperar.
+**Por qué este orden:** el agendamiento *por demanda* tiene poco volumen y radio de impacto pequeño, y da retroalimentación rápida. El lote (40.000 guías, sin segunda oportunidad en la ventana) va al final: ejecuta el mismo caso de uso, así que su corrección se valida antes con el agendamiento por demanda, y volumen y ventana se prueban antes del corte con la prueba de capacidad (H2.4). Los lectores son el acoplamiento menos conocido; la sincronización los mantiene vivos, así que pueden esperar.
 
 **Convivencia:** el controlador del monolito (único punto de entrada de la pantalla) enruta con el flag `agendamiento_en_servicio` por tenant. La **sombra** es un hook asíncrono con *timeout* corto: si falla, el flujo real no se entera. El comparador contrasta fecha y estado contra un *snapshot* con marca de tiempo, para no confundir un cambio legítimo de cobertura o festivo con una discrepancia.
 
-**Alternativas descartadas:** la *reescritura* o *big bang* (la lógica oculta en triggers, riesgo 1, no está caracterizada: sin pruebas no hay equivalencia demostrable); la *ventana de mantenimiento* (exige una parada aceptada por los 30 clientes y por el lote de las 05:00, sin vuelta atrás rápida); *solo aislar en el monolito* o *lift and shift* (no llevan el módulo a servicios gestionados ni dan escalado independiente por tenant, S9: cambian el hosting, no el acoplamiento); el *paralelo completo* (es la sombra: lo por demanda en F1 y el lote en F3); la BD compartida sin CDC (ADR-001, opción A).
+**Alternativas descartadas:** la *reescritura* o *big bang* (la lógica oculta en triggers, riesgo 1, no está caracterizada: sin pruebas no hay equivalencia demostrable); la *ventana de mantenimiento* (exige una parada aceptada por los 30 clientes y por el lote de las 05:00, sin vuelta atrás rápida); *solo aislar en el monolito* o *lift and shift* (no llevan el módulo a servicios gestionados ni dan escalado independiente por tenant, S9: cambian el hosting, no el acoplamiento); el *paralelo completo* (es la sombra: el agendamiento por demanda en F1 y el lote en F3); la BD compartida sin CDC (ADR-001, opción A).
 
 **Pausa o aborto** (lo decide un comité con sponsor de negocio; umbrales propuestos, por validar): (1) la coincidencia en sombra no llega a 99,9 % tras 4 semanas más de triaje; (2) un incidente grave atribuible al servicio en el canary, o *drift* recurrente sin explicar; (3) la cota alta de F1 se excede más de 25 %. Si se aborta, queda lo de F0. F2–F4 se estiman al cerrar F1.
 
@@ -103,7 +57,7 @@ flowchart LR
 | **Un escritor por tenant** | No migrado: escribe el legado. Migrado: solo el servicio; la reagenda manual del call center también pasa por el API. |
 | **Hacia el legado** | *Outbox* transaccional → Pub/Sub → adaptador, con *upsert* idempotente por `guia_id` + versión. La versión la asigna el agregado, monótona por guía, con *ordering key* por `guia_id`; el adaptador guarda la última versión aplicada en su propia tabla (no en el legado) y descarta las menores. Ruteo y reportes siguen leyendo igual (ruteo adopta la señal de lote en F3). Lag objetivo: < 5 s p95. |
 | **Triggers** | (1) Inventariar los efectos laterales de cada trigger (otras tablas, auditoría, estados que lee ruteo), asignar dueño (dominio, adaptador o se mantiene) y caracterizar con golden master las tablas afectadas, no solo fecha y estado. (2) Reimplementar como reglas de dominio con pruebas. (3) Desactivar por tenant con un flag dentro del trigger (cambio mínimo, apagado por defecto). (4) Eliminar en F4. El adaptador usa un rol dedicado que el trigger **ignora**. |
-| **Consistencia** | Eventual con ventana acotada. `AgendarGuia` lleva los datos de la guía que ya tiene el monolito (no depende del CDC); la cobertura puede ir desactualizada unos minutos y el resultado registra la versión usada. Reconciliación incremental por ventana horaria y tenant, con detalle por guía, más una completa nocturna (conteos + hash por estado/fecha), con alerta; la reparación desde el servicio es manual en las primeras olas y automática solo tras ganar confianza. |
+| **Consistencia** | Eventual con ventana acotada. `AgendarGuia` lleva los datos de la guía que ya tiene el monolito (no depende del CDC); la cobertura puede ir desactualizada unos minutos; se acepta porque cambia poco. Reconciliación incremental por ventana horaria y tenant, con detalle por guía, más una completa nocturna (conteos + hash por estado/fecha), con alerta; la reparación desde el servicio es manual en las primeras olas y automática solo tras ganar confianza. |
 | **Cambios de esquema** | Siempre *expand/contract*: nunca se renombra ni se borra en el mismo despliegue. |
 
 ## 4. Multitenancy
