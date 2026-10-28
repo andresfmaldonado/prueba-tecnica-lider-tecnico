@@ -1,0 +1,45 @@
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > null 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > undefined 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con InvalidInput en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 1 MB se rechaza con InvalidInput en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 1 MB se rechaza con InvalidInput en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 200 caracteres (rechazo=false) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 200 caracteres (rechazo=false) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 201 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 200 caracteres (rechazo=false) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 201 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 10000 caracteres (rechazo=true) 0ms
+[MEDIDA] S2b tenant 1 MB: 0.1 ms -> InvalidInput
+[MEDIDA] S2b waybillNumber 1 MB: 0.1 ms -> InvalidInput
+[MEDIDA] S2b city 1 MB: 0.1 ms -> InvalidInput
+[MEDIDA] S2b tenant 200 caracteres -> ACEPTADO
+[MEDIDA] S2b tenant 201 caracteres -> InvalidInput
+[MEDIDA] S2b tenant 10000 caracteres -> InvalidInput
+[MEDIDA] S2b waybillNumber 200 caracteres -> ACEPTADO
+[MEDIDA] S2b waybillNumber 201 caracteres -> InvalidInput
+[MEDIDA] S2b waybillNumber 10000 caracteres -> InvalidInput
+[MEDIDA] S2b city 200 caracteres -> ACEPTADO
+[MEDIDA] S2b city 201 caracteres -> InvalidInput
+[MEDIDA] S2b city 10000 caracteres -> InvalidInput

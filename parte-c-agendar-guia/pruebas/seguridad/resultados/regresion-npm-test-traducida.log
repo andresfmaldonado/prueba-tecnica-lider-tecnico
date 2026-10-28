@@ -1,0 +1,31 @@
+
+> agendamiento-agendar-guia@1.0.0 test
+> vitest run
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+ ❯ test/security.test.ts (19 tests | 1 failed) 7ms
+   ❯ Rango de fechas (hallazgo H5) (2)
+     × no se puede salir del rango soportado: nada de «+010000-01-01» 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/security.test.ts > Rango de fechas (hallazgo H5) > no se puede salir del rango soportado: nada de «+010000-01-01»
+AssertionError: expected function to throw an error, but it didn't
+ ❯ test/security.test.ts:81:63
+     79| describe('Rango de fechas (hallazgo H5)', () => {
+     80|   it('no se puede salir del rango soportado: nada de «+010000-01-01»',…
+     81|     expect(() => CivilDate.fromISO('9999-12-31').plusDays(1)).toThrow(…
+       |                                                               ^
+     82|     expect(() => CivilDate.fromISO('1900-01-01').plusDays(-1)).toThrow…
+     83|     expect(() => CivilDate.fromISO('2026-10-27').plusDays(Number.NaN))…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 79 passed (80)
+   Start at  02:19:39
+   Duration  118ms (transform 36%, tests 30%, import 29%, worker 5%)
+

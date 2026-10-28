@@ -1,0 +1,57 @@
+{
+  "prueba": "E1 volumen 3x",
+  "entorno": {
+    "node": "v22.21.1",
+    "plataforma": "darwin",
+    "arquitectura": "arm64",
+    "gcExpuesto": true
+  },
+  "configuracion": {
+    "guias": 120000,
+    "factor": 3,
+    "loteBase": 40000,
+    "concurrencia": 50,
+    "latenciaPorOperacionMs": 5
+  },
+  "guiasDistintas": 120000,
+  "completadas": 120000,
+  "errores": 0,
+  "tipos": {},
+  "segundos": 43.074,
+  "guiasPorSegundo": 2785.89,
+  "escrituras_reales": 120000,
+  "intentos_escritura": 120000,
+  "lecturas_guia": 120000,
+  "lecturas_cobertura": 120000,
+  "conflictos_version": 0,
+  "latencia_solicitud_ms": {
+    "n": 120000,
+    "p50": 18.01,
+    "p95": 19.564,
+    "p99": 20.028,
+    "max": 33.213
+  },
+  "memoria": {
+    "antes": {
+      "heapUsed": 20336752,
+      "rss": 92798976
+    },
+    "trasLote": {
+      "heapUsed": 59298752,
+      "rss": 129679360
+    },
+    "trasGc": {
+      "heapUsed": 50047360,
+      "rss": 129286144
+    }
+  },
+  "auditoria": {
+    "presentes": 120000,
+    "ausentes": 0,
+    "corruptas": 0,
+    "versionDistintaDeUno": 0,
+    "citaDistinta": 0,
+    "okSinGuia": 0,
+    "errorConGuia": 0
+  }
+}

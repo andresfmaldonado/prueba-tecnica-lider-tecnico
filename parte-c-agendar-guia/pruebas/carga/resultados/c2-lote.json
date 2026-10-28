@@ -1,0 +1,46 @@
+{
+  "testRun": "C2 corrida completa del lote",
+  "configuration": {
+    "waybills": 40000,
+    "concurrency": 50,
+    "latency_ms": 20
+  },
+  "completed": 40000,
+  "errors": 0,
+  "error_messages": [],
+  "seconds": 51.857,
+  "minutes": 0.864,
+  "req_s": 771.35,
+  "repository_calls": 120000,
+  "call_latency_ms": {
+    "n": 120000,
+    "p50": 21.622,
+    "p95": 22.715,
+    "p99": 22.848,
+    "max": 24.541
+  },
+  "waybill_latency_ms": {
+    "n": 40000,
+    "p50": 64.911,
+    "p95": 66.791,
+    "p99": 67.487,
+    "max": 69.178
+  },
+  "actual_writes": 40000,
+  "verification": {
+    "scheduled": 40000,
+    "no_coverage": 0,
+    "version_greater_than_1": 0,
+    "inconsistent_status_date": 0,
+    "distinct_oracle_dates": 0
+  },
+  "comparison": {
+    "batch_window_seconds": 7200,
+    "margin_vs_2h_times": 138.84,
+    "threshold_req_s": 5.6,
+    "meets_threshold": true,
+    "model_part_a_hours_at_5_req_s_extrapolated": 2.222,
+    "model_part_a_minutes_at_50_req_s_extrapolated": 13.33,
+    "hours_with_extrapolated_throughput": 0.014
+  }
+}

@@ -1,0 +1,10 @@
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+ ✓ pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras 223537ms
+ ✓ pruebas/carga/c4-open-load.campaign.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s 60023ms
+ ✓ pruebas/carga/batch.campaign.ts > C2 corrida completa del lote > 40.000 guías, concurrencia 50, L = 20 ms: tiempo, throughput y verificación del resultado 52011ms
+ ✓ pruebas/carga/batch.campaign.ts > C5 memoria antes y después de C2 > heapUsed y rss antes/después, y bytes aproximados por guía almacenada 1ms
+ ✓ pruebas/carga/c3-resumption.campaign.ts > C3 reanudación exacta tras caída > las escrituras totales son exactamente el tamaño del lote y el estado final es coherente 16993ms
+ Test Files  4 passed (4)
+      Tests  5 passed (5)
+   Start at  02:30:23
+   Duration  352.99s (tests 100%)

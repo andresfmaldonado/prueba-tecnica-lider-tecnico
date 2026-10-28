@@ -1,0 +1,18 @@
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F1 · mismo número de guía en dos tenants evoluciona de forma independiente 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F2 · coberturas distintas por tenant dan citas distintas 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F3 · un tenant sin cobertura queda SIN_COBERTURA aunque otro la tenga 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-01 con cobertura propia (día 0) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-02 con cobertura propia (día 1) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-03 con cobertura propia (día 2) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-04 con cobertura propia (día 3) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-05 con cobertura propia (día 4) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-06 con cobertura propia (día 5) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-07 con cobertura propia (día 6) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-08 con cobertura propia (día 7) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-09 con cobertura propia (día 8) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-10 con cobertura propia (día 9) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-11 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-12 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-13 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-14 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-15 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms

@@ -1,0 +1,6 @@
+[E1] guías=120000 (distintas=120000) concurrencia=50 L=5 ms
+[E1] tiempo=43.32 s throughput=2770.4 guías/s completadas=120000 errores=0
+[E1] escrituras reales=120000 intentos de escritura=120000 lecturas guía=120000 lecturas cobertura=120000
+[E1] auditoría: presentes=120000 ausentes=0 corruptas=0 versión≠1=0 distintas del oráculo=0
+[E1] heap antes=19.4 MB, tras lote=58.3 MB, tras gc=47.8 MB; rss antes=88.7 MB, tras lote=121 MB
+[E1] latencia por solicitud (ms): p50=18.077 p95=19.75 p99=20.472 máx=25.524

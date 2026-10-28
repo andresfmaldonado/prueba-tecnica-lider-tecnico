@@ -1,0 +1,15 @@
+[E4] N=100 tiempo=0.064 s throughput=1572.4 guías/s errores=0 escrituras=100
+[E4] N=100 latencia ms p50=63.174 p95=63.211 p99=63.215 máx=63.261 | retardo bucle p99=12.05 ms máx=12.05 ms | RSS máx=64.2 MB
+[E4] N=500 tiempo=0.067 s throughput=7449.1 guías/s errores=0 escrituras=500
+[E4] N=500 latencia ms p50=62.114 p95=66.303 p99=66.329 máx=66.343 | retardo bucle p99=12.05 ms máx=12.05 ms | RSS máx=66.5 MB
+[E4] N=1000 tiempo=0.068 s throughput=14681.2 guías/s errores=0 escrituras=1000
+[E4] N=1000 latencia ms p50=63.519 p95=66.628 p99=66.652 máx=66.666 | retardo bucle p99=12.73 ms máx=12.73 ms | RSS máx=75.6 MB
+[E4] N=5000 tiempo=0.084 s throughput=59839.9 guías/s errores=0 escrituras=5000
+[E4] N=5000 latencia ms p50=65.622 p95=71.689 p99=71.795 máx=71.843 | retardo bucle p99=19.825 ms máx=19.825 ms | RSS máx=113.6 MB
+[E4] N=10000 tiempo=0.089 s throughput=112068.9 guías/s errores=0 escrituras=10000
+[E4] N=10000 latencia ms p50=70.518 p95=74.189 p99=74.468 máx=75.911 | retardo bucle p99=19.726 ms máx=19.726 ms | RSS máx=141.7 MB
+[E4] N=20000 tiempo=0.151 s throughput=132117.6 guías/s errores=0 escrituras=20000
+[E4] N=20000 latencia ms p50=119.727 p95=124.017 p99=124.64 máx=124.813 | retardo bucle p99=27.05 ms máx=27.05 ms | RSS máx=212.3 MB
+[E4] N=50000 tiempo=0.395 s throughput=126437 guías/s errores=0 escrituras=50000
+[E4] N=50000 latencia ms p50=316.346 p95=320.28 p99=321.401 máx=321.943 | retardo bucle p99=99.484 ms máx=99.484 ms | RSS máx=398.8 MB
+[E4] punto de quiebre: escalón 50000: p99 de latencia 321.401 ms > 5 × 63.215 ms del primer escalón

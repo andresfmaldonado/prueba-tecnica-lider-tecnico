@@ -1,0 +1,13 @@
+
+> agendamiento-agendar-guia@1.0.0 test
+> vitest run
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+
+ Test Files  3 passed (3)
+      Tests  66 passed (66)
+   Start at  01:21:27
+   Duration  117ms (import 35%, tests 32%, transform 25%, worker 7%)
+

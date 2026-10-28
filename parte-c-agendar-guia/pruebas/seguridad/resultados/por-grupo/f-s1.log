@@ -1,0 +1,10 @@
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > línea base: mismo número de guía en dos tenants son dos guías independientes 4ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (a) tenant "a::b" + guía "c" vs tenant "a" + guía "b::c": no colisionan 1ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (b) tenant "x:" + guía "y" vs tenant "x" + guía ":y": no colisionan 1ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (b) tenant "t" + guía "x::y" vs tenant "t::x" + guía "y": no colisionan 1ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (b) tenant "a:::b" + guía "c" vs tenant "a" + guía ":b::c": no colisionan 1ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (c) "banco a" vs "banco  a" (doble espacio): son tenants aislados 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (d) "Banco-A" y "banco-a" son identificadores distintos (sensibles a mayúsculas, documentado) 1ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (e) tenant NFC "café" y NFD "cafe+acento" se tratan como el mismo tenant 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (e) número de guía NFC "G-é" y NFD "G-e+acento" se tratan como la misma guía 1ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (e) ciudad NFC "Medellín" y NFD dan la misma cobertura (la ciudad sí se normaliza) 0ms

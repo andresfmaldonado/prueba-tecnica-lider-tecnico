@@ -1,0 +1,47 @@
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > null 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > Symbol() 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con EntradaInvalida en < 500 ms 2ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 1 MB se rechaza con EntradaInvalida en < 500 ms 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 1 MB se rechaza con EntradaInvalida en < 500 ms 2ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 200 caracteres (rechazo=false) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 200 caracteres (rechazo=false) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 201 caracteres (rechazo=true) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 200 caracteres (rechazo=false) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 201 caracteres (rechazo=true) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 10000 caracteres (rechazo=true) 0ms
+[MEDIDA] S2b tenant 1 MB: 0.2 ms -> ACEPTADO
+[MEDIDA] S2b numeroGuia 1 MB: 0.1 ms -> ACEPTADO
+[MEDIDA] S2b ciudad 1 MB: 1.3 ms -> ACEPTADO
+[MEDIDA] S2b tenant 200 caracteres -> ACEPTADO
+[MEDIDA] S2b tenant 201 caracteres -> ACEPTADO
+[MEDIDA] S2b tenant 10000 caracteres -> ACEPTADO
+[MEDIDA] S2b numeroGuia 200 caracteres -> ACEPTADO
+[MEDIDA] S2b numeroGuia 201 caracteres -> ACEPTADO
+[MEDIDA] S2b numeroGuia 10000 caracteres -> ACEPTADO
+[MEDIDA] S2b ciudad 200 caracteres -> ACEPTADO
+[MEDIDA] S2b ciudad 201 caracteres -> ACEPTADO
+[MEDIDA] S2b ciudad 10000 caracteres -> ACEPTADO
+     38|       console.log(`[MEDIDA] S2b ${campo} 1 MB: ${ms.toFixed(1)} ms -> …
+     51|       console.log(`[MEDIDA] S2b ${campo} ${longitud} caracteres -> ${r…

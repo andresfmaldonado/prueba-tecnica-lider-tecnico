@@ -1,0 +1,8 @@
+Suite: npm run prueba:seguridad · línea base sin mutar: 0 fallos de 138 pruebas
+S-M1 H1 deshecho: la clave del repositorio vuelve a concatenar con «::» → 4 pruebas fallan de 138 → DETECTADA
+S-M2 H2 deshecho: sin límite de longitud en los identificadores → 10 pruebas fallan de 138 → DETECTADA
+S-M3 H3 deshecho: se aceptan caracteres de control → 15 pruebas fallan de 138 → DETECTADA
+S-M4 H4 deshecho: sin normalización Unicode NFC → 2 pruebas fallan de 138 → DETECTADA
+S-M5 H5 deshecho: las fechas pueden salir del rango soportado → 1 pruebas fallan de 138 → DETECTADA
+S-M6 H6 deshecho: el mensaje repite el número de guía completo → 1 pruebas fallan de 138 → DETECTADA
+Resultado: 6 de 6 mutaciones detectadas · src/ restaurado idéntico: sí

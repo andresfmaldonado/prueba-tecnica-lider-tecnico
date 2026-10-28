@@ -1,0 +1,115 @@
+{
+  "prueba": "E6 memoria y fugas",
+  "entorno": {
+    "node": "v22.21.1",
+    "plataforma": "darwin",
+    "arquitectura": "arm64",
+    "gcExpuesto": true
+  },
+  "configuracion": {
+    "guiasNuevas": 100000,
+    "operaciones": 1000000,
+    "guiasAgendadas": 10000,
+    "pasoMedicion": 100000,
+    "margenCrecimiento": 0.1,
+    "margenMinimoBytes": 20971520
+  },
+  "a": {
+    "guiasNuevas": 100000,
+    "escrituras_reales": 100000,
+    "heapAntesGc": 9765504,
+    "heapDespuesGc": 38316168,
+    "crecimientoBytes": 28550664,
+    "bytesPorGuiaAprox": 286,
+    "nota": "Incluye el Map del repositorio, la copia de la guía y sus objetos de valor (TenantId, NumeroGuia, FechaCivil)."
+  },
+  "b": {
+    "operaciones": 1000000,
+    "guiasAgendadas": 10000,
+    "segundos": 1.073,
+    "escrituras_durante_llamadas": 0,
+    "incoherentes": 0,
+    "auditoriaInicial": {
+      "presentes": 10000,
+      "ausentes": 0,
+      "corruptas": 0,
+      "versionDistintaDeUno": 0,
+      "citaDistinta": 0,
+      "okSinGuia": 0,
+      "errorConGuia": 0
+    },
+    "auditoriaFinal": {
+      "presentes": 10000,
+      "ausentes": 0,
+      "corruptas": 0,
+      "versionDistintaDeUno": 0,
+      "citaDistinta": 0,
+      "okSinGuia": 0,
+      "errorConGuia": 0
+    },
+    "puntos": [
+      {
+        "ops": 0,
+        "heapUsedBytes": 14147520,
+        "rssBytes": 130056192
+      },
+      {
+        "ops": 100000,
+        "heapUsedBytes": 14172848,
+        "rssBytes": 130596864
+      },
+      {
+        "ops": 200000,
+        "heapUsedBytes": 14183584,
+        "rssBytes": 130629632
+      },
+      {
+        "ops": 300000,
+        "heapUsedBytes": 14186920,
+        "rssBytes": 130646016
+      },
+      {
+        "ops": 400000,
+        "heapUsedBytes": 14189416,
+        "rssBytes": 130646016
+      },
+      {
+        "ops": 500000,
+        "heapUsedBytes": 14192512,
+        "rssBytes": 130646016
+      },
+      {
+        "ops": 600000,
+        "heapUsedBytes": 14203528,
+        "rssBytes": 130646016
+      },
+      {
+        "ops": 700000,
+        "heapUsedBytes": 14256824,
+        "rssBytes": 130678784
+      },
+      {
+        "ops": 800000,
+        "heapUsedBytes": 14261848,
+        "rssBytes": 130695168
+      },
+      {
+        "ops": 900000,
+        "heapUsedBytes": 14266056,
+        "rssBytes": 130711552
+      },
+      {
+        "ops": 1000000,
+        "heapUsedBytes": 14269112,
+        "rssBytes": 130711552
+      }
+    ],
+    "criterio": {
+      "desde": 100000,
+      "hasta": 1000000,
+      "crecimientoBytes": 96264,
+      "limiteBytes": 20971520,
+      "pasa": true
+    }
+  }
+}

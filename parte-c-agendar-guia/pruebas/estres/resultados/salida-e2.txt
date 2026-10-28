@@ -1,0 +1,7 @@
+[E2] solicitudes=10000 sobre una guía, L=5 ms, todas en vuelo a la vez
+[E2] tiempo=0.143 s completadas=10000 errores=0
+[E2] escrituras reales=1 intentos de escritura=10000 conflictos de versión=9999
+[E2] respuestas distintas=1 (AGENDADA|2026-10-29) oráculo=AGENDADA|2026-10-29
+[E2] versión final=1 estado final=AGENDADA cita final=2026-10-29
+[E2] latencia por solicitud (ms): p50=124.523 p95=127.459 p99=127.732 máx=127.756
+[E2] heap antes=9.4 MB después=86.2 MB

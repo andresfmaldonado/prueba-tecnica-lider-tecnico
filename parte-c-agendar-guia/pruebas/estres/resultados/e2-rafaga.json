@@ -1,0 +1,46 @@
+{
+  "testRun": "E2 ráfaga sobre la misma guía",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "exposedGc": true
+  },
+  "configuration": {
+    "requests": 10000,
+    "latencyPerOperationMs": 5,
+    "concurrency": "todas en vuelo"
+  },
+  "simplification": "coberturas de lunes a viernes sin cierres para la ciudad de la ráfaga",
+  "completed": 10000,
+  "errors": 0,
+  "kinds": {},
+  "seconds": 0.1543,
+  "actual_writes": 1,
+  "write_attempts": 10000,
+  "waybill_reads": 19999,
+  "version_conflicts": 9999,
+  "expected_conflicts_if_all_read_before_first_write": 9999,
+  "distinct_responses": [
+    "AGENDADA|2026-10-29"
+  ],
+  "oracle": "AGENDADA|2026-10-29",
+  "final_version": 1,
+  "request_latency_ms": {
+    "n": 10000,
+    "p50": 133.714,
+    "p95": 137.939,
+    "p99": 137.958,
+    "max": 137.967
+  },
+  "memory": {
+    "before": {
+      "heapUsed": 9826528,
+      "rss": 67534848
+    },
+    "after": {
+      "heapUsed": 88608072,
+      "rss": 170065920
+    }
+  }
+}

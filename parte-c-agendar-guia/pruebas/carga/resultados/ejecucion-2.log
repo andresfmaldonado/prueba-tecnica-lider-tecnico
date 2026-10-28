@@ -1,0 +1,84 @@
+
+> agendamiento-agendar-guia@1.0.0 prueba:carga
+> vitest run --config pruebas/vitest.config.ts pruebas/carga --reporter=verbose
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=1 completadas=40000 seg=0.123 req/s=326361.66 llamadas/s=979084.98 p50=0 p95=0.001 p99=0.001 max=0.614 errores=0 escrituras=40000 heapΔMB=26.49
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=10 completadas=40000 seg=0.109 req/s=365307.78 llamadas/s=1095923.35 p50=0.004 p95=0.008 p99=0.01 max=0.528 errores=0 escrituras=40000 heapΔMB=23.4
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=50 completadas=40000 seg=0.117 req/s=342839.76 llamadas/s=1028519.27 p50=0.022 p95=0.045 p99=0.073 max=2.121 errores=0 escrituras=40000 heapΔMB=-45.26
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=100 completadas=40000 seg=0.112 req/s=355936.41 llamadas/s=1067809.22 p50=0.043 p95=0.09 p99=0.286 max=0.512 errores=0 escrituras=40000 heapΔMB=12.69
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=1 completadas=1089 seg=20.001 req/s=54.45 llamadas/s=163.34 p50=6.32 p95=6.364 p99=6.419 max=14.642 errores=0 escrituras=1089 heapΔMB=-74.35
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=10 completadas=11021 seg=20.017 req/s=550.59 llamadas/s=1651.78 p50=6.372 p95=6.472 p99=6.529 max=7.267 errores=0 escrituras=11021 heapΔMB=2.28
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=50 completadas=40000 seg=14.455 req/s=2767.2 llamadas/s=8301.61 p50=5.984 p95=6.847 p99=6.972 max=9.798 errores=0 escrituras=40000 heapΔMB=10.34
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=100 completadas=40000 seg=7.041 req/s=5680.74 llamadas/s=17042.23 p50=5.858 p95=6.734 p99=7.161 max=8.544 errores=0 escrituras=40000 heapΔMB=-13.56
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=1 completadas=308 seg=20.06 req/s=15.35 llamadas/s=46.06 p50=22.042 p95=22.213 p99=22.667 max=30.178 errores=0 escrituras=308 heapΔMB=-45.49
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=10 completadas=3080 seg=20.006 req/s=153.95 llamadas/s=461.86 p50=21.854 p95=22.316 p99=22.509 max=22.917 errores=0 escrituras=3080 heapΔMB=2.36
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=50 completadas=15450 seg=20.062 req/s=770.12 llamadas/s=2310.37 p50=21.625 p95=22.681 p99=22.838 max=22.98 errores=0 escrituras=15450 heapΔMB=2.25
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=100 completadas=30800 seg=20.03 req/s=1537.73 llamadas/s=4613.19 p50=21.74 p95=22.874 p99=23.275 max=36.059 errores=0 escrituras=30800 heapΔMB=5.34
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=1 completadas=66 seg=20.18 req/s=3.27 llamadas/s=9.81 p50=102.162 p95=102.211 p99=103.48 max=122.335 errores=0 escrituras=66 heapΔMB=-31.43
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=10 completadas=660 seg=20.137 req/s=32.78 llamadas/s=98.33 p50=101.922 p95=102.43 p99=102.485 max=102.869 errores=0 escrituras=660 heapΔMB=6.25
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=50 completadas=3300 seg=20.139 req/s=163.86 llamadas/s=491.58 p50=101.739 p95=102.834 p99=102.958 max=103.293 errores=0 escrituras=3300 heapΔMB=-12.9
+
+stdout | pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=100 completadas=6600 seg=20.115 req/s=328.11 llamadas/s=984.33 p50=101.655 p95=102.774 p99=103.176 max=103.512 errores=0 escrituras=6600 heapΔMB=-1.26
+
+ ✓ pruebas/carga/c1-matrix.campaign.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras 223537ms
+stdout | pruebas/carga/c4-open-load.campaign.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s
+[C4] 5 req/s: lanzadas=100 completadas=100 errores=0 throughput=5.03 p50=65.251 p95=66.835 p99=66.872 max=66.998 maxInFlight=1 backlogCreciente=false retrasoMax=2.874ms
+
+stdout | pruebas/carga/c4-open-load.campaign.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s
+[C4] 50 req/s: lanzadas=1000 completadas=1000 errores=0 throughput=49.88 p50=61.549 p95=63.158 p99=63.899 max=65.947 maxInFlight=4 backlogCreciente=false retrasoMax=2.763ms
+
+stdout | pruebas/carga/c4-open-load.campaign.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s
+[C4] 500 req/s: lanzadas=10000 completadas=10000 errores=0 throughput=498.47 p50=60.614 p95=62.422 p99=63.088 max=64.406 maxInFlight=33 backlogCreciente=false retrasoMax=1.002ms
+
+ ✓ pruebas/carga/c4-open-load.campaign.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s 60023ms
+stdout | pruebas/carga/batch.campaign.ts > C2 corrida completa del lote > 40.000 guías, concurrencia 50, L = 20 ms: tiempo, throughput y verificación del resultado
+[C2] {"testRun":"C2 corrida completa del lote","configuration":{"waybills":40000,"concurrency":50,"latency_ms":20},"completed":40000,"errors":0,"error_messages":[],"seconds":51.857,"minutes":0.864,"req_s":771.35,"repository_calls":120000,"call_latency_ms":{"n":120000,"p50":21.622,"p95":22.715,"p99":22.848,"max":24.541},"waybill_latency_ms":{"n":40000,"p50":64.911,"p95":66.791,"p99":67.487,"max":69.178},"actual_writes":40000,"verification":{"scheduled":40000,"no_coverage":0,"version_greater_than_1":0,"inconsistent_status_date":0,"distinct_oracle_dates":0},"comparison":{"batch_window_seconds":7200,"margin_vs_2h_times":138.84,"threshold_req_s":5.6,"meets_threshold":true,"model_part_a_hours_at_5_req_s_extrapolated":2.222,"model_part_a_minutes_at_50_req_s_extrapolated":13.33,"hours_with_extrapolated_throughput":0.014}}
+
+ ✓ pruebas/carga/batch.campaign.ts > C2 corrida completa del lote > 40.000 guías, concurrencia 50, L = 20 ms: tiempo, throughput y verificación del resultado 52011ms
+stdout | pruebas/carga/batch.campaign.ts > C5 memoria antes y después de C2 > heapUsed y rss antes/después, y bytes aproximados por guía almacenada
+[C5] {"testRun":"C5 memoria","note":"Aproximado: sin forzar el recolector (no se usa --expose-gc); la variación incluye basura pendiente de recoger.","stored_waybills":40000,"heap_used_mb":{"before":11.5,"after":39.28},"rss_mb":{"before":64.05,"after":105.42},"bytes_heap_per_waybill_approx":728,"bytes_rss_per_waybill_approx":1085}
+
+ ✓ pruebas/carga/batch.campaign.ts > C5 memoria antes y después de C2 > heapUsed y rss antes/después, y bytes aproximados por guía almacenada 1ms
+stdout | pruebas/carga/c3-resumption.campaign.ts > C3 reanudación exacta tras caída > las escrituras totales son exactamente el tamaño del lote y el estado final es coherente
+[C3] {"testRun":"C3 reanudación tras caída","configuration":{"waybills":40000,"concurrency":50,"latency_ms":5},"pass1":{"completed":20049,"launched":20049,"errors":0,"writes":20049,"seconds":7.26,"percent_completed":50.12},"pass2":{"completed":40000,"errors":0,"writes":19951,"expected_writes_N_minus_completed1":19951,"seconds":9.614},"totals":{"actual_writes":40000,"expected_writes":40000,"waybills_present_after_pass1":20049,"waybills_present_at_end":40000},"verification":{"version_greater_than_1":0,"version_1":40000,"inconsistent_status_date":0,"scheduled":40000,"no_coverage":0,"distinct_oracle_dates":0}}
+
+ ✓ pruebas/carga/c3-resumption.campaign.ts > C3 reanudación exacta tras caída > las escrituras totales son exactamente el tamaño del lote y el estado final es coherente 16993ms
+
+ Test Files  4 passed (4)
+      Tests  5 passed (5)
+   Start at  02:30:23
+   Duration  352.99s (tests 100%)
+

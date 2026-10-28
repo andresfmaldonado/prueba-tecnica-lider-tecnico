@@ -1,0 +1,449 @@
+
+> agendamiento-agendar-guia@1.0.0 prueba:seguridad
+> vitest run --config pruebas/vitest.config.ts pruebas/seguridad --reporter=verbose
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+stdout | pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > el canario con secretos sintéticos produce las 5 coincidencias esperadas
+[MEDIDA] canario: archivo_env@env, clave_stripe_live@1, clave_aws_akia@2, clave_privada_pem@3, asignacion_secreta@4
+
+ ✓ pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > el canario con secretos sintéticos produce las 5 coincidencias esperadas 277ms
+stdout | pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > repositorio completo: 0 hallazgos dentro de parte-c-agendar-guia
+[MEDIDA] escaneados 55 archivos de texto; hallazgos totales 2; en parte-c 0; falsos positivos documentados 2
+[HALLAZGO FUERA DE PARTE-C] parte-b-code-review/code-review-compacto.md:36 [asignacion_secreta] TOKE***
+[HALLAZGO FUERA DE PARTE-C] parte-b-code-review/code-review.md:58 [asignacion_secreta] TOKE***
+[FALSO POSITIVO DOCUMENTADO] parte-b-code-review/code-review-compacto.md:36 [clave_stripe_live]
+[FALSO POSITIVO DOCUMENTADO] parte-b-code-review/code-review.md:58 [clave_stripe_live]
+
+ ✓ pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > repositorio completo: 0 hallazgos dentro de parte-c-agendar-guia 323ms
+ ✓ pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > parte-c-agendar-guia no tiene archivos .env* versionables 0ms
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con EntradaInvalida en < 500 ms
+[MEDIDA] S2b tenant 1 MB: 0.2 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 1 MB se rechaza con EntradaInvalida en < 500 ms
+[MEDIDA] S2b numeroGuia 1 MB: 0.1 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 1 MB se rechaza con EntradaInvalida en < 500 ms
+[MEDIDA] S2b ciudad 1 MB: 1.3 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 200 caracteres (rechazo=false)
+[MEDIDA] S2b tenant 200 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true)
+[MEDIDA] S2b tenant 201 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true)
+[MEDIDA] S2b tenant 10000 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 200 caracteres (rechazo=false)
+[MEDIDA] S2b numeroGuia 200 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 201 caracteres (rechazo=true)
+[MEDIDA] S2b numeroGuia 201 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 10000 caracteres (rechazo=true)
+[MEDIDA] S2b numeroGuia 10000 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 200 caracteres (rechazo=false)
+[MEDIDA] S2b ciudad 200 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 201 caracteres (rechazo=true)
+[MEDIDA] S2b ciudad 201 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 10000 caracteres (rechazo=true)
+[MEDIDA] S2b ciudad 10000 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad = 1.000.000 de espacios + "a" termina en < 500 ms
+[MEDIDA] S2f espacios+a: 0.5 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad = "a" + 1.000.000 de espacios + "b" termina en < 500 ms
+[MEDIDA] S2f espacios internos: 0.9 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad con 100.000 marcas diacríticas termina en < 500 ms
+[MEDIDA] S2f diacríticos: 1.1 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) desdeISO("9999-12-31").masDias(1) no produce texto mal formado
+[MEDIDA] S2g 9999-12-31 + 1 día -> "+010000-01"
+
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > null 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo numeroGuia con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (a) campo ciudad con tipo que no es texto > Symbol() 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con EntradaInvalida en < 500 ms 2ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 1 MB se rechaza con EntradaInvalida en < 500 ms 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 1 MB se rechaza con EntradaInvalida en < 500 ms 2ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 200 caracteres (rechazo=false) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true) 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true) 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 200 caracteres (rechazo=false) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 201 caracteres (rechazo=true) 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 10000 caracteres (rechazo=true) 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 200 caracteres (rechazo=false) 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 201 caracteres (rechazo=true) 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 10000 caracteres (rechazo=true) 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con NUL \u0000 dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con LF \n dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con CR \r dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con TAB \t dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con ESC \u001b dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con NUL \u0000 dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con LF \n dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con CR \r dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con TAB \t dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con ESC \u001b dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con NUL \u0000 dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con LF \n dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con CR \r dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con TAB \t dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con ESC \u001b dentro del valor -> EntradaInvalida 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad = 1.000.000 de espacios + "a" termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad = "a" + 1.000.000 de espacios + "b" termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad con 100.000 marcas diacríticas termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("2026-02-30") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("0000-00-00") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("2026-1-1") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("2026-13-01") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO(" 2026-10-27") -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) desdeISO("9999-12-31").masDias(1) no produce texto mal formado 1ms
+   → expected '+010000-01' to match /^\d{4}-\d{2}-\d{2}$/
+ ✓ pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > línea base: mismo número de guía en dos tenants son dos guías independientes 2ms
+ × pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (a) tenant "a::b" + guía "c" vs tenant "a" + guía "b::c": no colisionan 3ms
+   → expected { estado: 'AGENDADA', …(1) } to deeply equal { estado: 'SIN_COBERTURA', …(1) }
+ × pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (b) tenant "x:" + guía "y" vs tenant "x" + guía ":y": no colisionan 0ms
+   → expected { estado: 'AGENDADA', …(1) } to deeply equal { estado: 'SIN_COBERTURA', …(1) }
+ × pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (b) tenant "t" + guía "x::y" vs tenant "t::x" + guía "y": no colisionan 1ms
+   → expected { estado: 'AGENDADA', …(1) } to deeply equal { estado: 'SIN_COBERTURA', …(1) }
+ × pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (b) tenant "a:::b" + guía "c" vs tenant "a" + guía ":b::c": no colisionan 0ms
+   → expected { estado: 'AGENDADA', …(1) } to deeply equal { estado: 'SIN_COBERTURA', …(1) }
+ ✓ pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (c) "banco a" vs "banco  a" (doble espacio): son tenants aislados 0ms
+ ✓ pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (d) "Banco-A" y "banco-a" son identificadores distintos (sensibles a mayúsculas, documentado) 0ms
+ × pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (e) tenant NFC "café" y NFD "cafe+acento" se tratan como el mismo tenant 0ms
+   → expected { estado: 'SIN_COBERTURA', …(1) } to deeply equal { estado: 'AGENDADA', …(1) }
+ × pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (e) número de guía NFC "G-é" y NFD "G-e+acento" se tratan como la misma guía 1ms
+   → expected 2 to be 1 // Object.is equality
+ ✓ pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (e) ciudad NFC "Medellín" y NFD dan la misma cobertura (la ciudad sí se normaliza) 0ms
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > entrada de 1 MB solo en blancos: EntradaInvalida con mensaje corto y sin la entrada 1ms
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > ConflictoDeVersion con número de guía normal: mensaje acotado, sin datos de otro tenant 0ms
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > GuiaYaAgendada con número de guía normal: mensaje acotado y sin stack 1ms
+ × pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > error de FechaCivil.desdeISO con entrada de 1 MB: el mensaje no repite la entrada (<= 300 caracteres) 1ms
+   → expected 1048626 to be less than or equal to 300
+ × pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > GuiaYaAgendada con número de guía de 1 MB: el mensaje no repite el número 0ms
+   → expected 1048617 to be less than or equal to 300
+ × pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > ConflictoDeVersion con número de guía de 1 MB: el mensaje no repite el número 1ms
+   → expected 1048650 to be less than or equal to 300
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > los errores no exponen el stack en el message 0ms
+stdout | pruebas/seguridad/s8-dos.prueba.ts > S8 · Denegación de servicio por datos > Cobertura con 1.000.000 de fechas no disponibles: construcción y cubre() < 2 s
+[MEDIDA] S8 Cobertura 1M fechas: construccion=480.5 ms · cubre=0.119 ms · cubre(2026-10-29)=false
+
+ ✓ pruebas/seguridad/s8-dos.prueba.ts > S8 · Denegación de servicio por datos > Cobertura con 1.000.000 de fechas no disponibles: construcción y cubre() < 2 s 539ms
+stdout | pruebas/seguridad/s8-dos.prueba.ts > S8 · Denegación de servicio por datos > 100.000 tenants distintos en un repositorio: cada operación < 2 s
+[MEDIDA] S8 100.000 tenants: total=103 ms · máximo por operación=2.33 ms · reintento idempotente=0.02 ms · resultados inesperados=0
+
+ ✓ pruebas/seguridad/s8-dos.prueba.ts > S8 · Denegación de servicio por datos > 100.000 tenants distintos en un repositorio: cada operación < 2 s 103ms
+stdout | pruebas/seguridad/s8-dos.prueba.ts > S8 · Denegación de servicio por datos > 10.000 ciudades distintas con cobertura: cada operación < 2 s
+[MEDIDA] S8 10.000 ciudades: total=22 ms · máximo por operación=1.40 ms · agendadas=10000
+
+ ✓ pruebas/seguridad/s8-dos.prueba.ts > S8 · Denegación de servicio por datos > 10.000 ciudades distintas con cobertura: cada operación < 2 s 27ms
+stdout | pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > se analizan los archivos de src/ (no vacío)
+[MEDIDA] archivos analizados en src/: 12
+
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > se analizan los archivos de src/ (no vacío) 1ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón eval: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón new Function: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón child_process: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón require(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón import(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón fs: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón net: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón http: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón https: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón process.env: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón Math.random: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón console.log: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón Buffer: ninguna coincidencia 0ms
+stdout | pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (c) [INFORMATIVO] mutar por la fuerza el agregado sí surte efecto en tiempo de ejecución
+[INFORMATIVO S7c] tras mutar: {"estado":"AGENDADA","fechaCita":null,"version":-1,"versionOriginal":99}
+
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (a) Cobertura copia sus entradas: mutar el array original no cambia cubre() 1ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (a) Cobertura copia las fechas no disponibles: mutar el array original no reabre el día 1ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza AGENDADA sin fecha y fecha con estado no agendado 0ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión -1 0ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión 1.5 0ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión NaN 0ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión Infinity 0ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (b) un repositorio no deja que una copia mutada altere lo persistido 0ms
+ ✓ pruebas/seguridad/s7-integridad.prueba.ts > S7 · Integridad del dominio > (c) [INFORMATIVO] mutar por la fuerza el agregado sí surte efecto en tiempo de ejecución 1ms
+stdout | pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > package.json no declara dependencias de producción (solo devDependencies)
+[MEDIDA] devDependencies: @types/node, @vitest/coverage-v8, typescript, vitest
+
+ ✓ pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > package.json no declara dependencias de producción (solo devDependencies) 1ms
+ ✓ pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > package-lock.json existe y fija versiones 0ms
+ ✓ pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > el paquete es privado (no se publica por accidente) 0ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 34 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (a) tenant "a::b" + guía "c" vs tenant "a" + guía "b::c": no colisionan
+ FAIL  pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (b) tenant "x:" + guía "y" vs tenant "x" + guía ":y": no colisionan
+ FAIL  pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (b) tenant "t" + guía "x::y" vs tenant "t::x" + guía "y": no colisionan
+ FAIL  pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (b) tenant "a:::b" + guía "c" vs tenant "a" + guía ":b::c": no colisionan
+AssertionError: expected { estado: 'AGENDADA', …(1) } to deeply equal { estado: 'SIN_COBERTURA', …(1) }
+
+- Expected
++ Received
+
+  {
+-   "estado": "SIN_COBERTURA",
+-   "fechaCita": null,
++   "estado": "AGENDADA",
++   "fechaCita": "2026-10-29",
+  }
+
+ ❯ pruebas/seguridad/s1-aislamiento.prueba.ts:38:17
+     36|   ])('%s: no colisionan', async (_etiqueta, tA, nA, tB, nB) => {
+     37|     const r = await ejecutarPareja(tA, nA, tB, nB);
+     38|     expect(r.b).toEqual({ estado: 'SIN_COBERTURA', fechaCita: null });
+       |                 ^
+     39|     expect(r.guiaA?.estado).toBe('AGENDADA');
+     40|     expect(r.guiaB?.estado).toBe('SIN_COBERTURA');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/34]⎯
+
+ FAIL  pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (e) tenant NFC "café" y NFD "cafe+acento" se tratan como el mismo tenant
+AssertionError: expected { estado: 'SIN_COBERTURA', …(1) } to deeply equal { estado: 'AGENDADA', …(1) }
+
+- Expected
++ Received
+
+  {
+-   "estado": "AGENDADA",
+-   "fechaCita": "2026-10-29",
++   "estado": "SIN_COBERTURA",
++   "fechaCita": null,
+  }
+
+ ❯ pruebas/seguridad/s1-aislamiento.prueba.ts:71:16
+     69|     const r1 = await caso.ejecutar({ tenant: nfc, numeroGuia: 'G-1', c…
+     70|     const r2 = await caso.ejecutar({ tenant: nfd, numeroGuia: 'G-1', c…
+     71|     expect(r2).toEqual(r1); // misma guía: reintento idempotente
+       |                ^
+     72|     expect(guias.escrituras).toBe(1);
+     73|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/34]⎯
+
+ FAIL  pruebas/seguridad/s1-aislamiento.prueba.ts > S1 · Aislamiento multitenant > (e) número de guía NFC "G-é" y NFD "G-e+acento" se tratan como la misma guía
+AssertionError: expected 2 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 2
+
+ ❯ pruebas/seguridad/s1-aislamiento.prueba.ts:81:30
+     79|     const r2 = await caso.ejecutar({ tenant: 'banco-a', numeroGuia: 'G…
+     80|     expect(r2).toEqual(r1);
+     81|     expect(guias.escrituras).toBe(1);
+       |                              ^
+     82|   });
+     83|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/34]⎯
+
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con EntradaInvalida en < 500 ms
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 1 MB se rechaza con EntradaInvalida en < 500 ms
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 1 MB se rechaza con EntradaInvalida en < 500 ms
+AssertionError: expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ❯ pruebas/seguridad/s2-validacion.prueba.ts:39:25
+     37|       const { ms, resultado } = await cronometrarAsync(() => caso.ejec…
+     38|       console.log(`[MEDIDA] S2b ${campo} 1 MB: ${ms.toFixed(1)} ms -> …
+     39|       expect(resultado).toBeInstanceOf(EntradaInvalida);
+       |                         ^
+     40|       expect(ms).toBeLessThan(500);
+     41|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/34]⎯
+
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true)
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true)
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 201 caracteres (rechazo=true)
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) numeroGuia de 10000 caracteres (rechazo=true)
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 201 caracteres (rechazo=true)
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (b) ciudad de 10000 caracteres (rechazo=true)
+AssertionError: expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ❯ pruebas/seguridad/s2-validacion.prueba.ts:52:30
+     50|       const r = await resultadoDe(() => caso.ejecutar(comando({ [campo…
+     51|       console.log(`[MEDIDA] S2b ${campo} ${longitud} caracteres -> ${r…
+     52|       if (rechazo) expect(r).toBeInstanceOf(EntradaInvalida);
+       |                              ^
+     53|       else expect(r).not.toBeInstanceOf(Error);
+     54|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/34]⎯
+
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con NUL \u0000 dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con LF \n dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con CR \r dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con TAB \t dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con ESC \u001b dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con NUL \u0000 dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con LF \n dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con CR \r dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con TAB \t dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con ESC \u001b dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con NUL \u0000 dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con LF \n dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con CR \r dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con TAB \t dentro del valor -> EntradaInvalida
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con ESC \u001b dentro del valor -> EntradaInvalida
+AssertionError: expected { estado: 'SIN_COBERTURA', …(1) } to be an instance of EntradaInvalida
+ ❯ pruebas/seguridad/s2-validacion.prueba.ts:69:17
+     67|       const { caso } = escenario();
+     68|       const r = await resultadoDe(() => caso.ejecutar(comando({ [campo…
+     69|       expect(r).toBeInstanceOf(EntradaInvalida);
+       |                 ^
+     70|     });
+     71|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/34]⎯
+
+ FAIL  pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) desdeISO("9999-12-31").masDias(1) no produce texto mal formado
+AssertionError: expected '+010000-01' to match /^\d{4}-\d{2}-\d{2}$/
+
+- Expected:
+/^\d{4}-\d{2}-\d{2}$/
+
++ Received:
+"+010000-01"
+
+ ❯ pruebas/seguridad/s2-validacion.prueba.ts:148:15
+    146|     console.log(`[MEDIDA] S2g 9999-12-31 + 1 día -> ${r instanceof Err…
+    147|     if (r instanceof EntradaInvalida) return;
+    148|     expect(r).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+       |               ^
+    149|   });
+    150| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/34]⎯
+
+ FAIL  pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > error de FechaCivil.desdeISO con entrada de 1 MB: el mensaje no repite la entrada (<= 300 caracteres)
+AssertionError: expected 1048626 to be less than or equal to 300
+ ❯ revisarMensaje pruebas/seguridad/s3-errores.prueba.ts:15:22
+     13|   expect(err).toBeInstanceOf(Error);
+     14|   const msg = (err as Error).message;
+     15|   expect(msg.length).toBeLessThanOrEqual(300);
+       |                      ^
+     16|   expect(msg).not.toContain(entradaCompleta);
+     17|   for (const ruta of RUTAS_PROHIBIDAS) expect(msg).not.toContain(ruta);
+ ❯ pruebas/seguridad/s3-errores.prueba.ts:61:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/34]⎯
+
+ FAIL  pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > GuiaYaAgendada con número de guía de 1 MB: el mensaje no repite el número
+AssertionError: expected 1048617 to be less than or equal to 300
+ ❯ revisarMensaje pruebas/seguridad/s3-errores.prueba.ts:15:22
+     13|   expect(err).toBeInstanceOf(Error);
+     14|   const msg = (err as Error).message;
+     15|   expect(msg.length).toBeLessThanOrEqual(300);
+       |                      ^
+     16|   expect(msg).not.toContain(entradaCompleta);
+     17|   for (const ruta of RUTAS_PROHIBIDAS) expect(msg).not.toContain(ruta);
+ ❯ pruebas/seguridad/s3-errores.prueba.ts:75:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/34]⎯
+
+ FAIL  pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > ConflictoDeVersion con número de guía de 1 MB: el mensaje no repite el número
+AssertionError: expected 1048650 to be less than or equal to 300
+ ❯ revisarMensaje pruebas/seguridad/s3-errores.prueba.ts:15:22
+     13|   expect(err).toBeInstanceOf(Error);
+     14|   const msg = (err as Error).message;
+     15|   expect(msg.length).toBeLessThanOrEqual(300);
+       |                      ^
+     16|   expect(msg).not.toContain(entradaCompleta);
+     17|   for (const ruta of RUTAS_PROHIBIDAS) expect(msg).not.toContain(ruta);
+ ❯ pruebas/seguridad/s3-errores.prueba.ts:84:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/34]⎯
+
+
+ Test Files  3 failed | 5 passed (8)
+      Tests  34 failed | 103 passed (137)
+   Start at  01:13:32
+   Duration  1.96s (tests 94%, import 3%, transform 2%, worker 1%)
+
+    Isolate  8 workers spawned · ~61ms startup each (spawn + environment, per file)
+             at least ~425ms faster with isolate: false — reuses workers across files instead of one per file
+

@@ -1,0 +1,31 @@
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+      Coverage enabled with v8
+
+
+ Test Files  2 passed (2)
+      Tests  141 passed (141)
+   Start at  02:20:38
+   Duration  499ms (tests 75%, transform 16%, import 6%, worker 4%)
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   77.84 |    68.67 |   82.14 |   80.13 |                   
+ adapters          |   49.05 |     37.5 |   57.14 |   54.54 |                   
+  clocks.ts        |      75 |       50 |   66.66 |   85.71 | 13                
+  ...s-from-env.ts |    3.84 |        0 |       0 |       5 | 19-54             
+ domain            |    88.5 |       75 |   96.77 |   88.75 |                   
+  civil-date.ts    |      80 |    72.72 |   85.71 |   84.21 | 18,26,47          
+  errors.ts        |     100 |    66.66 |     100 |     100 | 4                 
+  identifiers.ts   |      85 |       60 |     100 |   84.21 | 14,19,22          
+  waybill.ts       |   89.65 |       70 |     100 |   89.28 | 31,34,79          
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 77.84% ( 130/167 )
+Branches     : 68.67% ( 57/83 )
+Functions    : 82.14% ( 46/56 )
+Lines        : 80.13% ( 117/146 )
+================================================================================

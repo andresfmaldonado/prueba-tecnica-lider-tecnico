@@ -1,0 +1,7 @@
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > entrada de 1 MB solo en blancos: EntradaInvalida con mensaje corto y sin la entrada 1ms
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > ConflictoDeVersion con número de guía normal: mensaje acotado, sin datos de otro tenant 0ms
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > GuiaYaAgendada con número de guía normal: mensaje acotado y sin stack 1ms
+ × pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > error de FechaCivil.desdeISO con entrada de 1 MB: el mensaje no repite la entrada (<= 300 caracteres) 1ms
+ × pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > GuiaYaAgendada con número de guía de 1 MB: el mensaje no repite el número 0ms
+ × pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > ConflictoDeVersion con número de guía de 1 MB: el mensaje no repite el número 1ms
+ ✓ pruebas/seguridad/s3-errores.prueba.ts > S3 · Fuga de información en errores > los errores no exponen el stack en el message 0ms

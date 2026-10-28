@@ -1,0 +1,8 @@
+=== Corrida 2 (renombrado al inglés), comandos ejecutados en el momento de la captura
+uptime:  2:42  up 6 days,  3:39, 1 user, load averages: 2.72 2.17 2.27
+Apple M4 10 17179869184 
+node: v22.21.1  npm: 10.9.4
+git rev-parse --short HEAD: d97161b
+git status --short src | wc -l: 26
+src checksum (find src | shasum): da110bb3
+=== Referencia de la corrida 1 (01:42, carga inicial medida): load 5.29 5.18 4.18; fileproviderd 141.7 % CPU

@@ -1,0 +1,16 @@
+$ grep -rnE '<patrones peligrosos>' src/   (salida real, vacía; código de salida 1 = sin coincidencias)
+lineas:        0
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > se analizan los archivos de src/ (no vacío) 1ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón eval: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón new Function: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón child_process: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón require(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón import(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón fs: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón net: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón http: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón https: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón process.env: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón Math.random: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón console.log: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patrones.prueba.ts > S6 · Patrones peligrosos en src/ > patrón Buffer: ninguna coincidencia 0ms

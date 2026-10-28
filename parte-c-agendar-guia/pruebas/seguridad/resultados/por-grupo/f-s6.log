@@ -1,0 +1,16 @@
+$ grep -rnE '<patrones>' src/   (salida real; vacía = sin coincidencias)
+src/adapters/settings-from-env.ts:53:export function settingsFromEnvironment(env: Environment = process.env): EnvironmentSettings {
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > se analizan los archivos de src/ (no vacío) 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón eval: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón new Function: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón child_process: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón require(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón import(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón fs: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón net: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón http: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón https: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón process.env: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón Math.random: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón console.log: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón Buffer: ninguna coincidencia 0ms

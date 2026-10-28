@@ -1,0 +1,11 @@
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B1 · hoy 2026-10-30 (viernes, sábado o domingo) con lunes a viernes → 2026-11-02 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B1 · hoy 2026-10-31 (viernes, sábado o domingo) con lunes a viernes → 2026-11-02 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B1 · hoy 2026-11-01 (viernes, sábado o domingo) con lunes a viernes → 2026-11-02 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-10-27 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-10-30 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-10-31 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-11-01 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B3 · cruce de año: hoy 2026-12-31 → 2027-01-01 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B4 · cruce de año con lunes a viernes: hoy 2026-12-31 → 2027-01-01 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B5 · año bisiesto: hoy 2028-02-28 con todos los días → 2028-02-29 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B6 · año no bisiesto: hoy 2027-02-28 con todos los días → 2027-03-01 0ms

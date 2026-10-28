@@ -1,0 +1,205 @@
+{
+  "testRun": "E5 fallos inyectados y reanudación",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "exposedGc": true
+  },
+  "configuration": {
+    "waybills": 20000,
+    "concurrency": 50,
+    "latencyPerOperationMs": 5,
+    "rates": [
+      0.05,
+      0.15,
+      0.3
+    ]
+  },
+  "theoretical_note": "Tasa de llamadas fallidas teórica 1-(1-p)^3: supone tres operaciones independientes por llamada. Una llamada falla si falla alguna de las operaciones que intenta; el orden en que se intentan no cambia esa probabilidad, pero sí el número medio de operaciones intentadas.",
+  "results": [
+    {
+      "failureRate": 0.05,
+      "waybills": 20000,
+      "pass1": {
+        "completed": 17161,
+        "failed": 2839,
+        "kinds": {
+          "InjectedError": 2839
+        },
+        "messages": [
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado"
+        ],
+        "actual_writes": 17161,
+        "attempted_operations": 57089,
+        "failures_per_operation": 2839,
+        "observed_call_rate": 0.14195,
+        "theoretical_call_rate": 0.14263,
+        "ic95_observed": [
+          0.13718,
+          0.14686
+        ],
+        "auditReport": {
+          "present": 17161,
+          "absent": 2839,
+          "corrupt": 0,
+          "versionDistinctFromOne": 0,
+          "distinctAppointment": 0,
+          "okWithoutWaybill": 0,
+          "errorWithWaybill": 0
+        }
+      },
+      "pass2": {
+        "completed": 20000,
+        "errors": 0,
+        "writes_in_pass": 2839,
+        "total_writes": 20000,
+        "auditReport": {
+          "present": 20000,
+          "absent": 0,
+          "corrupt": 0,
+          "versionDistinctFromOne": 0,
+          "distinctAppointment": 0,
+          "okWithoutWaybill": 0,
+          "errorWithWaybill": 0
+        }
+      },
+      "memory": {
+        "before": {
+          "heapUsed": 11588248,
+          "rss": 72138752
+        },
+        "after": {
+          "heapUsed": 24367064,
+          "rss": 100597760
+        }
+      }
+    },
+    {
+      "failureRate": 0.15,
+      "waybills": 20000,
+      "pass1": {
+        "completed": 12220,
+        "failed": 7780,
+        "kinds": {
+          "InjectedError": 7780
+        },
+        "messages": [
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado"
+        ],
+        "actual_writes": 12220,
+        "attempted_operations": 51471,
+        "failures_per_operation": 7780,
+        "observed_call_rate": 0.389,
+        "theoretical_call_rate": 0.38588,
+        "ic95_observed": [
+          0.38227,
+          0.39578
+        ],
+        "auditReport": {
+          "present": 12220,
+          "absent": 7780,
+          "corrupt": 0,
+          "versionDistinctFromOne": 0,
+          "distinctAppointment": 0,
+          "okWithoutWaybill": 0,
+          "errorWithWaybill": 0
+        }
+      },
+      "pass2": {
+        "completed": 20000,
+        "errors": 0,
+        "writes_in_pass": 7780,
+        "total_writes": 20000,
+        "auditReport": {
+          "present": 20000,
+          "absent": 0,
+          "corrupt": 0,
+          "versionDistinctFromOne": 0,
+          "distinctAppointment": 0,
+          "okWithoutWaybill": 0,
+          "errorWithWaybill": 0
+        }
+      },
+      "memory": {
+        "before": {
+          "heapUsed": 12014072,
+          "rss": 100712448
+        },
+        "after": {
+          "heapUsed": 23912296,
+          "rss": 102711296
+        }
+      }
+    },
+    {
+      "failureRate": 0.3,
+      "waybills": 20000,
+      "pass1": {
+        "completed": 6778,
+        "failed": 13222,
+        "kinds": {
+          "InjectedError": 13222
+        },
+        "messages": [
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado",
+          "InjectedError: fallo inyectado"
+        ],
+        "actual_writes": 6778,
+        "attempted_operations": 43778,
+        "failures_per_operation": 13222,
+        "observed_call_rate": 0.6611,
+        "theoretical_call_rate": 0.657,
+        "ic95_observed": [
+          0.65451,
+          0.66763
+        ],
+        "auditReport": {
+          "present": 6778,
+          "absent": 13222,
+          "corrupt": 0,
+          "versionDistinctFromOne": 0,
+          "distinctAppointment": 0,
+          "okWithoutWaybill": 0,
+          "errorWithWaybill": 0
+        }
+      },
+      "pass2": {
+        "completed": 20000,
+        "errors": 0,
+        "writes_in_pass": 13222,
+        "total_writes": 20000,
+        "auditReport": {
+          "present": 20000,
+          "absent": 0,
+          "corrupt": 0,
+          "versionDistinctFromOne": 0,
+          "distinctAppointment": 0,
+          "okWithoutWaybill": 0,
+          "errorWithWaybill": 0
+        }
+      },
+      "memory": {
+        "before": {
+          "heapUsed": 12124688,
+          "rss": 101220352
+        },
+        "after": {
+          "heapUsed": 31153400,
+          "rss": 103743488
+        }
+      }
+    }
+  ]
+}

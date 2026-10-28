@@ -1,0 +1,59 @@
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con NUL \u0000 dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con LF \n dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con CR \r dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con TAB \t dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con ESC \u001b dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con NUL \u0000 dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con LF \n dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con CR \r dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con TAB \t dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con ESC \u001b dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con NUL \u0000 dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con LF \n dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con CR \r dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con TAB \t dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con ESC \u001b dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = constructor se trata como dato 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad = 1.000.000 de espacios + "a" termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad = "a" + 1.000.000 de espacios + "b" termina en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad con 100.000 marcas diacríticas termina en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("2026-02-30") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("0000-00-00") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("2026-1-1") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("2026-13-01") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO(" 2026-10-27") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) fromISO("9999-12-31").masDias(1) no produce texto mal formado 0ms
+[MEDIDA] S2f espacios+a: 0.6 ms -> ACEPTADO
+[MEDIDA] S2f espacios internos: 0.1 ms -> InvalidInput
+[MEDIDA] S2f diacríticos: 0.0 ms -> InvalidInput
+[MEDIDA] S2g 9999-12-31 + 1 día -> InvalidInput

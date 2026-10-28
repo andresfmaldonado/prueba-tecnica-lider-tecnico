@@ -1,0 +1,48 @@
+{
+  "suite": "prueba:seguridad",
+  "mutaciones": [
+    {
+      "id": "S-M1",
+      "descripcion": "H1 deshecho: la clave del repositorio vuelve a concatenar con «::»",
+      "archivo": "src/adapters/in-memory-waybill-repository.ts",
+      "buscar": "compositeKey(tenantId.value, waybillNo.value)",
+      "reemplazar": "`${tenantId.value}::${waybillNo.value}`"
+    },
+    {
+      "id": "S-M2",
+      "descripcion": "H2 deshecho: sin límite de longitud en los identificadores",
+      "archivo": "src/domain/identifiers.ts",
+      "buscar": ".length > MAX_IDENTIFIER_LENGTH) {",
+      "reemplazar": ".length > Number.MAX_SAFE_INTEGER) {",
+      "todas": true
+    },
+    {
+      "id": "S-M3",
+      "descripcion": "H3 deshecho: se aceptan caracteres de control",
+      "archivo": "src/domain/identifiers.ts",
+      "buscar": "if (FORBIDDEN_CHARACTERS.test(normalized)) {",
+      "reemplazar": "if (false) {"
+    },
+    {
+      "id": "S-M4",
+      "descripcion": "H4 deshecho: sin normalización Unicode NFC",
+      "archivo": "src/domain/identifiers.ts",
+      "buscar": "clean.normalize('NFC')",
+      "reemplazar": "clean"
+    },
+    {
+      "id": "S-M5",
+      "descripcion": "H5 deshecho: las fechas pueden salir del rango soportado",
+      "archivo": "src/domain/civil-date.ts",
+      "buscar": "if (!Number.isInteger(daysSinceEpoch) || daysSinceEpoch < MIN_DAY || daysSinceEpoch > MAX_DAY) {",
+      "reemplazar": "if (false) {"
+    },
+    {
+      "id": "S-M6",
+      "descripcion": "H6 deshecho: el mensaje repite el número de guía completo",
+      "archivo": "src/domain/waybill.ts",
+      "buscar": "abbreviate(this.waybillNo.value)",
+      "reemplazar": "this.waybillNo.value"
+    }
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "testRun": "C1 matriz de carga cerrada",
+  "configuration": {
+    "seedValue": 20261028,
+    "batch_size": 40000,
+    "budget_seconds": 20,
+    "tenants": 30,
+    "cities": 12,
+    "threshold_req_s": 50
+  },
+  "rows": [
+    {
+      "latency_ms": 0,
+      "concurrency": 1,
+      "completed": 40000,
+      "launched": 40000,
+      "cap_reached": false,
+      "seconds": 0.123,
+      "req_s": 326361.66,
+      "calls_s": 979084.98,
+      "repository_calls": 120000,
+      "call_latency_ms": {
+        "n": 120000,
+        "p50": 0,
+        "p95": 0.001,
+        "p99": 0.001,
+        "max": 0.614
+      },
+      "waybill_latency_ms": {
+        "n": 40000,
+        "p50": 0.002,
+        "p95": 0.004,
+        "p99": 0.006,
+        "max": 1.354
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 40000,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 26.49,
+      "meets_throughput": null
+    },
+    {
+      "latency_ms": 0,
+      "concurrency": 10,
+      "completed": 40000,
+      "launched": 40000,
+      "cap_reached": false,
+      "seconds": 0.109,
+      "req_s": 365307.78,
+      "calls_s": 1095923.35,
+      "repository_calls": 120000,
+      "call_latency_ms": {
+        "n": 120000,
+        "p50": 0.004,
+        "p95": 0.008,
+        "p99": 0.01,
+        "max": 0.528
+      },
+      "waybill_latency_ms": {
+        "n": 40000,
+        "p50": 0.025,
+        "p95": 0.029,
+        "p99": 0.038,
+        "max": 0.553
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 40000,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 23.4,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 0,
+      "concurrency": 50,
+      "completed": 40000,
+      "launched": 40000,
+      "cap_reached": false,
+      "seconds": 0.117,
+      "req_s": 342839.76,
+      "calls_s": 1028519.27,
+      "repository_calls": 120000,
+      "call_latency_ms": {
+        "n": 120000,
+        "p50": 0.022,
+        "p95": 0.045,
+        "p99": 0.073,
+        "max": 2.121
+      },
+      "waybill_latency_ms": {
+        "n": 40000,
+        "p50": 0.128,
+        "p95": 0.212,
+        "p99": 0.447,
+        "max": 2.325
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 40000,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -45.26,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 0,
+      "concurrency": 100,
+      "completed": 40000,
+      "launched": 40000,
+      "cap_reached": false,
+      "seconds": 0.112,
+      "req_s": 355936.41,
+      "calls_s": 1067809.22,
+      "repository_calls": 120000,
+      "call_latency_ms": {
+        "n": 120000,
+        "p50": 0.043,
+        "p95": 0.09,
+        "p99": 0.286,
+        "max": 0.512
+      },
+      "waybill_latency_ms": {
+        "n": 40000,
+        "p50": 0.261,
+        "p95": 0.511,
+        "p99": 0.624,
+        "max": 0.745
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 40000,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 12.69,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 5,
+      "concurrency": 1,
+      "completed": 1089,
+      "launched": 1089,
+      "cap_reached": true,
+      "seconds": 20.001,
+      "req_s": 54.45,
+      "calls_s": 163.34,
+      "repository_calls": 3267,
+      "call_latency_ms": {
+        "n": 3267,
+        "p50": 6.32,
+        "p95": 6.364,
+        "p99": 6.419,
+        "max": 14.642
+      },
+      "waybill_latency_ms": {
+        "n": 1089,
+        "p50": 18.46,
+        "p95": 19.1,
+        "p99": 19.206,
+        "max": 26.564
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 1089,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -74.35,
+      "meets_throughput": null
+    },
+    {
+      "latency_ms": 5,
+      "concurrency": 10,
+      "completed": 11021,
+      "launched": 11021,
+      "cap_reached": true,
+      "seconds": 20.017,
+      "req_s": 550.59,
+      "calls_s": 1651.78,
+      "repository_calls": 33063,
+      "call_latency_ms": {
+        "n": 33063,
+        "p50": 6.372,
+        "p95": 6.472,
+        "p99": 6.529,
+        "max": 7.267
+      },
+      "waybill_latency_ms": {
+        "n": 11021,
+        "p50": 18.093,
+        "p95": 19.303,
+        "p99": 19.434,
+        "max": 20.034
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 11021,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 2.28,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 5,
+      "concurrency": 50,
+      "completed": 40000,
+      "launched": 40000,
+      "cap_reached": false,
+      "seconds": 14.455,
+      "req_s": 2767.2,
+      "calls_s": 8301.61,
+      "repository_calls": 120000,
+      "call_latency_ms": {
+        "n": 120000,
+        "p50": 5.984,
+        "p95": 6.847,
+        "p99": 6.972,
+        "max": 9.798
+      },
+      "waybill_latency_ms": {
+        "n": 40000,
+        "p50": 18.103,
+        "p95": 19.604,
+        "p99": 20.066,
+        "max": 21.69
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 40000,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 10.34,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 5,
+      "concurrency": 100,
+      "completed": 40000,
+      "launched": 40000,
+      "cap_reached": false,
+      "seconds": 7.041,
+      "req_s": 5680.74,
+      "calls_s": 17042.23,
+      "repository_calls": 120000,
+      "call_latency_ms": {
+        "n": 120000,
+        "p50": 5.858,
+        "p95": 6.734,
+        "p99": 7.161,
+        "max": 8.544
+      },
+      "waybill_latency_ms": {
+        "n": 40000,
+        "p50": 17.682,
+        "p95": 19.422,
+        "p99": 20.036,
+        "max": 20.483
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 40000,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -13.56,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 20,
+      "concurrency": 1,
+      "completed": 308,
+      "launched": 308,
+      "cap_reached": true,
+      "seconds": 20.06,
+      "req_s": 15.35,
+      "calls_s": 46.06,
+      "repository_calls": 924,
+      "call_latency_ms": {
+        "n": 924,
+        "p50": 22.042,
+        "p95": 22.213,
+        "p99": 22.667,
+        "max": 30.178
+      },
+      "waybill_latency_ms": {
+        "n": 308,
+        "p50": 65.108,
+        "p95": 66.639,
+        "p99": 67.976,
+        "max": 75.358
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 308,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -45.49,
+      "meets_throughput": null
+    },
+    {
+      "latency_ms": 20,
+      "concurrency": 10,
+      "completed": 3080,
+      "launched": 3080,
+      "cap_reached": true,
+      "seconds": 20.006,
+      "req_s": 153.95,
+      "calls_s": 461.86,
+      "repository_calls": 9240,
+      "call_latency_ms": {
+        "n": 9240,
+        "p50": 21.854,
+        "p95": 22.316,
+        "p99": 22.509,
+        "max": 22.917
+      },
+      "waybill_latency_ms": {
+        "n": 3080,
+        "p50": 65.062,
+        "p95": 66.73,
+        "p99": 66.831,
+        "max": 66.914
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 3080,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 2.36,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 20,
+      "concurrency": 50,
+      "completed": 15450,
+      "launched": 15450,
+      "cap_reached": true,
+      "seconds": 20.062,
+      "req_s": 770.12,
+      "calls_s": 2310.37,
+      "repository_calls": 46350,
+      "call_latency_ms": {
+        "n": 46350,
+        "p50": 21.625,
+        "p95": 22.681,
+        "p99": 22.838,
+        "max": 22.98
+      },
+      "waybill_latency_ms": {
+        "n": 15450,
+        "p50": 65.014,
+        "p95": 66.866,
+        "p99": 67.36,
+        "max": 67.551
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 15450,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 2.25,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 20,
+      "concurrency": 100,
+      "completed": 30800,
+      "launched": 30800,
+      "cap_reached": true,
+      "seconds": 20.03,
+      "req_s": 1537.73,
+      "calls_s": 4613.19,
+      "repository_calls": 92400,
+      "call_latency_ms": {
+        "n": 92400,
+        "p50": 21.74,
+        "p95": 22.874,
+        "p99": 23.275,
+        "max": 36.059
+      },
+      "waybill_latency_ms": {
+        "n": 30800,
+        "p50": 65.041,
+        "p95": 66.972,
+        "p99": 68.699,
+        "max": 84.065
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 30800,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 5.34,
+      "meets_throughput": true
+    },
+    {
+      "latency_ms": 100,
+      "concurrency": 1,
+      "completed": 66,
+      "launched": 66,
+      "cap_reached": true,
+      "seconds": 20.18,
+      "req_s": 3.27,
+      "calls_s": 9.81,
+      "repository_calls": 198,
+      "call_latency_ms": {
+        "n": 198,
+        "p50": 102.162,
+        "p95": 102.211,
+        "p99": 103.48,
+        "max": 122.335
+      },
+      "waybill_latency_ms": {
+        "n": 66,
+        "p50": 305.4,
+        "p95": 306.728,
+        "p99": 326.027,
+        "max": 326.027
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 66,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -31.43,
+      "meets_throughput": null
+    },
+    {
+      "latency_ms": 100,
+      "concurrency": 10,
+      "completed": 660,
+      "launched": 660,
+      "cap_reached": true,
+      "seconds": 20.137,
+      "req_s": 32.78,
+      "calls_s": 98.33,
+      "repository_calls": 1980,
+      "call_latency_ms": {
+        "n": 1980,
+        "p50": 101.922,
+        "p95": 102.43,
+        "p99": 102.485,
+        "max": 102.869
+      },
+      "waybill_latency_ms": {
+        "n": 660,
+        "p50": 305.296,
+        "p95": 306.918,
+        "p99": 307.077,
+        "max": 307.085
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 660,
+      "writes_equal_completed": true,
+      "heap_delta_mb": 6.25,
+      "meets_throughput": null
+    },
+    {
+      "latency_ms": 100,
+      "concurrency": 50,
+      "completed": 3300,
+      "launched": 3300,
+      "cap_reached": true,
+      "seconds": 20.139,
+      "req_s": 163.86,
+      "calls_s": 491.58,
+      "repository_calls": 9900,
+      "call_latency_ms": {
+        "n": 9900,
+        "p50": 101.739,
+        "p95": 102.834,
+        "p99": 102.958,
+        "max": 103.293
+      },
+      "waybill_latency_ms": {
+        "n": 3300,
+        "p50": 305.307,
+        "p95": 307.077,
+        "p99": 307.582,
+        "max": 307.62
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 3300,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -12.9,
+      "meets_throughput": null
+    },
+    {
+      "latency_ms": 100,
+      "concurrency": 100,
+      "completed": 6600,
+      "launched": 6600,
+      "cap_reached": true,
+      "seconds": 20.115,
+      "req_s": 328.11,
+      "calls_s": 984.33,
+      "repository_calls": 19800,
+      "call_latency_ms": {
+        "n": 19800,
+        "p50": 101.655,
+        "p95": 102.774,
+        "p99": 103.176,
+        "max": 103.512
+      },
+      "waybill_latency_ms": {
+        "n": 6600,
+        "p50": 305.027,
+        "p95": 306.503,
+        "p99": 306.653,
+        "max": 306.848
+      },
+      "errors": 0,
+      "error_messages": [],
+      "actual_writes": 6600,
+      "writes_equal_completed": true,
+      "heap_delta_mb": -1.26,
+      "meets_throughput": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios (" ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("   ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("\t") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("\n ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo numeroGuia vacío o con solo espacios ("") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo numeroGuia vacío o con solo espacios (" ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo numeroGuia vacío o con solo espacios ("   ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo numeroGuia vacío o con solo espacios ("\t") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo numeroGuia vacío o con solo espacios ("\n ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo ciudad vacío o con solo espacios ("") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo ciudad vacío o con solo espacios (" ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo ciudad vacío o con solo espacios ("   ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo ciudad vacío o con solo espacios ("\t") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E1 · campo ciudad vacío o con solo espacios ("\n ") → EntradaInvalida sin tocar repositorios 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E2 · espacios sobrantes en ("  banco-a ", "G-1", "Medellín") se ignoran: es la misma guía 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E2 · espacios sobrantes en ("banco-a", "  G-1 ", "Medellín") se ignoran: es la misma guía 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E2 · espacios sobrantes en ("banco-a", "G-1", "  Medellín  ") se ignoran: es la misma guía 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E3 · la ciudad "Medellín" es Medellín 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E3 · la ciudad "MEDELLIN" es Medellín 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E3 · la ciudad " medellin " es Medellín 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E3 · la ciudad "Medellin" es Medellín 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E3 · la ciudad "MEDELLÍN" es Medellín 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E3 · la ciudad "medellín" es Medellín 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > E · Entradas > E4 · espacios internos en la ciudad: «  Santa   Marta » es «Santa Marta» 0ms

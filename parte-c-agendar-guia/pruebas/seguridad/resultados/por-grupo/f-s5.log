@@ -1,0 +1,8 @@
+ ✓ pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > el canario con secretos sintéticos produce las 5 coincidencias esperadas 442ms
+ ✓ pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > repositorio completo: 0 hallazgos dentro de parte-c-agendar-guia 281ms
+ ✓ pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > parte-c-agendar-guia no tiene archivos .env* versionables 0ms
+[MEDIDA] canario: archivo_env@env, clave_stripe_live@1, clave_aws_akia@2, clave_privada_pem@3, asignacion_secreta@4
+[MEDIDA] escaneados 82 archivos de texto; hallazgos totales 0; en parte-c 0; falsos positivos documentados 4
+FALSO POSITIVO DOCUMENTADO parte-b-code-review/code-review.md:58 [clave_stripe_live] sk_l***
+FALSO POSITIVO DOCUMENTADO parte-b-code-review/code-review.md:58 [asignacion_secreta] TOKE***
+Total hallazgos: 0 · falsos positivos documentados: 4

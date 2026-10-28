@@ -1,0 +1,9 @@
+Suite: npm run prueba:funcional · línea base sin mutar: 0 fallos de 141 pruebas
+M1 ventana de 14 días en lugar de 15 → 0 pruebas fallan de 141 → NO DETECTADA
+M2 el sábado cuenta como día hábil → 11 pruebas fallan de 141 → DETECTADA
+M3 hoy cuenta (la búsqueda empieza en d=0) → 68 pruebas fallan de 141 → DETECTADA
+M4 sin idempotencia: una guía agendada se recalcula → 9 pruebas fallan de 141 → DETECTADA
+M5 el repositorio ignora los conflictos de versión → 5 pruebas fallan de 141 → DETECTADA
+M6 la ciudad no se normaliza a mayúsculas → 4 pruebas fallan de 141 → DETECTADA
+M7 el reloj ignora la zona horaria (usa UTC) → 8 pruebas fallan de 141 → DETECTADA
+Resultado: 6 de 7 mutaciones detectadas · src/ restaurado idéntico: sí

@@ -1,0 +1,54 @@
+{
+  "testRun": "E3 contención mixta",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "exposedGc": true
+  },
+  "configuration": {
+    "waybills": 1000,
+    "duplicates": 50,
+    "requests": 50000,
+    "inFlight": 50000,
+    "latencyPerOperationMs": 5
+  },
+  "completed": 50000,
+  "errors": 0,
+  "kinds": {},
+  "seconds": 0.712,
+  "actual_writes": 1000,
+  "write_attempts": 50000,
+  "waybill_reads": 99000,
+  "coverage_reads": 52352,
+  "coverage_reads_predicted": 52352,
+  "waybills_without_coverage": 48,
+  "version_conflicts": 49000,
+  "waybills_with_distinct_responses": 0,
+  "request_latency_ms": {
+    "n": 50000,
+    "p50": 608.982,
+    "p95": 634.845,
+    "p99": 679.936,
+    "max": 702.594
+  },
+  "memory": {
+    "before": {
+      "heapUsed": 10332992,
+      "rss": 68173824
+    },
+    "after": {
+      "heapUsed": 346373184,
+      "rss": 440516608
+    }
+  },
+  "auditReport": {
+    "present": 1000,
+    "absent": 0,
+    "corrupt": 0,
+    "versionDistinctFromOne": 0,
+    "distinctAppointment": 0,
+    "okWithoutWaybill": 0,
+    "errorWithWaybill": 0
+  }
+}

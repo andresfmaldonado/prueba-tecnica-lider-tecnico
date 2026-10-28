@@ -1,0 +1,60 @@
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con NUL \u0000 dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con LF \n dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con CR \r dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con TAB \t dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) tenant con ESC \u001b dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con NUL \u0000 dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con LF \n dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con CR \r dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con TAB \t dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) numeroGuia con ESC \u001b dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con NUL \u0000 dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con LF \n dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con CR \r dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con TAB \t dentro del valor -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (c) ciudad con ESC \u001b dentro del valor -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) tenant = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) numeroGuia = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (d) ciudad = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) tenant = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) numeroGuia = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (e) ciudad = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad = 1.000.000 de espacios + "a" termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad = "a" + 1.000.000 de espacios + "b" termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (f) ciudad con 100.000 marcas diacríticas termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("2026-02-30") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("0000-00-00") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("2026-1-1") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO("2026-13-01") -> EntradaInvalida 0ms
+ ✓ pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) FechaCivil.desdeISO(" 2026-10-27") -> EntradaInvalida 0ms
+ × pruebas/seguridad/s2-validacion.prueba.ts > S2 · Validación de entradas > (g) desdeISO("9999-12-31").masDias(1) no produce texto mal formado 1ms
+[MEDIDA] S2f espacios+a: 0.5 ms -> ACEPTADO
+[MEDIDA] S2f espacios internos: 0.8 ms -> ACEPTADO
+[MEDIDA] S2f diacríticos: 1.2 ms -> ACEPTADO
+[MEDIDA] S2g 9999-12-31 + 1 día -> "+010000-01"
+    146|     console.log(`[MEDIDA] S2g 9999-12-31 + 1 día -> ${r instanceof Err…

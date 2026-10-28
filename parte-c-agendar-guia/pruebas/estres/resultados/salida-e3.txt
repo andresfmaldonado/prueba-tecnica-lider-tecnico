@@ -1,0 +1,8 @@
+[E3] lecturas de cobertura=52352 predicción=52352 = 50000 primeros intentos + 49 reintentos × 48 guías SIN_COBERTURA
+[E3] guías=1000 duplicados=50 solicitudes=50000 en vuelo=50000 L=5 ms
+[E3] tiempo=0.66 s completadas=50000 errores=0 tipos={}
+[E3] escrituras reales=1000 intentos de escritura=50000 conflictos de versión=49000
+[E3] auditoría: presentes=1000 versión≠1=0 corruptas=0 distintas del oráculo=0
+[E3] guías con respuestas distintas entre duplicados=0
+[E3] latencia por solicitud (ms): p50=558.386 p95=587.704 p99=626.058 máx=652.022
+[E3] heap antes=9.8 MB después=287.7 MB rss después=410 MB

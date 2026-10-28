@@ -1,0 +1,8 @@
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > entrada de 1 MB solo en blancos: InvalidInput con mensaje corto y sin la entrada 3ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > VersionConflict con número de guía normal: mensaje acotado, sin datos de otro tenant 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > WaybillAlreadyScheduled con número de guía normal: mensaje acotado y sin stack 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > error de CivilDate.fromISO con entrada de 1 MB: el mensaje no repite la entrada (<= 300 caracteres) 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > WaybillAlreadyScheduled con el número de guía más largo permitido: el mensaje no lo repite completo 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > un número de guía de 1 MB ya no llega a existir: se rechaza al construirlo (H2 corregido) 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > VersionConflict con el número de guía más largo permitido: el mensaje no lo repite completo 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > los errores no exponen el stack en el message 1ms

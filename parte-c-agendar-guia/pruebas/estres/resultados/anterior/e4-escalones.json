@@ -1,0 +1,199 @@
+{
+  "prueba": "E4 escalones de concurrencia",
+  "entorno": {
+    "node": "v22.21.1",
+    "plataforma": "darwin",
+    "arquitectura": "arm64",
+    "gcExpuesto": true
+  },
+  "configuracion": {
+    "escalones": [
+      100,
+      500,
+      1000,
+      5000,
+      10000,
+      20000,
+      50000
+    ],
+    "latenciaPorOperacionMs": 20,
+    "concurrencia": "N guías distintas, todas en vuelo a la vez",
+    "limiteRssMb": 4096,
+    "umbralQuiebreP99": 5,
+    "umbralRetardoP99Ms": 1000
+  },
+  "nota_rss": "El RSS es el del proceso worker de vitest y es un máximo acumulado: no baja entre escalones.",
+  "pasos": [
+    {
+      "escalon": 100,
+      "segundos": 0.063,
+      "guiasPorSegundo": 1584.3,
+      "completadas": 100,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 100,
+      "presentes": 100,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 100,
+        "p50": 62.753,
+        "p95": 62.8,
+        "p99": 62.804,
+        "max": 62.811
+      },
+      "retardoMs": {
+        "p99": 12.042,
+        "max": 12.042,
+        "muestras": 5
+      },
+      "rssMaximoMB": 64.3
+    },
+    {
+      "escalon": 500,
+      "segundos": 0.064,
+      "guiasPorSegundo": 7832.2,
+      "completadas": 500,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 500,
+      "presentes": 500,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 500,
+        "p50": 62.83,
+        "p95": 63.088,
+        "p99": 63.11,
+        "max": 63.121
+      },
+      "retardoMs": {
+        "p99": 13.066,
+        "max": 13.066,
+        "muestras": 5
+      },
+      "rssMaximoMB": 66.8
+    },
+    {
+      "escalon": 1000,
+      "segundos": 0.068,
+      "guiasPorSegundo": 14731.4,
+      "completadas": 1000,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 1000,
+      "presentes": 1000,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 1000,
+        "p50": 65.075,
+        "p95": 66.57,
+        "p99": 66.599,
+        "max": 66.613
+      },
+      "retardoMs": {
+        "p99": 12.755,
+        "max": 12.755,
+        "muestras": 5
+      },
+      "rssMaximoMB": 75.6
+    },
+    {
+      "escalon": 5000,
+      "segundos": 0.081,
+      "guiasPorSegundo": 62021.3,
+      "completadas": 5000,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 5000,
+      "presentes": 5000,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 5000,
+        "p50": 65.994,
+        "p95": 69.817,
+        "p99": 69.993,
+        "max": 70.035
+      },
+      "retardoMs": {
+        "p99": 13.885,
+        "max": 13.885,
+        "muestras": 5
+      },
+      "rssMaximoMB": 112.6
+    },
+    {
+      "escalon": 10000,
+      "segundos": 0.093,
+      "guiasPorSegundo": 107894.4,
+      "completadas": 10000,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 10000,
+      "presentes": 10000,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 10000,
+        "p50": 79.005,
+        "p95": 82.449,
+        "p99": 82.749,
+        "max": 82.826
+      },
+      "retardoMs": {
+        "p99": 22.659,
+        "max": 22.659,
+        "muestras": 5
+      },
+      "rssMaximoMB": 146.8
+    },
+    {
+      "escalon": 20000,
+      "segundos": 0.167,
+      "guiasPorSegundo": 119691.4,
+      "completadas": 20000,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 20000,
+      "presentes": 20000,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 20000,
+        "p50": 134.659,
+        "p95": 139.26,
+        "p99": 140.059,
+        "max": 140.245
+      },
+      "retardoMs": {
+        "p99": 39.289,
+        "max": 39.289,
+        "muestras": 3
+      },
+      "rssMaximoMB": 214.7
+    },
+    {
+      "escalon": 50000,
+      "segundos": 0.386,
+      "guiasPorSegundo": 129585.8,
+      "completadas": 50000,
+      "errores": 0,
+      "tipos": {},
+      "escrituras": 50000,
+      "presentes": 50000,
+      "incoherentes": 0,
+      "latenciaMs": {
+        "n": 50000,
+        "p50": 305.011,
+        "p95": 310.225,
+        "p99": 311.643,
+        "max": 312.252
+      },
+      "retardoMs": {
+        "p99": 99.615,
+        "max": 99.615,
+        "muestras": 3
+      },
+      "rssMaximoMB": 399.7
+    }
+  ],
+  "detenido_por_rss": null,
+  "punto_de_quiebre": null,
+  "conclusion_quiebre": "no se alcanzó hasta N=50000"
+}

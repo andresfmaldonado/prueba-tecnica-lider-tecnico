@@ -1,0 +1,15 @@
+[E5] tasa=0.05 guías=20000 pasada 1: completadas=17161 fallidas=2839 tipos={"InjectedError":2839}
+[E5] tasa=0.05 llamadas fallidas observada=14.19 % IC95 [13.72, 14.69] % teórica 1-(1-p)^3=14.26 %
+[E5] tasa=0.05 operaciones intentadas=57089 fallos por operación=2839 (4.97 %, teórico p=5.00 %)
+[E5] tasa=0.05 pasada 1 auditoría: presentes=17161 ausentes=2839 corruptas=0 versión≠1=0 distintas del oráculo=0 ok sin guía=0 error con guía=0
+[E5] tasa=0.05 pasada 2 (reanudación): completadas=20000 errores=0 escrituras en pasada 2=2839 escrituras totales=20000 presentes=20000 corruptas=0 versión≠1=0 distintas del oráculo=0
+[E5] tasa=0.15 guías=20000 pasada 1: completadas=12220 fallidas=7780 tipos={"InjectedError":7780}
+[E5] tasa=0.15 llamadas fallidas observada=38.90 % IC95 [38.23, 39.58] % teórica 1-(1-p)^3=38.59 %
+[E5] tasa=0.15 operaciones intentadas=51471 fallos por operación=7780 (15.12 %, teórico p=15.00 %)
+[E5] tasa=0.15 pasada 1 auditoría: presentes=12220 ausentes=7780 corruptas=0 versión≠1=0 distintas del oráculo=0 ok sin guía=0 error con guía=0
+[E5] tasa=0.15 pasada 2 (reanudación): completadas=20000 errores=0 escrituras en pasada 2=7780 escrituras totales=20000 presentes=20000 corruptas=0 versión≠1=0 distintas del oráculo=0
+[E5] tasa=0.3 guías=20000 pasada 1: completadas=6778 fallidas=13222 tipos={"InjectedError":13222}
+[E5] tasa=0.3 llamadas fallidas observada=66.11 % IC95 [65.45, 66.76] % teórica 1-(1-p)^3=65.70 %
+[E5] tasa=0.3 operaciones intentadas=43778 fallos por operación=13222 (30.20 %, teórico p=30.00 %)
+[E5] tasa=0.3 pasada 1 auditoría: presentes=6778 ausentes=13222 corruptas=0 versión≠1=0 distintas del oráculo=0 ok sin guía=0 error con guía=0
+[E5] tasa=0.3 pasada 2 (reanudación): completadas=20000 errores=0 escrituras en pasada 2=13222 escrituras totales=20000 presentes=20000 corruptas=0 versión≠1=0 distintas del oráculo=0

@@ -1,0 +1,157 @@
+
+> agendamiento-agendar-guia@1.0.0 prueba:funcional
+> vitest run --config pruebas/vitest.config.ts pruebas/funcional --reporter=verbose
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A1 · lunes a viernes, hoy martes 2026-10-27 → 2026-10-28 2ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A2 · solo viernes → 2026-10-30 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A3 · solo martes (hoy no cuenta) → 2026-11-03 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A4 · lunes y viernes → 2026-10-30 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A5 · todos los días con hoy viernes 2026-10-30 → 2026-11-02 (salta sábado y domingo) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 1 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 2 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 3 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 4 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 5 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 6 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 7 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 1 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 2 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 3 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 4 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 5 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 6 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 7 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B1 · hoy 2026-10-30 (viernes, sábado o domingo) con lunes a viernes → 2026-11-02 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B1 · hoy 2026-10-31 (viernes, sábado o domingo) con lunes a viernes → 2026-11-02 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B1 · hoy 2026-11-01 (viernes, sábado o domingo) con lunes a viernes → 2026-11-02 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-10-27 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-10-30 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-10-31 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B2 · solo sábado y domingo, hoy 2026-11-01 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B3 · cruce de año: hoy 2026-12-31 → 2027-01-01 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B4 · cruce de año con lunes a viernes: hoy 2026-12-31 → 2027-01-01 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B5 · año bisiesto: hoy 2028-02-28 con todos los días → 2028-02-29 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > B · Fines de semana y calendario > B6 · año no bisiesto: hoy 2027-02-28 con todos los días → 2027-03-01 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C1 · festivos en los días 1 a 14 → cita el día 15 = 2026-11-11 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C2 · festivos en los días 1 a 15 → SIN_COBERTURA (el día 16 queda fuera) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C3 · festivo mañana → salta al siguiente día hábil: 2026-10-29 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C4 · cobertura sin días de la semana → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C5 · ciudad sin cobertura configurada → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C6 · cobertura de otra ciudad no aplica → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C7 · cobertura solo martes con festivo el 2026-11-03 → 2026-11-10 (día 14 de la ventana) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C8 · cobertura solo martes con festivos el 2026-11-03 y 2026-11-10 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 1-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 2-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 3-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 4-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 5-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 6-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 7-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 8-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 9-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 10-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 11-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 12-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 13-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 14-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 15-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 16-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D1 · guía ya agendada: devuelve su cita sin recalcular y sin escribir 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D2 · ejecutar dos veces: misma cita y una sola escritura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D3 · SIN_COBERTURA se reintenta y se agenda cuando aparece cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D4 · reintento sin cobertura nueva: no escribe ni sube la versión 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D5 · guía inexistente: se crea pendiente y se agenda (versión 1) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D6 · secuencia de versiones 0 → 1 → 2 → 2 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D7 · guía pendiente con versión 3 → al agendar sube a 4 (no reinicia) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D8 · guía SIN_COBERTURA sembrada (versión 1) con cobertura → agenda en versión 2 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D9 · cambiar la cobertura después de agendar no mueve la cita 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios (" ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("   ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("\t") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo tenant vacío o con solo espacios ("\n ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo waybillNumber vacío o con solo espacios ("") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo waybillNumber vacío o con solo espacios (" ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo waybillNumber vacío o con solo espacios ("   ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo waybillNumber vacío o con solo espacios ("\t") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo waybillNumber vacío o con solo espacios ("\n ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo city vacío o con solo espacios ("") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo city vacío o con solo espacios (" ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo city vacío o con solo espacios ("   ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo city vacío o con solo espacios ("\t") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E1 · campo city vacío o con solo espacios ("\n ") → InvalidInput sin tocar repositorios 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E2 · espacios sobrantes en ("  banco-a ", "G-1", "Medellín") se ignoran: es la misma guía 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E2 · espacios sobrantes en ("banco-a", "  G-1 ", "Medellín") se ignoran: es la misma guía 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E2 · espacios sobrantes en ("banco-a", "G-1", "  Medellín  ") se ignoran: es la misma guía 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E3 · la ciudad "Medellín" es Medellín 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E3 · la ciudad "MEDELLIN" es Medellín 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E3 · la ciudad " medellin " es Medellín 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E3 · la ciudad "Medellin" es Medellín 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E3 · la ciudad "MEDELLÍN" es Medellín 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E3 · la ciudad "medellín" es Medellín 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > E · Entradas > E4 · espacios internos en la ciudad: «  Santa   Marta » es «Santa Marta» 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F1 · mismo número de guía en dos tenants evoluciona de forma independiente 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F2 · coberturas distintas por tenant dan citas distintas 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F3 · un tenant sin cobertura queda SIN_COBERTURA aunque otro la tenga 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-01 con cobertura propia (día 0) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-02 con cobertura propia (día 1) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-03 con cobertura propia (día 2) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-04 con cobertura propia (día 3) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-05 con cobertura propia (día 4) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-06 con cobertura propia (día 5) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-07 con cobertura propia (día 6) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-08 con cobertura propia (día 7) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-09 con cobertura propia (día 8) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F4 · cliente-10 con cobertura propia (día 9) ve solo su cita, con 10 tenants definidos a la vez 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-11 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-12 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-13 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-14 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > F · Multitenancy y aislamiento > F5 · cliente-15 sin cobertura propia → SIN_COBERTURA aunque otros tengan 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G1 · Bogotá 2026-10-28T03:00Z es el 2026-10-27 (todavía es la noche anterior) 8ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G2 · Bogotá 2026-10-28T05:00Z es el 2026-10-28 (00:00 locales) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G3 · cambio de mes: 2026-11-01T04:59:59Z es 10-31 y 05:00:00Z es 11-01 en Bogotá 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G4 · cambio de año: 2027-01-01T04:59:59Z es 2026-12-31 y 05:00:00Z es 2027-01-01 en Bogotá 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona America/Mexico_City en 2026-10-28T05:30:00Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona America/Mexico_City en 2026-10-28T06:00:00Z → 2026-10-28 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona Europe/Madrid en 2026-10-27T22:30:00Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona Europe/Madrid en 2026-10-27T23:30:00Z → 2026-10-28 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona UTC en 2026-10-27T23:59:59Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona UTC en 2026-10-28T00:00:00Z → 2026-10-28 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona America/Bogota en 2026-10-28T04:59:59Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G6 · sin zona explícita, el reloj usa America/Bogota 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G7 · el mismo instante con reloj de Bogotá agenda 2026-10-28; con reloj UTC, 2026-10-29 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Medellín se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Bogotá se normaliza sin error y agenda con su cobertura 1ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Cali se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Barranquilla se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Cartagena se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Bucaramanga se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Pereira se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Manizales se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Cúcuta se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Ibagué se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Santa Marta se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Villavicencio se normaliza sin error y agenda con su cobertura 0ms
+stdout | pruebas/funcional/differential-concurrency.campaign.ts > H · Diferencial contra el oráculo > H1 · 10.000 casos aleatorios (semilla 20261028): 0 discrepancias con expectedAppointment
+[H1] casos=10000 agendadas=9446 sin_cobertura=554 discrepancias=0
+
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > H · Diferencial contra el oráculo > H1 · 10.000 casos aleatorios (semilla 20261028): 0 discrepancias con expectedAppointment 111ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I0 · ATTEMPTS_ON_CONFLICT vale 2 0ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I1 · 2 solicitudes simultáneas sobre la misma guía: misma cita y 1 escritura real 18ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I1 · 50 solicitudes simultáneas sobre la misma guía: misma cita y 1 escritura real 19ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I2 · 2 solicitudes simultáneas sin cobertura: todas SIN_COBERTURA y 1 escritura real 19ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I2 · 50 solicitudes simultáneas sin cobertura: todas SIN_COBERTURA y 1 escritura real 20ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I3 · 50 guías distintas en paralelo: cada una se escribe exactamente una vez 13ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I4 · guardar con una versión vieja lanza VersionConflict 0ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I5 · si el repositorio siempre da conflicto, se reintenta exactamente ATTEMPTS_ON_CONFLICT veces 1ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I6 · un conflicto puntual se resuelve releyendo: el segundo intento agenda 0ms
+
+ Test Files  2 passed (2)
+      Tests  141 passed (141)
+   Start at  02:19:05
+   Duration  395ms (tests 87%, import 7%, transform 5%, worker 1%)
+

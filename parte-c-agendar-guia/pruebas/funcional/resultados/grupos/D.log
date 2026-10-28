@@ -1,0 +1,9 @@
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D1 · guía ya agendada: devuelve su cita sin recalcular y sin escribir 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D2 · ejecutar dos veces: misma cita y una sola escritura 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D3 · SIN_COBERTURA se reintenta y se agenda cuando aparece cobertura 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D4 · reintento sin cobertura nueva: no escribe ni sube la versión 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D5 · guía inexistente: se crea pendiente y se agenda (versión 1) 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D6 · secuencia de versiones 0 → 1 → 2 → 2 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D7 · guía pendiente con versión 3 → al agendar sube a 4 (no reinicia) 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D8 · guía SIN_COBERTURA sembrada (versión 1) con cobertura → agenda en versión 2 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > D · Estado de la guía (idempotencia, versión y reintentos) > D9 · cambiar la cobertura después de agendar no mueve la cita 0ms

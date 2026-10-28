@@ -1,0 +1,115 @@
+{
+  "testRun": "E6 memoria y fugas",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "exposedGc": true
+  },
+  "configuration": {
+    "newWaybills": 100000,
+    "operations": 1000000,
+    "scheduledWaybills": 10000,
+    "measureStep": 100000,
+    "growthMargin": 0.1,
+    "minimumMarginBytes": 20971520
+  },
+  "a": {
+    "newWaybills": 100000,
+    "actual_writes": 100000,
+    "heapBeforeGc": 9863176,
+    "heapAfterGc": 38411904,
+    "bytesGrowth": 28548728,
+    "bytesPerWaybillApprox": 285,
+    "note": "Incluye el Map del repositorio, la copia de la guía y sus objetos de valor (TenantId, WaybillNumber, CivilDate)."
+  },
+  "b": {
+    "operations": 1000000,
+    "scheduledWaybills": 10000,
+    "seconds": 1.065,
+    "writes_during_calls": 0,
+    "inconsistent": 0,
+    "initialAuditReport": {
+      "present": 10000,
+      "absent": 0,
+      "corrupt": 0,
+      "versionDistinctFromOne": 0,
+      "distinctAppointment": 0,
+      "okWithoutWaybill": 0,
+      "errorWithWaybill": 0
+    },
+    "finalAuditReport": {
+      "present": 10000,
+      "absent": 0,
+      "corrupt": 0,
+      "versionDistinctFromOne": 0,
+      "distinctAppointment": 0,
+      "okWithoutWaybill": 0,
+      "errorWithWaybill": 0
+    },
+    "points": [
+      {
+        "ops": 0,
+        "heapUsedBytes": 14219296,
+        "rssBytes": 129400832
+      },
+      {
+        "ops": 100000,
+        "heapUsedBytes": 14243528,
+        "rssBytes": 130154496
+      },
+      {
+        "ops": 200000,
+        "heapUsedBytes": 14254000,
+        "rssBytes": 130203648
+      },
+      {
+        "ops": 300000,
+        "heapUsedBytes": 14257072,
+        "rssBytes": 130203648
+      },
+      {
+        "ops": 400000,
+        "heapUsedBytes": 14259912,
+        "rssBytes": 130203648
+      },
+      {
+        "ops": 500000,
+        "heapUsedBytes": 14262792,
+        "rssBytes": 130203648
+      },
+      {
+        "ops": 600000,
+        "heapUsedBytes": 14266312,
+        "rssBytes": 130203648
+      },
+      {
+        "ops": 700000,
+        "heapUsedBytes": 14324104,
+        "rssBytes": 130236416
+      },
+      {
+        "ops": 800000,
+        "heapUsedBytes": 14329776,
+        "rssBytes": 130236416
+      },
+      {
+        "ops": 900000,
+        "heapUsedBytes": 14333968,
+        "rssBytes": 130252800
+      },
+      {
+        "ops": 1000000,
+        "heapUsedBytes": 14336728,
+        "rssBytes": 130252800
+      }
+    ],
+    "criterion": {
+      "from": 100000,
+      "until": 1000000,
+      "bytesGrowth": 93200,
+      "limitBytes": 20971520,
+      "passed": true
+    }
+  }
+}

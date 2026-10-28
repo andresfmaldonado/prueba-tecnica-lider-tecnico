@@ -7,7 +7,7 @@ export default defineConfig({
       include: ['src/**/*.ts'],
       exclude: ['src/index.ts'],
       reporter: ['text'],
-      // La Parte A promete ≥ 90 % en unitarias de dominio: que no se pierda sin que nadie lo note.
+      // Part A promises ≥ 90 % in domain unit tests: do not let that slip unnoticed.
       thresholds: { statements: 90, branches: 90, functions: 90, lines: 90 },
     },
   },

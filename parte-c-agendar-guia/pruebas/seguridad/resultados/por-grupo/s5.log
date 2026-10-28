@@ -1,0 +1,11 @@
+ ✓ pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > el canario con secretos sintéticos produce las 5 coincidencias esperadas 278ms
+ ✓ pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > repositorio completo: 0 hallazgos dentro de parte-c-agendar-guia 325ms
+ ✓ pruebas/seguridad/s5-secretos.prueba.ts > S5 · Secretos > parte-c-agendar-guia no tiene archivos .env* versionables 0ms
+Raíz escaneada: /Users/andres.maldonado/prueba-tecnica-lider-tecnico
+Archivos de texto escaneados: 55
+Omitidos (tamaño o lectura): 0
+FALSO POSITIVO DOCUMENTADO parte-b-code-review/code-review-compacto.md:36 [clave_stripe_live] sk_l***
+FALSO POSITIVO DOCUMENTADO parte-b-code-review/code-review-compacto.md:36 [asignacion_secreta] TOKE***
+FALSO POSITIVO DOCUMENTADO parte-b-code-review/code-review.md:58 [clave_stripe_live] sk_l***
+FALSO POSITIVO DOCUMENTADO parte-b-code-review/code-review.md:58 [asignacion_secreta] TOKE***
+Total hallazgos: 0 · falsos positivos documentados: 4

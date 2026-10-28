@@ -1,0 +1,26 @@
+{
+  "suite": "prueba:estres:contencion",
+  "mutaciones": [
+    {
+      "id": "X-M1",
+      "descripcion": "el repositorio ignora los conflictos de versión",
+      "archivo": "src/adapters/in-memory-waybill-repository.ts",
+      "buscar": "if (savedVersion !== waybill.originalVersion)",
+      "reemplazar": "if (false)"
+    },
+    {
+      "id": "X-M2",
+      "descripcion": "sin reintento ante conflicto (un solo intento)",
+      "archivo": "src/application/scheduling-settings.ts",
+      "buscar": "ATTEMPTS_ON_CONFLICT = 2",
+      "reemplazar": "ATTEMPTS_ON_CONFLICT = 1"
+    },
+    {
+      "id": "X-M3",
+      "descripcion": "sin idempotencia: una guía agendada se recalcula",
+      "archivo": "src/application/schedule-waybill.ts",
+      "buscar": "if (waybill.isScheduled()) return toResult(waybill);",
+      "reemplazar": ""
+    }
+  ]
+}

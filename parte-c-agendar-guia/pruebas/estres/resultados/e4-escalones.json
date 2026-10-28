@@ -1,0 +1,202 @@
+{
+  "testRun": "E4 escalones de concurrencia",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "exposedGc": true
+  },
+  "configuration": {
+    "rungs": [
+      100,
+      500,
+      1000,
+      5000,
+      10000,
+      20000,
+      50000
+    ],
+    "latencyPerOperationMs": 20,
+    "concurrency": "N guías distintas, todas en vuelo a la vez",
+    "rssLimitMb": 4096,
+    "breakpointP99Threshold": 5,
+    "delayP99ThresholdMs": 1000
+  },
+  "note_rss": "El RSS es el del proceso worker de vitest y es un máximo acumulado: no baja entre escalones.",
+  "steps": [
+    {
+      "rung": 100,
+      "seconds": 0.064,
+      "waybillsPerSecond": 1572.4,
+      "completed": 100,
+      "errors": 0,
+      "kinds": {},
+      "writes": 100,
+      "present": 100,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 100,
+        "p50": 63.174,
+        "p95": 63.211,
+        "p99": 63.215,
+        "max": 63.261
+      },
+      "delayMs": {
+        "p99": 12.05,
+        "max": 12.05,
+        "samples": 4
+      },
+      "maxRssMB": 64.2
+    },
+    {
+      "rung": 500,
+      "seconds": 0.067,
+      "waybillsPerSecond": 7449.1,
+      "completed": 500,
+      "errors": 0,
+      "kinds": {},
+      "writes": 500,
+      "present": 500,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 500,
+        "p50": 62.114,
+        "p95": 66.303,
+        "p99": 66.329,
+        "max": 66.343
+      },
+      "delayMs": {
+        "p99": 12.05,
+        "max": 12.05,
+        "samples": 5
+      },
+      "maxRssMB": 66.5
+    },
+    {
+      "rung": 1000,
+      "seconds": 0.068,
+      "waybillsPerSecond": 14681.2,
+      "completed": 1000,
+      "errors": 0,
+      "kinds": {},
+      "writes": 1000,
+      "present": 1000,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 1000,
+        "p50": 63.519,
+        "p95": 66.628,
+        "p99": 66.652,
+        "max": 66.666
+      },
+      "delayMs": {
+        "p99": 12.73,
+        "max": 12.73,
+        "samples": 5
+      },
+      "maxRssMB": 75.6
+    },
+    {
+      "rung": 5000,
+      "seconds": 0.084,
+      "waybillsPerSecond": 59839.9,
+      "completed": 5000,
+      "errors": 0,
+      "kinds": {},
+      "writes": 5000,
+      "present": 5000,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 5000,
+        "p50": 65.622,
+        "p95": 71.689,
+        "p99": 71.795,
+        "max": 71.843
+      },
+      "delayMs": {
+        "p99": 19.825,
+        "max": 19.825,
+        "samples": 6
+      },
+      "maxRssMB": 113.6
+    },
+    {
+      "rung": 10000,
+      "seconds": 0.089,
+      "waybillsPerSecond": 112068.9,
+      "completed": 10000,
+      "errors": 0,
+      "kinds": {},
+      "writes": 10000,
+      "present": 10000,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 10000,
+        "p50": 70.518,
+        "p95": 74.189,
+        "p99": 74.468,
+        "max": 75.911
+      },
+      "delayMs": {
+        "p99": 19.726,
+        "max": 19.726,
+        "samples": 5
+      },
+      "maxRssMB": 141.7
+    },
+    {
+      "rung": 20000,
+      "seconds": 0.151,
+      "waybillsPerSecond": 132117.6,
+      "completed": 20000,
+      "errors": 0,
+      "kinds": {},
+      "writes": 20000,
+      "present": 20000,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 20000,
+        "p50": 119.727,
+        "p95": 124.017,
+        "p99": 124.64,
+        "max": 124.813
+      },
+      "delayMs": {
+        "p99": 27.05,
+        "max": 27.05,
+        "samples": 5
+      },
+      "maxRssMB": 212.3
+    },
+    {
+      "rung": 50000,
+      "seconds": 0.395,
+      "waybillsPerSecond": 126437,
+      "completed": 50000,
+      "errors": 0,
+      "kinds": {},
+      "writes": 50000,
+      "present": 50000,
+      "inconsistent": 0,
+      "latencyMs": {
+        "n": 50000,
+        "p50": 316.346,
+        "p95": 320.28,
+        "p99": 321.401,
+        "max": 321.943
+      },
+      "delayMs": {
+        "p99": 99.484,
+        "max": 99.484,
+        "samples": 3
+      },
+      "maxRssMB": 398.8
+    }
+  ],
+  "stopped_by_rss": null,
+  "breakpoint_point": {
+    "rung": 50000,
+    "criterion": "p99 de latencia 321.401 ms > 5 × 63.215 ms del primer escalón"
+  },
+  "conclusion_breakpoint": "escalón 50000: p99 de latencia 321.401 ms > 5 × 63.215 ms del primer escalón"
+}

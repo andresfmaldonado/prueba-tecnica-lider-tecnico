@@ -1,0 +1,54 @@
+{
+  "suite": "prueba:funcional",
+  "mutaciones": [
+    {
+      "id": "M1",
+      "descripcion": "ventana de 14 días en lugar de 15",
+      "archivo": "src/domain/scheduling-policy.ts",
+      "buscar": "WINDOW_DAYS = 15",
+      "reemplazar": "WINDOW_DAYS = 14"
+    },
+    {
+      "id": "M2",
+      "descripcion": "el sábado cuenta como día hábil",
+      "archivo": "src/domain/scheduling-policy.ts",
+      "buscar": "[1, 2, 3, 4, 5]",
+      "reemplazar": "[1, 2, 3, 4, 5, 6]"
+    },
+    {
+      "id": "M3",
+      "descripcion": "hoy cuenta (la búsqueda empieza en d=0)",
+      "archivo": "src/domain/scheduling-policy.ts",
+      "buscar": "let d = 1;",
+      "reemplazar": "let d = 0;"
+    },
+    {
+      "id": "M4",
+      "descripcion": "sin idempotencia: una guía agendada se recalcula",
+      "archivo": "src/application/schedule-waybill.ts",
+      "buscar": "if (waybill.isScheduled()) return toResult(waybill);",
+      "reemplazar": ""
+    },
+    {
+      "id": "M5",
+      "descripcion": "el repositorio ignora los conflictos de versión",
+      "archivo": "src/adapters/in-memory-waybill-repository.ts",
+      "buscar": "if (savedVersion !== waybill.originalVersion)",
+      "reemplazar": "if (false)"
+    },
+    {
+      "id": "M6",
+      "descripcion": "la ciudad no se normaliza a mayúsculas",
+      "archivo": "src/domain/identifiers.ts",
+      "buscar": ".toUpperCase()",
+      "reemplazar": ""
+    },
+    {
+      "id": "M7",
+      "descripcion": "el reloj ignora la zona horaria (usa UTC)",
+      "archivo": "src/adapters/clocks.ts",
+      "buscar": "timeZone: this.timeZoneId",
+      "reemplazar": "timeZone: 'UTC'"
+    }
+  ]
+}

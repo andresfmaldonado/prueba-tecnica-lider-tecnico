@@ -1,0 +1,24 @@
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C1 · festivos en los días 1 a 14 → cita el día 15 = 2026-11-11 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C2 · festivos en los días 1 a 15 → SIN_COBERTURA (el día 16 queda fuera) 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C3 · festivo mañana → salta al siguiente día hábil: 2026-10-29 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C4 · cobertura sin días de la semana → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C5 · ciudad sin cobertura configurada → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C6 · cobertura de otra ciudad no aplica → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C7 · cobertura solo martes con festivo el 2026-11-03 → 2026-11-10 (día 14 de la ventana) 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C8 · cobertura solo martes con festivos el 2026-11-03 y 2026-11-10 → SIN_COBERTURA 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 1-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 2-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 3-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 4-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 5-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 6-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 7-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 8-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 9-1 con todos los días: coincide con el oráculo 1ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 10-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 11-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 12-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 13-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 14-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 15-1 con todos los días: coincide con el oráculo 0ms
+ ✓ pruebas/funcional/reglas.prueba.ts > C · Ventana de 15 días > C9 · festivos en los días 1 a 16-1 con todos los días: coincide con el oráculo 0ms

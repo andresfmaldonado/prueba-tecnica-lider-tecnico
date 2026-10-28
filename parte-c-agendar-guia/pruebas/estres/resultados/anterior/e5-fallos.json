@@ -1,0 +1,205 @@
+{
+  "prueba": "E5 fallos inyectados y reanudación",
+  "entorno": {
+    "node": "v22.21.1",
+    "plataforma": "darwin",
+    "arquitectura": "arm64",
+    "gcExpuesto": true
+  },
+  "configuracion": {
+    "guias": 20000,
+    "concurrencia": 50,
+    "latenciaPorOperacionMs": 5,
+    "tasas": [
+      0.05,
+      0.15,
+      0.3
+    ]
+  },
+  "nota_teorica": "Tasa de llamadas fallidas teórica 1-(1-p)^3: supone tres operaciones independientes por llamada. Una llamada falla si falla alguna de las operaciones que intenta; el orden en que se intentan no cambia esa probabilidad, pero sí el número medio de operaciones intentadas.",
+  "resultados": [
+    {
+      "tasaFallo": 0.05,
+      "guias": 20000,
+      "pasada1": {
+        "completadas": 17161,
+        "fallidas": 2839,
+        "tipos": {
+          "ErrorInyectado": 2839
+        },
+        "mensajes": [
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado"
+        ],
+        "escrituras_reales": 17161,
+        "operaciones_intentadas": 57089,
+        "fallos_por_operacion": 2839,
+        "tasa_llamadas_observada": 0.14195,
+        "tasa_llamadas_teorica": 0.14263,
+        "ic95_observada": [
+          0.13718,
+          0.14686
+        ],
+        "auditoria": {
+          "presentes": 17161,
+          "ausentes": 2839,
+          "corruptas": 0,
+          "versionDistintaDeUno": 0,
+          "citaDistinta": 0,
+          "okSinGuia": 0,
+          "errorConGuia": 0
+        }
+      },
+      "pasada2": {
+        "completadas": 20000,
+        "errores": 0,
+        "escrituras_en_pasada": 2839,
+        "escrituras_totales": 20000,
+        "auditoria": {
+          "presentes": 20000,
+          "ausentes": 0,
+          "corruptas": 0,
+          "versionDistintaDeUno": 0,
+          "citaDistinta": 0,
+          "okSinGuia": 0,
+          "errorConGuia": 0
+        }
+      },
+      "memoria": {
+        "antes": {
+          "heapUsed": 11540080,
+          "rss": 72466432
+        },
+        "despues": {
+          "heapUsed": 23718576,
+          "rss": 105889792
+        }
+      }
+    },
+    {
+      "tasaFallo": 0.15,
+      "guias": 20000,
+      "pasada1": {
+        "completadas": 12220,
+        "fallidas": 7780,
+        "tipos": {
+          "ErrorInyectado": 7780
+        },
+        "mensajes": [
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado"
+        ],
+        "escrituras_reales": 12220,
+        "operaciones_intentadas": 51471,
+        "fallos_por_operacion": 7780,
+        "tasa_llamadas_observada": 0.389,
+        "tasa_llamadas_teorica": 0.38588,
+        "ic95_observada": [
+          0.38227,
+          0.39578
+        ],
+        "auditoria": {
+          "presentes": 12220,
+          "ausentes": 7780,
+          "corruptas": 0,
+          "versionDistintaDeUno": 0,
+          "citaDistinta": 0,
+          "okSinGuia": 0,
+          "errorConGuia": 0
+        }
+      },
+      "pasada2": {
+        "completadas": 20000,
+        "errores": 0,
+        "escrituras_en_pasada": 7780,
+        "escrituras_totales": 20000,
+        "auditoria": {
+          "presentes": 20000,
+          "ausentes": 0,
+          "corruptas": 0,
+          "versionDistintaDeUno": 0,
+          "citaDistinta": 0,
+          "okSinGuia": 0,
+          "errorConGuia": 0
+        }
+      },
+      "memoria": {
+        "antes": {
+          "heapUsed": 11968880,
+          "rss": 104644608
+        },
+        "despues": {
+          "heapUsed": 23369016,
+          "rss": 100253696
+        }
+      }
+    },
+    {
+      "tasaFallo": 0.3,
+      "guias": 20000,
+      "pasada1": {
+        "completadas": 6778,
+        "fallidas": 13222,
+        "tipos": {
+          "ErrorInyectado": 13222
+        },
+        "mensajes": [
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado",
+          "ErrorInyectado: fallo inyectado"
+        ],
+        "escrituras_reales": 6778,
+        "operaciones_intentadas": 43778,
+        "fallos_por_operacion": 13222,
+        "tasa_llamadas_observada": 0.6611,
+        "tasa_llamadas_teorica": 0.657,
+        "ic95_observada": [
+          0.65451,
+          0.66763
+        ],
+        "auditoria": {
+          "presentes": 6778,
+          "ausentes": 13222,
+          "corruptas": 0,
+          "versionDistintaDeUno": 0,
+          "citaDistinta": 0,
+          "okSinGuia": 0,
+          "errorConGuia": 0
+        }
+      },
+      "pasada2": {
+        "completadas": 20000,
+        "errores": 0,
+        "escrituras_en_pasada": 13222,
+        "escrituras_totales": 20000,
+        "auditoria": {
+          "presentes": 20000,
+          "ausentes": 0,
+          "corruptas": 0,
+          "versionDistintaDeUno": 0,
+          "citaDistinta": 0,
+          "okSinGuia": 0,
+          "errorConGuia": 0
+        }
+      },
+      "memoria": {
+        "antes": {
+          "heapUsed": 12079160,
+          "rss": 98844672
+        },
+        "despues": {
+          "heapUsed": 31092984,
+          "rss": 101302272
+        }
+      }
+    }
+  ]
+}

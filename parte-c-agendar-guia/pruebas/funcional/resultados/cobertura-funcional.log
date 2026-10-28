@@ -1,0 +1,29 @@
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+      Coverage enabled with v8
+
+
+ Test Files  2 passed (2)
+      Tests  141 passed (141)
+   Start at  01:12:07
+   Duration  482ms (tests 75%, transform 14%, import 6%, worker 5%)
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   93.44 |     87.5 |   93.75 |   94.44 |                   
+ adapters          |      92 |       90 |   84.61 |   95.65 |                   
+  relojes.ts       |      75 |       50 |   66.66 |   85.71 | 12                
+ domain            |   91.66 |    81.25 |   96.77 |    92.3 |                   
+  fecha-civil.ts   |   82.35 |    77.77 |    87.5 |    87.5 | 19,45             
+  guia.ts          |   89.65 |       70 |     100 |   89.28 | 31,34,79          
+  ...ificadores.ts |     100 |       75 |     100 |     100 | 4                 
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 93.44% ( 114/122 )
+Branches     : 87.5% ( 49/56 )
+Functions    : 93.75% ( 45/48 )
+Lines        : 94.44% ( 102/108 )
+================================================================================

@@ -1,0 +1,25 @@
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G1 · Bogotá 2026-10-28T03:00Z es el 2026-10-27 (todavía es la noche anterior) 8ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G2 · Bogotá 2026-10-28T05:00Z es el 2026-10-28 (00:00 locales) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G3 · cambio de mes: 2026-11-01T04:59:59Z es 10-31 y 05:00:00Z es 11-01 en Bogotá 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G4 · cambio de año: 2027-01-01T04:59:59Z es 2026-12-31 y 05:00:00Z es 2027-01-01 en Bogotá 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona America/Mexico_City en 2026-10-28T05:30:00Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona America/Mexico_City en 2026-10-28T06:00:00Z → 2026-10-28 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona Europe/Madrid en 2026-10-27T22:30:00Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona Europe/Madrid en 2026-10-27T23:30:00Z → 2026-10-28 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona UTC en 2026-10-27T23:59:59Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona UTC en 2026-10-28T00:00:00Z → 2026-10-28 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G5 · zona America/Bogota en 2026-10-28T04:59:59Z → 2026-10-27 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G6 · sin zona explícita, el reloj usa America/Bogota 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Tiempo (SystemClock y zona horaria) > G7 · el mismo instante con reloj de Bogotá agenda 2026-10-28; con reloj UTC, 2026-10-29 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Medellín se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Bogotá se normaliza sin error y agenda con su cobertura 1ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Cali se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Barranquilla se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Cartagena se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Bucaramanga se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Pereira se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Manizales se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Cúcuta se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Ibagué se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Santa Marta se normaliza sin error y agenda con su cobertura 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > G · Catálogo común de ciudades > G8 · Villavicencio se normaliza sin error y agenda con su cobertura 0ms

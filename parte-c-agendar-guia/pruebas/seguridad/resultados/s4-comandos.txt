@@ -1,0 +1,10 @@
+$ npm audit
+found 0 vulnerabilities
+
+$ npm ls --omit=dev --all
+agendamiento-agendar-guia@1.0.0 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+`-- (empty)
+
+
+$ npm ls --all (exit=0)
+lineas del arbol completo: 137

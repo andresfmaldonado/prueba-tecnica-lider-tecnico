@@ -1,0 +1,10 @@
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (a) Cobertura copia sus entradas: mutar el array original no cambia cubre() 1ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (a) Cobertura copia las fechas no disponibles: mutar el array original no reabre el día 1ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza AGENDADA sin fecha y fecha con estado no agendado 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión -1 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión 1.5 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión NaN 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión Infinity 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) un repositorio no deja que una copia mutada altere lo persistido 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (c) [INFORMATIVO] mutar por la fuerza el agregado sí surte efecto en tiempo de ejecución 2ms
+[INFORMATIVO S7c] tras mutar: {"status":"AGENDADA","appointmentDate":null,"version":-1,"originalVersion":99}

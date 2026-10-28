@@ -1,0 +1,84 @@
+
+> agendamiento-agendar-guia@1.0.0 prueba:carga
+> vitest run --config pruebas/vitest.config.ts pruebas/carga --reporter=verbose
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+stdout | pruebas/carga/lote.prueba.ts > C2 corrida completa del lote > 40.000 guías, concurrencia 50, L = 20 ms: tiempo, throughput y verificación del resultado
+[C2] {"prueba":"C2 corrida completa del lote","configuracion":{"guias":40000,"concurrencia":50,"latencia_ms":20},"completadas":40000,"errores":0,"mensajes_error":[],"segundos":50.245,"minutos":0.837,"req_s":796.1,"llamadas_repositorio":120000,"latencia_llamada_ms":{"n":120000,"p50":20.872,"p95":21.74,"p99":21.927,"max":23.514},"latencia_guia_ms":{"n":40000,"p50":62.833,"p95":64.363,"p99":64.736,"max":65.722},"escrituras_reales":40000,"verificacion":{"agendadas":40000,"sin_cobertura":0,"version_mayor_que_1":0,"incoherentes_estado_fecha":0,"fechas_distintas_del_oraculo":0},"comparacion":{"ventana_lote_segundos":7200,"margen_frente_a_2h_veces":143.3,"umbral_req_s":5.6,"cumple_umbral":true,"modelo_parte_a_horas_a_5_req_s_extrapolado":2.222,"modelo_parte_a_minutos_a_50_req_s_extrapolado":13.33,"horas_con_throughput_medido_extrapolado":0.014}}
+
+ ✓ pruebas/carga/lote.prueba.ts > C2 corrida completa del lote > 40.000 guías, concurrencia 50, L = 20 ms: tiempo, throughput y verificación del resultado 50413ms
+stdout | pruebas/carga/lote.prueba.ts > C5 memoria antes y después de C2 > heapUsed y rss antes/después, y bytes aproximados por guía almacenada
+[C5] {"prueba":"C5 memoria","nota":"Aproximado: sin forzar el recolector (no se usa --expose-gc); la variación incluye basura pendiente de recoger.","guias_almacenadas":40000,"heap_used_mb":{"antes":11.34,"despues":34.63},"rss_mb":{"antes":64.34,"despues":99.73},"bytes_heap_por_guia_aprox":610,"bytes_rss_por_guia_aprox":928}
+
+ ✓ pruebas/carga/lote.prueba.ts > C5 memoria antes y después de C2 > heapUsed y rss antes/después, y bytes aproximados por guía almacenada 0ms
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=1 completadas=40000 seg=0.127 req/s=314830.38 llamadas/s=944491.15 p50=0 p95=0.001 p99=0.001 max=0.528 errores=0 escrituras=40000 heapΔMB=26.94
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=10 completadas=40000 seg=0.112 req/s=357265.53 llamadas/s=1071796.6 p50=0.004 p95=0.008 p99=0.01 max=0.528 errores=0 escrituras=40000 heapΔMB=7.82
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=50 completadas=40000 seg=0.117 req/s=342327.76 llamadas/s=1026983.28 p50=0.022 p95=0.045 p99=0.064 max=2.05 errores=0 escrituras=40000 heapΔMB=-44.85
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=0ms c=100 completadas=40000 seg=0.116 req/s=344379.17 llamadas/s=1033137.52 p50=0.046 p95=0.092 p99=0.316 max=0.635 errores=0 escrituras=40000 heapΔMB=26.21
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=1 completadas=1175 seg=20.011 req/s=58.72 llamadas/s=176.16 p50=5.729 p95=5.834 p99=5.897 max=15.784 errores=0 escrituras=1175 heapΔMB=-64.4
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=10 completadas=11940 seg=20.008 req/s=596.77 llamadas/s=1790.3 p50=5.783 p95=5.941 p99=6.037 max=6.635 errores=0 escrituras=11940 heapΔMB=2.39
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=50 completadas=40000 seg=13.27 req/s=3014.3 llamadas/s=9042.89 p50=5.644 p95=6.264 p99=6.421 max=9.304 errores=0 escrituras=40000 heapΔMB=10.05
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=5ms c=100 completadas=40000 seg=6.582 req/s=6077.43 llamadas/s=18232.29 p50=5.436 p95=6.23 p99=6.546 max=7.702 errores=0 escrituras=40000 heapΔMB=-19.28
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=1 completadas=318 seg=20.013 req/s=15.89 llamadas/s=47.67 p50=21.121 p95=21.205 p99=21.309 max=24.743 errores=0 escrituras=318 heapΔMB=-34.28
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=10 completadas=3180 seg=20.062 req/s=158.51 llamadas/s=475.54 p50=21.171 p95=22.197 p99=22.403 max=28.333 errores=0 escrituras=3180 heapΔMB=3.89
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=50 completadas=15451 seg=20.053 req/s=770.5 llamadas/s=2311.5 p50=21.592 p95=22.712 p99=22.875 max=39.141 errores=0 escrituras=15451 heapΔMB=7.65
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=20ms c=100 completadas=30884 seg=20.065 req/s=1539.17 llamadas/s=4617.51 p50=21.715 p95=22.844 p99=23.288 max=28.919 errores=0 escrituras=30884 heapΔMB=1.89
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=1 completadas=66 seg=20.15 req/s=3.28 llamadas/s=9.83 p50=101.912 p95=102.23 p99=104.399 max=123.63 errores=0 escrituras=66 heapΔMB=-23.02
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=10 completadas=660 seg=20.138 req/s=32.77 llamadas/s=98.32 p50=101.792 p95=102.473 p99=108.661 max=110.013 errores=0 escrituras=660 heapΔMB=-0.52
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=50 completadas=3300 seg=20.108 req/s=164.11 llamadas/s=492.34 p50=101.535 p95=102.665 p99=102.85 max=103.105 errores=0 escrituras=3300 heapΔMB=1.78
+
+stdout | pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras
+[C1] L=100ms c=100 completadas=6600 seg=20.151 req/s=327.52 llamadas/s=982.56 p50=101.752 p95=103.121 p99=105.897 max=114.187 errores=0 escrituras=6600 heapΔMB=0.73
+
+ ✓ pruebas/carga/c1-matriz.prueba.ts > C1 matriz de carga cerrada > 16 combinaciones: throughput, latencia por llamada, errores y escrituras 221991ms
+stdout | pruebas/carga/c4-carga-abierta.prueba.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s
+[C4] 5 req/s: lanzadas=100 completadas=100 errores=0 throughput=5.03 p50=65.381 p95=66.928 p99=67.165 max=67.292 maxEnVuelo=1 backlogCreciente=false retrasoMax=2.748ms
+
+stdout | pruebas/carga/c4-carga-abierta.prueba.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s
+[C4] 50 req/s: lanzadas=1000 completadas=1000 errores=0 throughput=49.89 p50=61.527 p95=63.354 p99=64.089 max=65.069 maxEnVuelo=4 backlogCreciente=false retrasoMax=2.786ms
+
+stdout | pruebas/carga/c4-carga-abierta.prueba.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s
+[C4] 500 req/s: lanzadas=10000 completadas=10000 errores=0 throughput=498.5 p50=60.869 p95=62.389 p99=63.093 max=70.98 maxEnVuelo=35 backlogCreciente=false retrasoMax=8.225ms
+
+ ✓ pruebas/carga/c4-carga-abierta.prueba.ts > C4 carga abierta > 5, 50 y 500 req/s: p50/p95/p99, en vuelo y backlog; criterio p99 < 200 ms a 5 req/s 60028ms
+stdout | pruebas/carga/c3-reanudacion.prueba.ts > C3 reanudación exacta tras caída > las escrituras totales son exactamente el tamaño del lote y el estado final es coherente
+[C3] {"prueba":"C3 reanudación tras caída","configuracion":{"guias":40000,"concurrencia":50,"latencia_ms":5},"pasada1":{"completadas":20049,"lanzadas":20049,"errores":0,"escrituras":20049,"segundos":7.321,"porcentaje_completado":50.12},"pasada2":{"completadas":40000,"errores":0,"escrituras":19951,"esperadas_escrituras_N_menos_completadas1":19951,"segundos":9.672},"totales":{"escrituras_reales":40000,"esperadas_escrituras":40000,"guias_presentes_tras_pasada1":20049,"guias_presentes_al_final":40000},"verificacion":{"version_mayor_que_1":0,"version_1":40000,"incoherentes_estado_fecha":0,"agendadas":40000,"sin_cobertura":0,"fechas_distintas_del_oraculo":0}}
+
+ ✓ pruebas/carga/c3-reanudacion.prueba.ts > C3 reanudación exacta tras caída > las escrituras totales son exactamente el tamaño del lote y el estado final es coherente 17121ms
+
+ Test Files  4 passed (4)
+      Tests  5 passed (5)
+   Start at  01:29:33
+   Duration  349.97s (tests 100%)
+

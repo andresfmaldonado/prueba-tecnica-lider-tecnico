@@ -1,0 +1,19 @@
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A1 · lunes a viernes, hoy martes 2026-10-27 → 2026-10-28 2ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A2 · solo viernes → 2026-10-30 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A3 · solo martes (hoy no cuenta) → 2026-11-03 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A4 · lunes y viernes → 2026-10-30 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A5 · todos los días con hoy viernes 2026-10-30 → 2026-11-02 (salta sábado y domingo) 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 1 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 2 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 3 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 4 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 5 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 6 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A6 · solo el día 7 de la semana, hoy 2026-10-27, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 1 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 2 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 3 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 4 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 5 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 6 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms
+ ✓ pruebas/funcional/rules.campaign.ts > A · Regla de la cita > A7 · solo el día 7 de la semana, hoy 2026-10-30, coincide con el oráculo 0ms

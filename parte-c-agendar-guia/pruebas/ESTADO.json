@@ -1,0 +1,112 @@
+{
+  "creado": "2026-10-28T01:06:48-05:00",
+  "pruebas": {
+    "funcional": {
+      "estado": "verificada",
+      "nota": "regresion npm test 80/80; mutaciones 7/7; informe corregido",
+      "actualizado": "2026-10-28T02:23:15-05:00",
+      "hallazgos": 0
+    },
+    "seguridad": {
+      "estado": "verificada",
+      "nota": "traducida y regenerada: 138/138; npm test 80/80; 6 hallazgos cerrados; mutaciones 6/6 (log previo a la restauracion, repetir en solitario)",
+      "actualizado": "2026-10-28T02:23:07-05:00",
+      "hallazgos": 0
+    },
+    "carga": {
+      "estado": "verificada",
+      "nota": "suite completa con nombres en ingles y configuracion LOAD_* validada: 5/5 pruebas; 0 errores; evidencias y PDF regenerados",
+      "actualizado": "2026-10-28T02:38:07-05:00",
+      "hallazgos": 0
+    },
+    "estres": {
+      "estado": "verificada",
+      "nota": "Renombrado al ingles; suite completa 9/9; mutaciones 3/3; src restaurado; informe y PDF regenerados",
+      "actualizado": "2026-10-28T02:43:42-05:00",
+      "hallazgos": 0
+    }
+  },
+  "notas": [
+    {
+      "hora": "2026-10-28T01:06:48-05:00",
+      "texto": "Andamiaje listo y probado (runner, oráculo, latencia, captura, gráfico, informe, estado)"
+    },
+    {
+      "hora": "2026-10-28T01:08:34-05:00",
+      "texto": "01:15 lanzados subagentes Haiku: funcional y seguridad (en paralelo). Carga y estrés esperan, para correr con el equipo en reposo."
+    },
+    {
+      "hora": "2026-10-28T01:12:11-05:00",
+      "texto": "Pendiente al terminar las pruebas: traducir al inglés el código de la Parte C (solo código; mensajes y valores siguen en español). Ver NOTA-IA."
+    },
+    {
+      "hora": "2026-10-28T01:13:57-05:00",
+      "texto": "01:24 funcional VERIFICADA por Claude: re-ejecución 141/141, 0 discrepancias en 10.000 casos, src/ y test/ intactos, cifras del informe = logs. Pendiente: validar con mutaciones cuando termine seguridad (no mutar src mientras corre)."
+    },
+    {
+      "hora": "2026-10-28T01:15:30-05:00",
+      "texto": "Pendiente en la pasada de refactor (tras las pruebas): traducir a inglés + variables de entorno (SCHEDULING_WINDOW_DAYS, SCHEDULING_CONFLICT_ATTEMPTS, SCHEDULING_BUSINESS_DAYS, SCHEDULING_TIME_ZONE; CHROME_BIN; REPO_ROOT; PRUEBAS_SEED). S6 de seguridad debe permitir process.env solo en el adaptador de configuración."
+    },
+    {
+      "hora": "2026-10-28T01:16:09-05:00",
+      "texto": "Seguridad: 137 casos, 103 pasan, 34 fallan. H1 Critico (colision tenant::guia). Sin correcciones a src/."
+    },
+    {
+      "hora": "2026-10-28T01:21:54-05:00",
+      "texto": "Hallazgos de seguridad H1-H6 corregidos en src/ (138/138; unitarias 66/66; mutaciones 13/13). Informes funcional y seguridad en actualización (después)."
+    },
+    {
+      "hora": "2026-10-28T01:22:29-05:00",
+      "texto": "bucle 01:22: funcional aprobada (pdf); seguridad corregida, informe 'después' en curso; carga y estrés pendientes; 2 subagentes activos, sin atascos"
+    },
+    {
+      "hora": "2026-10-28T01:23:53-05:00",
+      "texto": "01:30 funcional y seguridad VERIFICADAS y actualizadas (antes/después + mutaciones). Lanzada la prueba de CARGA (Haiku) con el equipo en reposo; estrés va después."
+    },
+    {
+      "hora": "2026-10-28T01:31:20-05:00",
+      "texto": "bucle 01:31: funcional y seguridad aprobadas; carga en curso (ejecutando C1-C5), sin atasco; estrés pendiente"
+    },
+    {
+      "hora": "2026-10-28T01:42:43-05:00",
+      "texto": "Carga VERIFICADA por Claude (Little ±12 %, re-ejecución C2/C3, mutación de idempotencia detectada) e informe corregido (commit, coberturas garantizadas). Lanzada la prueba de ESTRÉS con el equipo en reposo."
+    },
+    {
+      "hora": "2026-10-28T01:43:09-05:00",
+      "texto": "bucle 01:43: funcional, seguridad y carga aprobadas con informe PDF; estrés recién lanzado (leyendo src y herramientas), subagente activo, sin atasco"
+    },
+    {
+      "hora": "2026-10-28T01:51:19-05:00",
+      "texto": "bucle 01:51: tres pruebas aprobadas con PDF; estrés en curso (arnés validado con humo, ejecutando la corrida completa), subagente activo desde hace 8 min, sin atasco"
+    },
+    {
+      "hora": "2026-10-28T01:58:05-05:00",
+      "texto": "Estrés VERIFICADO por Claude: cuadra con la teoría (E2, E3, E5); la cifra 52.352 se explicó (48 guías SIN_COBERTURA × 49) y se reprodujo; mutaciones 3/3 (tras corregir mi script); informe completado (O4, sección de mutaciones). Las 4 pruebas aprobadas."
+    },
+    {
+      "hora": "2026-10-28T02:02:29-05:00",
+      "texto": "bucle 02:02: las 4 pruebas estaban aprobadas con PDF, pero NO termino el bucle: queda re-ejecutar y regenerar evidencias tras traducir el código al inglés (subagente Haiku traduciendo nombres, sin atasco). Los estados pasan a 'regenerar'."
+    },
+    {
+      "hora": "2026-10-28T02:13:15-05:00",
+      "texto": "bucle 02:13: pruebas en 'regenerar' (nombres traducidos, suites en verde: 66/141/138); 2 subagentes traduciendo comentarios (activos, sin atasco); sigue variables de entorno y regeneración de evidencias"
+    },
+    {
+      "hora": "2026-10-28T02:21:18-05:00",
+      "texto": "bucle 02:21: refactor de variables de entorno hecho y verificado (80/141/138, 16 mutaciones); funcional y seguridad regenerando con subagentes; carga y estres esperan maquina libre"
+    },
+    {
+      "hora": "2026-10-28T02:31:16-05:00",
+      "texto": "bucle 02:31: funcional y seguridad verificadas tras regenerar (141/138, mutaciones 7/7 y 6/6); carga en curso; estres espera"
+    },
+    {
+      "hora": "2026-10-28T02:41:15-05:00",
+      "texto": "bucle 02:41: funcional, seguridad y carga verificadas; estres en curso (suite completa); sin hallazgos abiertos"
+    },
+    {
+      "hora": "2026-10-28T02:44:24-05:00",
+      "texto": "bucle: las 4 pruebas verificadas con PDF, 0 hallazgos abiertos; bucle terminado y borrado"
+    }
+  ],
+  "actualizado": "2026-10-28T02:44:24-05:00"
+}

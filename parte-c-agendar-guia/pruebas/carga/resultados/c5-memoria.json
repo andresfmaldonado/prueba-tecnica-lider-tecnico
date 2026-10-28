@@ -1,0 +1,15 @@
+{
+  "testRun": "C5 memoria",
+  "note": "Aproximado: sin forzar el recolector (no se usa --expose-gc); la variación incluye basura pendiente de recoger.",
+  "stored_waybills": 40000,
+  "heap_used_mb": {
+    "before": 11.5,
+    "after": 39.28
+  },
+  "rss_mb": {
+    "before": 64.05,
+    "after": 105.42
+  },
+  "bytes_heap_per_waybill_approx": 728,
+  "bytes_rss_per_waybill_approx": 1085
+}

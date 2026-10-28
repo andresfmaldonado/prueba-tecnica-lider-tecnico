@@ -1,0 +1,57 @@
+{
+  "testRun": "E1 volumen 3x",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "exposedGc": true
+  },
+  "configuration": {
+    "waybills": 120000,
+    "factor": 3,
+    "baseBatch": 40000,
+    "concurrency": 50,
+    "latencyPerOperationMs": 5
+  },
+  "distinctWaybills": 120000,
+  "completed": 120000,
+  "errors": 0,
+  "kinds": {},
+  "seconds": 43.315,
+  "waybillsPerSecond": 2770.38,
+  "actual_writes": 120000,
+  "write_attempts": 120000,
+  "waybill_reads": 120000,
+  "coverage_reads": 120000,
+  "version_conflicts": 0,
+  "request_latency_ms": {
+    "n": 120000,
+    "p50": 18.077,
+    "p95": 19.75,
+    "p99": 20.472,
+    "max": 25.524
+  },
+  "memory": {
+    "before": {
+      "heapUsed": 20335368,
+      "rss": 92979200
+    },
+    "postBatch": {
+      "heapUsed": 61097224,
+      "rss": 126894080
+    },
+    "postGc": {
+      "heapUsed": 50071424,
+      "rss": 127778816
+    }
+  },
+  "auditReport": {
+    "present": 120000,
+    "absent": 0,
+    "corrupt": 0,
+    "versionDistinctFromOne": 0,
+    "distinctAppointment": 0,
+    "okWithoutWaybill": 0,
+    "errorWithWaybill": 0
+  }
+}

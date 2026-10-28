@@ -5,6 +5,11 @@
   "scripts": {
     "test": "vitest run",
     "coverage": "vitest run --coverage",
+    "prueba:funcional": "vitest run --config pruebas/vitest.config.ts pruebas/funcional --reporter=verbose",
+    "prueba:seguridad": "vitest run --config pruebas/vitest.config.ts pruebas/seguridad --reporter=verbose",
+    "prueba:carga": "vitest run --config pruebas/vitest.config.ts pruebas/carga --reporter=verbose",
+    "prueba:estres:contencion": "NODE_OPTIONS=--expose-gc vitest run --config pruebas/vitest.config.ts pruebas/estres/e2-burst.campaign.ts pruebas/estres/e3-contention.campaign.ts --reporter=verbose",
+    "prueba:estres": "NODE_OPTIONS=--expose-gc vitest run --config pruebas/vitest.config.ts pruebas/estres --reporter=verbose",
     "typecheck": "tsc --noEmit",
     "test:watch": "vitest"
   },

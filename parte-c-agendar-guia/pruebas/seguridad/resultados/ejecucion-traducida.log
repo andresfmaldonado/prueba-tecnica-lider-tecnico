@@ -1,0 +1,230 @@
+
+> agendamiento-agendar-guia@1.0.0 prueba:seguridad
+> vitest run --config pruebas/vitest.config.ts pruebas/seguridad --reporter=verbose
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+stdout | pruebas/seguridad/s8-dos.campaign.ts > S8 · Denegación de servicio por datos > Cobertura con 1.000.000 de fechas no disponibles: construcción y cubre() < 2 s
+[MEDIDA] S8 Cobertura 1M fechas: construccion=476.4 ms · cubre=0.104 ms · cubre(2026-10-29)=false
+
+ ✓ pruebas/seguridad/s8-dos.campaign.ts > S8 · Denegación de servicio por datos > Cobertura con 1.000.000 de fechas no disponibles: construcción y cubre() < 2 s 543ms
+stdout | pruebas/seguridad/s8-dos.campaign.ts > S8 · Denegación de servicio por datos > 100.000 tenants distintos en un repositorio: cada operación < 2 s
+[MEDIDA] S8 100.000 tenants: total=125 ms · máximo por operación=2.04 ms · reintento idempotente=0.02 ms · resultados inesperados=0
+
+ ✓ pruebas/seguridad/s8-dos.campaign.ts > S8 · Denegación de servicio por datos > 100.000 tenants distintos en un repositorio: cada operación < 2 s 125ms
+stdout | pruebas/seguridad/s8-dos.campaign.ts > S8 · Denegación de servicio por datos > 10.000 ciudades distintas con cobertura: cada operación < 2 s
+[MEDIDA] S8 10.000 ciudades: total=22 ms · máximo por operación=0.90 ms · agendadas=10000
+
+ ✓ pruebas/seguridad/s8-dos.campaign.ts > S8 · Denegación de servicio por datos > 10.000 ciudades distintas con cobertura: cada operación < 2 s 29ms
+stdout | pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > el canario con secretos sintéticos produce las 5 coincidencias esperadas
+[MEDIDA] canario: archivo_env@env, clave_stripe_live@1, clave_aws_akia@2, clave_privada_pem@3, asignacion_secreta@4
+
+ ✓ pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > el canario con secretos sintéticos produce las 5 coincidencias esperadas 281ms
+stdout | pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > repositorio completo: 0 hallazgos dentro de parte-c-agendar-guia
+[MEDIDA] escaneados 82 archivos de texto; hallazgos totales 0; en parte-c 0; falsos positivos documentados 4
+[FALSO POSITIVO DOCUMENTADO] parte-b-code-review/code-review-compacto.md:36 [clave_stripe_live]
+[FALSO POSITIVO DOCUMENTADO] parte-b-code-review/code-review-compacto.md:36 [asignacion_secreta]
+[FALSO POSITIVO DOCUMENTADO] parte-b-code-review/code-review.md:58 [clave_stripe_live]
+[FALSO POSITIVO DOCUMENTADO] parte-b-code-review/code-review.md:58 [asignacion_secreta]
+
+ ✓ pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > repositorio completo: 0 hallazgos dentro de parte-c-agendar-guia 338ms
+ ✓ pruebas/seguridad/s5-secrets.campaign.ts > S5 · Secretos > parte-c-agendar-guia no tiene archivos .env* versionables 0ms
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con InvalidInput en < 500 ms
+[MEDIDA] S2b tenant 1 MB: 0.1 ms -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 1 MB se rechaza con InvalidInput en < 500 ms
+[MEDIDA] S2b waybillNumber 1 MB: 0.1 ms -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 1 MB se rechaza con InvalidInput en < 500 ms
+[MEDIDA] S2b city 1 MB: 0.1 ms -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 200 caracteres (rechazo=false)
+[MEDIDA] S2b tenant 200 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true)
+[MEDIDA] S2b tenant 201 caracteres -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true)
+[MEDIDA] S2b tenant 10000 caracteres -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 200 caracteres (rechazo=false)
+[MEDIDA] S2b waybillNumber 200 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 201 caracteres (rechazo=true)
+[MEDIDA] S2b waybillNumber 201 caracteres -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 10000 caracteres (rechazo=true)
+[MEDIDA] S2b waybillNumber 10000 caracteres -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 200 caracteres (rechazo=false)
+[MEDIDA] S2b city 200 caracteres -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 201 caracteres (rechazo=true)
+[MEDIDA] S2b city 201 caracteres -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 10000 caracteres (rechazo=true)
+[MEDIDA] S2b city 10000 caracteres -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad = 1.000.000 de espacios + "a" termina en < 500 ms
+[MEDIDA] S2f espacios+a: 0.6 ms -> ACEPTADO
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad = "a" + 1.000.000 de espacios + "b" termina en < 500 ms
+[MEDIDA] S2f espacios internos: 0.1 ms -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad con 100.000 marcas diacríticas termina en < 500 ms
+[MEDIDA] S2f diacríticos: 0.0 ms -> InvalidInput
+
+stdout | pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) fromISO("9999-12-31").masDias(1) no produce texto mal formado
+[MEDIDA] S2g 9999-12-31 + 1 día -> InvalidInput
+
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > null 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo tenant con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo waybillNumber con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > null 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > undefined 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > 42 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > true 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > {} 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > [] 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (a) campo city con tipo que no es texto > Symbol() 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 1 MB se rechaza con InvalidInput en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 1 MB se rechaza con InvalidInput en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 1 MB se rechaza con InvalidInput en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 200 caracteres (rechazo=false) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 201 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) tenant de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 200 caracteres (rechazo=false) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 201 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) waybillNumber de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 200 caracteres (rechazo=false) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 201 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (b) city de 10000 caracteres (rechazo=true) 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con NUL \u0000 dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con LF \n dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con CR \r dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con TAB \t dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) tenant con ESC \u001b dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con NUL \u0000 dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con LF \n dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con CR \r dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con TAB \t dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) waybillNumber con ESC \u001b dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con NUL \u0000 dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con LF \n dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con CR \r dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con TAB \t dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (c) city con ESC \u001b dentro del valor -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) tenant = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) waybillNumber = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = '; DROP TABLE guias;--: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = <script>alert(1)</script>: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = ../../etc/passwd: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = ${jndi:ldap://x/a}: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = %00: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (d) city = ' OR '1'='1: nunca otro error; si se acepta, se guarda tal cual 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = toString se trata como dato 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) tenant = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) waybillNumber = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = __proto__ se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = constructor se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = toString se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (e) city = hasOwnProperty se trata como dato 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad = 1.000.000 de espacios + "a" termina en < 500 ms 1ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad = "a" + 1.000.000 de espacios + "b" termina en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (f) ciudad con 100.000 marcas diacríticas termina en < 500 ms 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("2026-02-30") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("0000-00-00") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("2026-1-1") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO("2026-13-01") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) CivilDate.fromISO(" 2026-10-27") -> InvalidInput 0ms
+ ✓ pruebas/seguridad/s2-validation.campaign.ts > S2 · Validación de entradas > (g) fromISO("9999-12-31").masDias(1) no produce texto mal formado 0ms
+stdout | pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > se analizan los archivos de src/ (no vacío)
+[MEDIDA] archivos analizados en src/: 15
+
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > se analizan los archivos de src/ (no vacío) 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón eval: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón new Function: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón child_process: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón require(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón import(: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón fs: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón net: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón http: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón https: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón process.env: ninguna coincidencia 1ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón Math.random: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón console.log: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s6-patterns.campaign.ts > S6 · Patrones peligrosos en src/ > patrón Buffer: ninguna coincidencia 0ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > entrada de 1 MB solo en blancos: InvalidInput con mensaje corto y sin la entrada 2ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > VersionConflict con número de guía normal: mensaje acotado, sin datos de otro tenant 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > WaybillAlreadyScheduled con número de guía normal: mensaje acotado y sin stack 1ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > error de CivilDate.fromISO con entrada de 1 MB: el mensaje no repite la entrada (<= 300 caracteres) 0ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > WaybillAlreadyScheduled con el número de guía más largo permitido: el mensaje no lo repite completo 0ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > un número de guía de 1 MB ya no llega a existir: se rechaza al construirlo (H2 corregido) 0ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > VersionConflict con el número de guía más largo permitido: el mensaje no lo repite completo 0ms
+ ✓ pruebas/seguridad/s3-errors.campaign.ts > S3 · Fuga de información en errores > los errores no exponen el stack en el message 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > línea base: mismo número de guía en dos tenants son dos guías independientes 2ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (a) tenant "a::b" + guía "c" vs tenant "a" + guía "b::c": no colisionan 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (b) tenant "x:" + guía "y" vs tenant "x" + guía ":y": no colisionan 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (b) tenant "t" + guía "x::y" vs tenant "t::x" + guía "y": no colisionan 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (b) tenant "a:::b" + guía "c" vs tenant "a" + guía ":b::c": no colisionan 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (c) "banco a" vs "banco  a" (doble espacio): son tenants aislados 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (d) "Banco-A" y "banco-a" son identificadores distintos (sensibles a mayúsculas, documentado) 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (e) tenant NFC "café" y NFD "cafe+acento" se tratan como el mismo tenant 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (e) número de guía NFC "G-é" y NFD "G-e+acento" se tratan como la misma guía 0ms
+ ✓ pruebas/seguridad/s1-isolation.campaign.ts > S1 · Aislamiento multitenant > (e) ciudad NFC "Medellín" y NFD dan la misma cobertura (la ciudad sí se normaliza) 0ms
+stdout | pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (c) [INFORMATIVO] mutar por la fuerza el agregado sí surte efecto en tiempo de ejecución
+[INFORMATIVO S7c] tras mutar: {"status":"AGENDADA","appointmentDate":null,"version":-1,"originalVersion":99}
+
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (a) Cobertura copia sus entradas: mutar el array original no cambia cubre() 1ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (a) Cobertura copia las fechas no disponibles: mutar el array original no reabre el día 1ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza AGENDADA sin fecha y fecha con estado no agendado 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión -1 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión 1.5 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión NaN 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) Guia.reconstruir rechaza versión Infinity 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (b) un repositorio no deja que una copia mutada altere lo persistido 0ms
+ ✓ pruebas/seguridad/s7-integrity.campaign.ts > S7 · Integridad del dominio > (c) [INFORMATIVO] mutar por la fuerza el agregado sí surte efecto en tiempo de ejecución 1ms
+stdout | pruebas/seguridad/s4-dependencies.campaign.ts > S4 · Dependencias > package.json no declara dependencias de producción (solo devDependencies)
+[MEDIDA] devDependencies: @types/node, @vitest/coverage-v8, typescript, vitest
+
+ ✓ pruebas/seguridad/s4-dependencies.campaign.ts > S4 · Dependencias > package.json no declara dependencias de producción (solo devDependencies) 1ms
+ ✓ pruebas/seguridad/s4-dependencies.campaign.ts > S4 · Dependencias > package-lock.json existe y fija versiones 0ms
+ ✓ pruebas/seguridad/s4-dependencies.campaign.ts > S4 · Dependencias > el paquete es privado (no se publica por accidente) 0ms
+
+ Test Files  8 passed (8)
+      Tests  138 passed (138)
+   Start at  02:18:52
+   Duration  1.95s (tests 94%, import 4%, transform 1%, worker 1%)
+
+    Isolate  8 workers spawned · ~61ms startup each (spawn + environment, per file)
+             at least ~428ms faster with isolate: false — reuses workers across files instead of one per file
+

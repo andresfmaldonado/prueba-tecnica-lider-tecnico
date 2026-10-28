@@ -1,0 +1,13 @@
+ ✓ pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > package.json no declara dependencias de producción (solo devDependencies) 1ms
+ ✓ pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > package-lock.json existe y fija versiones 0ms
+ ✓ pruebas/seguridad/s4-dependencias.prueba.ts > S4 · Dependencias > el paquete es privado (no se publica por accidente) 0ms
+$ npm audit
+found 0 vulnerabilities
+
+$ npm ls --omit=dev --all
+agendamiento-agendar-guia@1.0.0 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+`-- (empty)
+
+
+$ npm ls --all (exit=0)
+lineas del arbol completo: 137

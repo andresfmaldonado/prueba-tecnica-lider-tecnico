@@ -1,0 +1,37 @@
+{
+  "testRun": "C3 reanudación tras caída",
+  "configuration": {
+    "waybills": 40000,
+    "concurrency": 50,
+    "latency_ms": 5
+  },
+  "pass1": {
+    "completed": 20049,
+    "launched": 20049,
+    "errors": 0,
+    "writes": 20049,
+    "seconds": 7.26,
+    "percent_completed": 50.12
+  },
+  "pass2": {
+    "completed": 40000,
+    "errors": 0,
+    "writes": 19951,
+    "expected_writes_N_minus_completed1": 19951,
+    "seconds": 9.614
+  },
+  "totals": {
+    "actual_writes": 40000,
+    "expected_writes": 40000,
+    "waybills_present_after_pass1": 20049,
+    "waybills_present_at_end": 40000
+  },
+  "verification": {
+    "version_greater_than_1": 0,
+    "version_1": 40000,
+    "inconsistent_status_date": 0,
+    "scheduled": 40000,
+    "no_coverage": 0,
+    "distinct_oracle_dates": 0
+  }
+}

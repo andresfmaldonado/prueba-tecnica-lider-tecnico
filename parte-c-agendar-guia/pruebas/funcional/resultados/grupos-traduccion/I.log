@@ -1,0 +1,9 @@
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I0 · ATTEMPTS_ON_CONFLICT vale 2 0ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I1 · 2 solicitudes simultáneas sobre la misma guía: misma cita y 1 escritura real 18ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I1 · 50 solicitudes simultáneas sobre la misma guía: misma cita y 1 escritura real 19ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I2 · 2 solicitudes simultáneas sin cobertura: todas SIN_COBERTURA y 1 escritura real 19ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I2 · 50 solicitudes simultáneas sin cobertura: todas SIN_COBERTURA y 1 escritura real 20ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I3 · 50 guías distintas en paralelo: cada una se escribe exactamente una vez 13ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I4 · guardar con una versión vieja lanza VersionConflict 0ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I5 · si el repositorio siempre da conflicto, se reintenta exactamente ATTEMPTS_ON_CONFLICT veces 1ms
+ ✓ pruebas/funcional/differential-concurrency.campaign.ts > I · Concurrencia e intentos > I6 · un conflicto puntual se resuelve releyendo: el segundo intento agenda 0ms

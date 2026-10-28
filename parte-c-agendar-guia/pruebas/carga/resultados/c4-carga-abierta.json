@@ -1,0 +1,91 @@
+{
+  "testRun": "C4 carga abierta",
+  "latency_ms": 20,
+  "segments": [
+    {
+      "target_pace_req_s": 5,
+      "window_s": 20,
+      "launched": 100,
+      "achieved_launch_pace_req_s": 5.05,
+      "completed": 100,
+      "errors": 0,
+      "error_messages": [],
+      "achieved_throughput_req_s": 5.03,
+      "end_to_end_latency_ms": {
+        "n": 100,
+        "p50": 65.251,
+        "p95": 66.835,
+        "p99": 66.872,
+        "max": 66.998
+      },
+      "max_in_flight": 1,
+      "pending_at_launch_close": 1,
+      "drain_after_close_ms": 62.716,
+      "max_launch_delay_ms": 2.874,
+      "mean_in_flight_first_tercile": 0,
+      "mean_in_flight_last_tercile": 0,
+      "growing_backlog": false,
+      "repository_calls": 300,
+      "actual_writes": 100
+    },
+    {
+      "target_pace_req_s": 50,
+      "window_s": 20,
+      "launched": 1000,
+      "achieved_launch_pace_req_s": 50.05,
+      "completed": 1000,
+      "errors": 0,
+      "error_messages": [],
+      "achieved_throughput_req_s": 49.88,
+      "end_to_end_latency_ms": {
+        "n": 1000,
+        "p50": 61.549,
+        "p95": 63.158,
+        "p99": 63.899,
+        "max": 65.947
+      },
+      "max_in_flight": 4,
+      "pending_at_launch_close": 4,
+      "drain_after_close_ms": 65.916,
+      "max_launch_delay_ms": 2.763,
+      "mean_in_flight_first_tercile": 2.98,
+      "mean_in_flight_last_tercile": 3,
+      "growing_backlog": false,
+      "repository_calls": 3000,
+      "actual_writes": 1000
+    },
+    {
+      "target_pace_req_s": 500,
+      "window_s": 20,
+      "launched": 10000,
+      "achieved_launch_pace_req_s": 500.06,
+      "completed": 10000,
+      "errors": 0,
+      "error_messages": [],
+      "achieved_throughput_req_s": 498.47,
+      "end_to_end_latency_ms": {
+        "n": 10000,
+        "p50": 60.614,
+        "p95": 62.422,
+        "p99": 63.088,
+        "max": 64.406
+      },
+      "max_in_flight": 33,
+      "pending_at_launch_close": 31,
+      "drain_after_close_ms": 63.819,
+      "max_launch_delay_ms": 1.002,
+      "mean_in_flight_first_tercile": 29.9,
+      "mean_in_flight_last_tercile": 30.03,
+      "growing_backlog": false,
+      "repository_calls": 30000,
+      "actual_writes": 10000
+    }
+  ],
+  "criterion": {
+    "p99_at_peak_ms": 66.872,
+    "p99_threshold_ms": 200,
+    "meets_p99": true,
+    "growing_backlog_at_peak": false,
+    "meets_no_backlog": true
+  }
+}

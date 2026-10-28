@@ -1,0 +1,139 @@
+
+> agendamiento-agendar-guia@1.0.0 prueba:estres
+> NODE_OPTIONS=--expose-gc vitest run --config pruebas/vitest.config.ts pruebas/estres --reporter=verbose
+
+
+ RUN  v5.0.5 /Users/andres.maldonado/prueba-tecnica-lider-tecnico/parte-c-agendar-guia
+
+stdout | pruebas/estres/e1-volumen.prueba.ts > E1 volumen 3x > 120000 guías distintas, concurrencia 50, L=5 ms
+[E1] guías=120000 (distintas=120000) concurrencia=50 L=5 ms
+[E1] tiempo=43.07 s throughput=2785.9 guías/s completadas=120000 errores=0
+[E1] escrituras reales=120000 intentos de escritura=120000 lecturas guía=120000 lecturas cobertura=120000
+[E1] auditoría: presentes=120000 ausentes=0 corruptas=0 versión≠1=0 distintas del oráculo=0
+[E1] heap antes=19.4 MB, tras lote=56.6 MB, tras gc=47.7 MB; rss antes=88.5 MB, tras lote=123.7 MB
+[E1] latencia por solicitud (ms): p50=18.01 p95=19.564 p99=20.028 máx=33.213
+
+ ✓ pruebas/estres/e1-volumen.prueba.ts > E1 volumen 3x > 120000 guías distintas, concurrencia 50, L=5 ms 43429ms
+stdout | pruebas/estres/e5-fallos.prueba.ts > E5 fallos inyectados y reanudación > tasa 0.05: 20000 guías, concurrencia 50, L=5 ms
+[E5] tasa=0.05 guías=20000 pasada 1: completadas=17161 fallidas=2839 tipos={"ErrorInyectado":2839}
+[E5] tasa=0.05 llamadas fallidas observada=14.19 % IC95 [13.72, 14.69] % teórica 1-(1-p)^3=14.26 %
+[E5] tasa=0.05 operaciones intentadas=57089 fallos por operación=2839 (4.97 %, teórico p=5.00 %)
+[E5] tasa=0.05 pasada 1 auditoría: presentes=17161 ausentes=2839 corruptas=0 versión≠1=0 distintas del oráculo=0 ok sin guía=0 error con guía=0
+[E5] tasa=0.05 pasada 2 (reanudación): completadas=20000 errores=0 escrituras en pasada 2=2839 escrituras totales=20000 presentes=20000 corruptas=0 versión≠1=0 distintas del oráculo=0
+
+ ✓ pruebas/estres/e5-fallos.prueba.ts > E5 fallos inyectados y reanudación > tasa 0.05: 20000 guías, concurrencia 50, L=5 ms 10143ms
+stdout | pruebas/estres/e5-fallos.prueba.ts > E5 fallos inyectados y reanudación > tasa 0.15: 20000 guías, concurrencia 50, L=5 ms
+[E5] tasa=0.15 guías=20000 pasada 1: completadas=12220 fallidas=7780 tipos={"ErrorInyectado":7780}
+[E5] tasa=0.15 llamadas fallidas observada=38.90 % IC95 [38.23, 39.58] % teórica 1-(1-p)^3=38.59 %
+[E5] tasa=0.15 operaciones intentadas=51471 fallos por operación=7780 (15.12 %, teórico p=15.00 %)
+[E5] tasa=0.15 pasada 1 auditoría: presentes=12220 ausentes=7780 corruptas=0 versión≠1=0 distintas del oráculo=0 ok sin guía=0 error con guía=0
+[E5] tasa=0.15 pasada 2 (reanudación): completadas=20000 errores=0 escrituras en pasada 2=7780 escrituras totales=20000 presentes=20000 corruptas=0 versión≠1=0 distintas del oráculo=0
+
+ ✓ pruebas/estres/e5-fallos.prueba.ts > E5 fallos inyectados y reanudación > tasa 0.15: 20000 guías, concurrencia 50, L=5 ms 10596ms
+stdout | pruebas/estres/e5-fallos.prueba.ts > E5 fallos inyectados y reanudación > tasa 0.3: 20000 guías, concurrencia 50, L=5 ms
+[E5] tasa=0.3 guías=20000 pasada 1: completadas=6778 fallidas=13222 tipos={"ErrorInyectado":13222}
+[E5] tasa=0.3 llamadas fallidas observada=66.11 % IC95 [65.45, 66.76] % teórica 1-(1-p)^3=65.70 %
+[E5] tasa=0.3 operaciones intentadas=43778 fallos por operación=13222 (30.20 %, teórico p=30.00 %)
+[E5] tasa=0.3 pasada 1 auditoría: presentes=6778 ausentes=13222 corruptas=0 versión≠1=0 distintas del oráculo=0 ok sin guía=0 error con guía=0
+[E5] tasa=0.3 pasada 2 (reanudación): completadas=20000 errores=0 escrituras en pasada 2=13222 escrituras totales=20000 presentes=20000 corruptas=0 versión≠1=0 distintas del oráculo=0
+
+ ✓ pruebas/estres/e5-fallos.prueba.ts > E5 fallos inyectados y reanudación > tasa 0.3: 20000 guías, concurrencia 50, L=5 ms 10962ms
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=100 tiempo=0.063 s throughput=1584.3 guías/s errores=0 escrituras=100
+[E4] N=100 latencia ms p50=62.753 p95=62.8 p99=62.804 máx=62.811 | retardo bucle p99=12.042 ms máx=12.042 ms | RSS máx=64.3 MB
+
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=500 tiempo=0.064 s throughput=7832.2 guías/s errores=0 escrituras=500
+[E4] N=500 latencia ms p50=62.83 p95=63.088 p99=63.11 máx=63.121 | retardo bucle p99=13.066 ms máx=13.066 ms | RSS máx=66.8 MB
+
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=1000 tiempo=0.068 s throughput=14731.4 guías/s errores=0 escrituras=1000
+[E4] N=1000 latencia ms p50=65.075 p95=66.57 p99=66.599 máx=66.613 | retardo bucle p99=12.755 ms máx=12.755 ms | RSS máx=75.6 MB
+
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=5000 tiempo=0.081 s throughput=62021.3 guías/s errores=0 escrituras=5000
+[E4] N=5000 latencia ms p50=65.994 p95=69.817 p99=69.993 máx=70.035 | retardo bucle p99=13.885 ms máx=13.885 ms | RSS máx=112.6 MB
+
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=10000 tiempo=0.093 s throughput=107894.4 guías/s errores=0 escrituras=10000
+[E4] N=10000 latencia ms p50=79.005 p95=82.449 p99=82.749 máx=82.826 | retardo bucle p99=22.659 ms máx=22.659 ms | RSS máx=146.8 MB
+
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=20000 tiempo=0.167 s throughput=119691.4 guías/s errores=0 escrituras=20000
+[E4] N=20000 latencia ms p50=134.659 p95=139.26 p99=140.059 máx=140.245 | retardo bucle p99=39.289 ms máx=39.289 ms | RSS máx=214.7 MB
+
+stdout | pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB
+[E4] N=50000 tiempo=0.386 s throughput=129585.8 guías/s errores=0 escrituras=50000
+[E4] N=50000 latencia ms p50=305.011 p95=310.225 p99=311.643 máx=312.252 | retardo bucle p99=99.615 ms máx=99.615 ms | RSS máx=399.7 MB
+[E4] punto de quiebre: no se alcanzó hasta N=50000
+
+ ✓ pruebas/estres/e4-escalones.prueba.ts > E4 escalones de concurrencia > escalones [100, 500, 1000, 5000, 10000, 20000, 50000] · L=20 ms · tope RSS 4096 MB 1176ms
+stdout | pruebas/estres/e3-contencion.prueba.ts > E3 contención mixta > 1000 guías × 50 duplicados, todos en vuelo, L=5 ms
+[E3] guías=1000 duplicados=50 solicitudes=50000 en vuelo=50000 L=5 ms
+[E3] tiempo=0.68 s completadas=50000 errores=0 tipos={}
+[E3] escrituras reales=1000 intentos de escritura=50000 conflictos de versión=49000
+[E3] auditoría: presentes=1000 versión≠1=0 corruptas=0 distintas del oráculo=0
+[E3] guías con respuestas distintas entre duplicados=0
+[E3] latencia por solicitud (ms): p50=585.17 p95=605.933 p99=645.282 máx=668.3
+[E3] heap antes=9.7 MB después=308.8 MB rss después=393.5 MB
+
+ ✓ pruebas/estres/e3-contencion.prueba.ts > E3 contención mixta > 1000 guías × 50 duplicados, todos en vuelo, L=5 ms 694ms
+stdout | pruebas/estres/e2-rafaga.prueba.ts > E2 ráfaga sobre la misma guía > 10000 solicitudes simultáneas sobre una guía, L=5 ms
+[E2] solicitudes=10000 sobre una guía, L=5 ms, todas en vuelo a la vez
+[E2] tiempo=0.144 s completadas=10000 errores=0
+[E2] escrituras reales=1 intentos de escritura=10000 conflictos de versión=9999
+[E2] respuestas distintas=1 (AGENDADA|2026-10-29) oráculo=AGENDADA|2026-10-29
+[E2] versión final=1 estado final=AGENDADA cita final=2026-10-29
+[E2] latencia por solicitud (ms): p50=124.892 p95=127.88 p99=127.911 máx=127.918
+[E2] heap antes=9.3 MB después=85.1 MB
+
+ ✓ pruebas/estres/e2-rafaga.prueba.ts > E2 ráfaga sobre la misma guía > 10000 solicitudes simultáneas sobre una guía, L=5 ms 152ms
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (a) 100000 guías nuevas: bytes por guía
+[E6] (a) guías nuevas=100000 escrituras reales=100000
+[E6] (a) heap tras gc antes=9.3 MB, después=36.5 MB, crecimiento=27.2 MB ≈ 286 bytes por guía (100000 guías)
+
+ ✓ pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (a) 100000 guías nuevas: bytes por guía 277ms
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) sembradas=10000 agendadas; heap inicial=13.5 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=100000 heapUsed tras gc=13.5 MB rss=124.5 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=200000 heapUsed tras gc=13.5 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=300000 heapUsed tras gc=13.5 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=400000 heapUsed tras gc=13.5 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=500000 heapUsed tras gc=13.5 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=600000 heapUsed tras gc=13.5 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=700000 heapUsed tras gc=13.6 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=800000 heapUsed tras gc=13.6 MB rss=124.6 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=900000 heapUsed tras gc=13.6 MB rss=124.7 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) ops=1000000 heapUsed tras gc=13.6 MB rss=124.7 MB
+
+stdout | pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas
+[E6] (b) operaciones=1000000 tiempo=1.07 s; escrituras durante llamadas=0; incoherentes=0
+[E6] (b) crecimiento de heap tras gc entre 100000 y 1000000 ops = 0.1 MB; límite = 20 MB; CUMPLE
+
+ ✓ pruebas/estres/e6-memoria.prueba.ts > E6 memoria y fugas > (b) 1000000 llamadas idempotentes sobre 10000 guías agendadas 1152ms
+
+ Test Files  6 passed (6)
+      Tests  9 passed (9)
+   Start at  01:48:59
+   Duration  79.11s (tests 100%)
+

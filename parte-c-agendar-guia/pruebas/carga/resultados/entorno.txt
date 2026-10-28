@@ -1,0 +1,14 @@
+Registrado antes de empezar la primera ejecucion (uptime y sysctl, 01:23):
+$ uptime
+ 1:23  up 6 days,  2:20, 1 user, load averages: 2.79 2.80 2.45
+$ sysctl -n machdep.cpu.brand_string hw.ncpu hw.memsize
+Apple M4
+10
+17179869184
+Versiones usadas en la ejecucion 2:
+$ node -v
+v22.21.1
+$ npm -v
+10.9.4
+$ npx vitest --version
+vitest/5.0.5 darwin-arm64 node-v22.21.1

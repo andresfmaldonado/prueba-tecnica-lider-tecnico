@@ -1,0 +1,15 @@
+[E6] (a) guías nuevas=100000 escrituras reales=100000
+[E6] (a) heap tras gc antes=9.4 MB, después=36.6 MB, crecimiento=27.2 MB ≈ 285 bytes por guía (100000 guías)
+[E6] (b) sembradas=10000 agendadas; heap inicial=13.6 MB
+[E6] (b) ops=100000 heapUsed tras gc=13.6 MB rss=124.1 MB
+[E6] (b) ops=200000 heapUsed tras gc=13.6 MB rss=124.2 MB
+[E6] (b) ops=300000 heapUsed tras gc=13.6 MB rss=124.2 MB
+[E6] (b) ops=400000 heapUsed tras gc=13.6 MB rss=124.2 MB
+[E6] (b) ops=500000 heapUsed tras gc=13.6 MB rss=124.2 MB
+[E6] (b) ops=600000 heapUsed tras gc=13.6 MB rss=124.2 MB
+[E6] (b) ops=700000 heapUsed tras gc=13.7 MB rss=124.2 MB
+[E6] (b) ops=800000 heapUsed tras gc=13.7 MB rss=124.2 MB
+[E6] (b) ops=900000 heapUsed tras gc=13.7 MB rss=124.2 MB
+[E6] (b) ops=1000000 heapUsed tras gc=13.7 MB rss=124.2 MB
+[E6] (b) operaciones=1000000 tiempo=1.06 s; escrituras durante llamadas=0; incoherentes=0
+[E6] (b) crecimiento de heap tras gc entre 100000 y 1000000 ops = 0.1 MB; límite = 20 MB; CUMPLE
