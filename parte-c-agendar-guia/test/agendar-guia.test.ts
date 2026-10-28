@@ -4,16 +4,17 @@ import {
   Ciudad,
   Cobertura,
   CoberturaRepositoryEnMemoria,
+  ConflictoDeVersion,
   EntradaInvalida,
   FechaCivil,
   Guia,
-  GuiaNoEncontrada,
   GuiaRepositoryEnMemoria,
+  INTENTOS_POR_CONFLICTO,
   NumeroGuia,
   RelojFijo,
   TenantId,
 } from '../src';
-import type { DiaSemana } from '../src';
+import type { DiaSemana, GuiaRepository } from '../src';
 
 const LUN_A_VIE: DiaSemana[] = [1, 2, 3, 4, 5];
 const [LUN, MAR, , , VIE, SAB, DOM] = [1, 2, 3, 4, 5, 6, 7] as const;
@@ -48,6 +49,9 @@ function escenario(opciones: { hoy?: FechaCivil } = {}) {
     async estadoGuardado(tenant = 'banco-a', numero = 'G-1') {
       const g = await guias.obtener(TenantId.de(tenant), NumeroGuia.de(numero));
       return g && { estado: g.estado, fechaCita: g.fechaCita?.toString() ?? null };
+    },
+    async versionGuardada(tenant = 'banco-a', numero = 'G-1') {
+      return (await guias.obtener(TenantId.de(tenant), NumeroGuia.de(numero)))?.version ?? null;
     },
   };
 }
@@ -183,7 +187,7 @@ describe('Agendar una guía — idempotencia', () => {
   it('si ya está agendada devuelve la cita existente sin recalcular ni escribir', async () => {
     const e = escenario();
     e.guias.sembrar(
-      Guia.reconstruir(TenantId.de('banco-a'), NumeroGuia.de('G-1'), 'AGENDADA', fecha('2026-10-29')),
+      Guia.reconstruir(TenantId.de('banco-a'), NumeroGuia.de('G-1'), 'AGENDADA', fecha('2026-10-29'), 1),
     );
     e.cobertura(new Cobertura([LUN])); // si recalculara, daría otra fecha
 
@@ -206,13 +210,6 @@ describe('Agendar una guía — idempotencia', () => {
 });
 
 describe('Agendar una guía — entradas y errores', () => {
-  it('guía inexistente: GuiaNoEncontrada', async () => {
-    const e = escenario();
-    e.cobertura(new Cobertura(LUN_A_VIE));
-
-    await expect(e.ejecutar()).rejects.toBeInstanceOf(GuiaNoEncontrada);
-  });
-
   it.each([
     ['tenant', { tenant: '  ' }],
     ['numeroGuia', { numeroGuia: '' }],
@@ -238,12 +235,14 @@ describe('Agendar una guía — entradas y errores', () => {
 });
 
 describe('Agendar una guía — multitenancy', () => {
-  it('la guía de un tenant no es visible desde otro, aunque el número coincida', async () => {
+  it('la guía de un tenant no se mezcla con la de otro, aunque el número coincida', async () => {
     const e = escenario();
     e.guiaPendiente('banco-a', 'G-1');
     e.cobertura(new Cobertura(LUN_A_VIE), 'banco-b');
 
-    await expect(e.ejecutar({ tenant: 'banco-b', numeroGuia: 'G-1' })).rejects.toBeInstanceOf(GuiaNoEncontrada);
+    const r = await e.ejecutar({ tenant: 'banco-b', numeroGuia: 'G-1' });
+
+    expect(r.estado).toBe('AGENDADA'); // banco-b crea su propia agenda
     expect(await e.estadoGuardado('banco-a')).toEqual({ estado: 'PENDIENTE_AGENDA', fechaCita: null });
   });
 
@@ -256,5 +255,97 @@ describe('Agendar una guía — multitenancy', () => {
 
     expect((await e.ejecutar({ tenant: 'banco-a' })).fechaCita).toBe('2026-10-30');
     expect((await e.ejecutar({ tenant: 'banco-b' })).fechaCita).toBe('2026-11-02');
+  });
+});
+
+describe('Agendar una guía — guía que aún no existe en el servicio', () => {
+  it('no es un error: se crea pendiente con los datos del comando y se agenda', async () => {
+    const e = escenario();
+    e.cobertura(new Cobertura(LUN_A_VIE));
+
+    expect(await e.ejecutar()).toEqual({ estado: 'AGENDADA', fechaCita: '2026-10-28' });
+    expect(await e.estadoGuardado()).toEqual({ estado: 'AGENDADA', fechaCita: '2026-10-28' });
+    expect(e.guias.escrituras).toBe(1);
+  });
+
+  it('sin cobertura queda creada como SIN_COBERTURA', async () => {
+    const e = escenario();
+
+    expect(await e.ejecutar()).toEqual({ estado: 'SIN_COBERTURA', fechaCita: null });
+    expect(await e.estadoGuardado()).toEqual({ estado: 'SIN_COBERTURA', fechaCita: null });
+  });
+});
+
+describe('Agendar una guía — versión y control optimista', () => {
+  it('la versión sube con cada cambio de estado: 0 → 1 (SIN_COBERTURA) → 2 (AGENDADA)', async () => {
+    const e = escenario();
+    e.guiaPendiente();
+    expect(await e.versionGuardada()).toBe(0);
+
+    await e.ejecutar();
+    expect(await e.versionGuardada()).toBe(1);
+
+    e.cobertura(new Cobertura(LUN_A_VIE));
+    await e.ejecutar();
+    expect(await e.versionGuardada()).toBe(2);
+  });
+
+  it('reintentar una guía SIN_COBERTURA sin cobertura nueva no escribe ni sube la versión', async () => {
+    const e = escenario();
+    e.guiaPendiente();
+    await e.ejecutar();
+    const escrituras = e.guias.escrituras;
+
+    await e.ejecutar();
+
+    expect(e.guias.escrituras).toBe(escrituras);
+    expect(await e.versionGuardada()).toBe(1);
+  });
+
+  it('dos solicitudes simultáneas para la misma guía dan la misma cita y una sola escritura', async () => {
+    const e = escenario();
+    e.cobertura(new Cobertura(LUN_A_VIE));
+
+    const [a, b] = await Promise.all([e.ejecutar(), e.ejecutar()]);
+
+    expect(a).toEqual({ estado: 'AGENDADA', fechaCita: '2026-10-28' });
+    expect(b).toEqual(a);
+    expect(e.guias.escrituras).toBe(1);
+    expect(await e.versionGuardada()).toBe(1);
+  });
+
+  it('el repositorio rechaza guardar una guía leída con una versión vieja', async () => {
+    const e = escenario();
+    e.guiaPendiente();
+    const tenant = TenantId.de('banco-a');
+    const numero = NumeroGuia.de('G-1');
+    const primera = (await e.guias.obtener(tenant, numero))!;
+    const segunda = (await e.guias.obtener(tenant, numero))!;
+
+    primera.agendar(fecha('2026-10-28'));
+    await e.guias.guardar(primera);
+    segunda.marcarSinCobertura();
+
+    await expect(e.guias.guardar(segunda)).rejects.toBeInstanceOf(ConflictoDeVersion);
+    expect(await e.estadoGuardado()).toEqual({ estado: 'AGENDADA', fechaCita: '2026-10-28' });
+  });
+
+  it('si el conflicto persiste tras reintentar, el error se propaga', async () => {
+    let guardados = 0;
+    const guias: GuiaRepository = {
+      obtener: async () => null,
+      guardar: async () => {
+        guardados++;
+        throw new ConflictoDeVersion('conflicto simulado');
+      },
+    };
+    const coberturas = new CoberturaRepositoryEnMemoria();
+    coberturas.definir(TenantId.de('banco-a'), Ciudad.de('Medellin'), new Cobertura(LUN_A_VIE));
+    const agendar = new AgendarGuia(guias, coberturas, new RelojFijo(MARTES));
+
+    await expect(agendar.ejecutar({ tenant: 'banco-a', numeroGuia: 'G-1', ciudad: 'Medellin' })).rejects.toBeInstanceOf(
+      ConflictoDeVersion,
+    );
+    expect(guardados).toBe(INTENTOS_POR_CONFLICTO);
   });
 });

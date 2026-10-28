@@ -36,10 +36,32 @@ describe('Guia', () => {
   });
 
   it('no se puede reconstruir un estado incoherente (AGENDADA sin fecha)', () => {
-    expect(() => Guia.reconstruir(tenant, numero, 'AGENDADA', null)).toThrow(EntradaInvalida);
+    expect(() => Guia.reconstruir(tenant, numero, 'AGENDADA', null, 0)).toThrow(EntradaInvalida);
     expect(() =>
-      Guia.reconstruir(tenant, numero, 'SIN_COBERTURA', FechaCivil.desdeISO('2026-10-28')),
+      Guia.reconstruir(tenant, numero, 'SIN_COBERTURA', FechaCivil.desdeISO('2026-10-28'), 0),
     ).toThrow(EntradaInvalida);
+  });
+
+  it('la versión sube con cada cambio de estado y versionOriginal conserva la leída', () => {
+    const guia = Guia.reconstruir(tenant, numero, 'PENDIENTE_AGENDA', null, 3);
+    expect([guia.version, guia.versionOriginal, guia.hayCambios()]).toEqual([3, 3, false]);
+
+    guia.agendar(FechaCivil.desdeISO('2026-10-28'));
+
+    expect([guia.version, guia.versionOriginal, guia.hayCambios()]).toEqual([4, 3, true]);
+  });
+
+  it('marcar SIN_COBERTURA una guía que ya lo está no cambia la versión', () => {
+    const guia = Guia.reconstruir(tenant, numero, 'SIN_COBERTURA', null, 1);
+
+    guia.marcarSinCobertura();
+
+    expect(guia.version).toBe(1);
+    expect(guia.hayCambios()).toBe(false);
+  });
+
+  it.each([-1, 1.5, Number.NaN])('rechaza la versión inválida %s', (version) => {
+    expect(() => Guia.reconstruir(tenant, numero, 'PENDIENTE_AGENDA', null, version)).toThrow(EntradaInvalida);
   });
 });
 

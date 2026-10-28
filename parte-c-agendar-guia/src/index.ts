@@ -1,8 +1,8 @@
-export { AgendarGuia } from './application/agendar-guia';
+export { AgendarGuia, INTENTOS_POR_CONFLICTO } from './application/agendar-guia';
 export type { AgendarGuiaComando, AgendarGuiaResultado } from './application/agendar-guia';
 export type { CoberturaRepository, GuiaRepository, Reloj } from './application/puertos';
 export { Cobertura } from './domain/cobertura';
-export { EntradaInvalida, ErrorDeDominio, GuiaNoEncontrada, GuiaYaAgendada } from './domain/errores';
+export { ConflictoDeVersion, EntradaInvalida, ErrorDeDominio, GuiaYaAgendada } from './domain/errores';
 export { FechaCivil } from './domain/fecha-civil';
 export type { DiaSemana } from './domain/fecha-civil';
 export { Guia } from './domain/guia';

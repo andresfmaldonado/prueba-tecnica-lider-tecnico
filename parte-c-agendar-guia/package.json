@@ -4,11 +4,13 @@
   "description": "Parte C: caso de uso Agendar una guia (hexagonal, TypeScript)",
   "scripts": {
     "test": "vitest run",
+    "coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
     "test:watch": "vitest"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^5.0.5",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
   },

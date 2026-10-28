@@ -10,6 +10,10 @@ export interface CoberturaRepository {
 
 export interface GuiaRepository {
   obtener(tenantId: TenantId, numero: NumeroGuia): Promise<Guia | null>;
+  /**
+   * Control optimista: falla con ConflictoDeVersion si la guía almacenada no está en
+   * `guia.versionOriginal` (0 si aún no existe). Quien llama relee y reintenta.
+   */
   guardar(guia: Guia): Promise<void>;
 }
 

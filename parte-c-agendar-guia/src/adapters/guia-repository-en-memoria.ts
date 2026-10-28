@@ -1,4 +1,5 @@
 import type { GuiaRepository } from '../application/puertos';
+import { ConflictoDeVersion } from '../domain/errores';
 import { Guia } from '../domain/guia';
 import type { NumeroGuia, TenantId } from '../domain/identificadores';
 
@@ -16,8 +17,15 @@ export class GuiaRepositoryEnMemoria implements GuiaRepository {
   }
 
   async guardar(guia: Guia): Promise<void> {
+    const k = clave(guia.tenantId, guia.numero);
+    const versionGuardada = this.almacen.get(k)?.version ?? 0;
+    if (versionGuardada !== guia.versionOriginal) {
+      throw new ConflictoDeVersion(
+        `La guía ${guia.numero.valor} cambió mientras se procesaba: se esperaba la versión ${guia.versionOriginal} y hay la ${versionGuardada}`,
+      );
+    }
     this.escrituras++;
-    this.almacen.set(clave(guia.tenantId, guia.numero), copiar(guia));
+    this.almacen.set(k, copiar(guia));
   }
 
   /** Siembra una guía sin contar como escritura (preparación de escenarios). */
@@ -27,5 +35,5 @@ export class GuiaRepositoryEnMemoria implements GuiaRepository {
 }
 
 function copiar(g: Guia): Guia {
-  return Guia.reconstruir(g.tenantId, g.numero, g.estado, g.fechaCita);
+  return Guia.reconstruir(g.tenantId, g.numero, g.estado, g.fechaCita, g.version);
 }
