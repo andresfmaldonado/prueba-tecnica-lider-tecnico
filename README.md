@@ -7,7 +7,7 @@ Entrega de las tres partes de la prueba y la nota sobre el uso de IA.
 | Entregable | Dónde |
 |---|---|
 | **Parte A** — Diseño de la migración (C4 nivel 2 + ADR-001) | [parte-a-diseno/Parte-A-Diseno-Migracion-Agendamiento.md](parte-a-diseno/Parte-A-Diseno-Migracion-Agendamiento.md) |
-| **Parte B** — Code review con comentarios en línea | [parte-b-code-review/code-review.md](parte-b-code-review/code-review.md) |
+| **Parte B** — Code review con comentarios en línea | Versión para el desarrollador: [code-review-compacto.md](parte-b-code-review/code-review-compacto.md) · Versión extendida, para apreciar cómo enseño: [code-review.md](parte-b-code-review/code-review.md) |
 | **Parte C** — Caso de uso «Agendar una guía» con pruebas | [parte-c-agendar-guia/](parte-c-agendar-guia/README.md) |
 | **Nota de IA** — herramientas usadas y para qué | [NOTA-IA.md](NOTA-IA.md) |
 
@@ -45,7 +45,8 @@ Están detallados en la sección 0 del documento de la Parte A y en el README de
 ├── parte-a-diseno/
 │   └── Parte-A-Diseno-Migracion-Agendamiento.md
 ├── parte-b-code-review/
-│   └── code-review.md
+│   ├── code-review-compacto.md   (la que entregaría al desarrollador)
+│   └── code-review.md            (extendida, para apreciar la enseñanza)
 └── parte-c-agendar-guia/
     ├── README.md
     ├── src/        (domain, application, adapters)
