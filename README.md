@@ -22,10 +22,10 @@ cd parte-c-agendar-guia && npm install && npm test
 ## Resumen del diseño
 
 - **Estrategia:** Strangler Fig con modo sombra, cinco fases y corte progresivo por tenant. El lote nocturno se migra al final.
-- **Datos:** el servicio es el único escritor de los tenants migrados y sincroniza hacia las tablas del legado con *outbox* y CDC, de modo que call center, ruteo y reportes no cambian en la primera fase (ADR-001).
+- **Datos:** el servicio es el único escritor de los tenants migrados y sincroniza hacia las tablas del legado con *outbox* y CDC, de modo que call center, ruteo y reportes no cambian su fuente de lectura en la primera fase (ADR-001).
 - **Multitenancy:** base de datos compartida con `tenant_id` y Row-Level Security, con vía de escape a una BD por tenant.
 - **Rollback:** por tenant en minutos y sin pérdida de datos, gracias a la sincronización hacia el legado.
-- **Plan de la fase 1:** 5 épicas y 15 historias, 58–96 días-persona con los supuestos declarados.
+- **Plan de la fase 1:** 5 épicas y 17 historias, 61–101 días-persona con los supuestos declarados.
 
 ## Supuestos principales
 
